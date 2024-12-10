@@ -196,6 +196,31 @@ file_reader_8 = LSCFileReader(
 )
 file_reader_8.read_file()
 
+# NOTE: 12/10/2024 This count is still ongoing, the OV 1-6 samples are not yet counted, but for all practical purposes we can assume they're zeros. Other than that it all looks good to me.
+file_reader_9 = LSCFileReader(
+    f"{data_folder}/1L_BL-1_IV-1-8_OV-1-5_IV-1-9_OV-1-6.csv",
+    vial_labels=[
+        "1L-BL-1",
+        None,
+        "IV 1-8-1",
+        "IV 1-8-2",
+        "IV 1-8-3",
+        "IV 1-8-4",
+        None,
+        "OV 1-5-1",
+        "OV 1-5-2",
+        "OV 1-5-3",
+        "OV 1-5-4",
+        None,
+        "IV 1-9-1",
+        "IV 1-9-2",
+        "IV 1-9-3",
+        "IV 1-9-4",
+        None,
+    ],
+)
+file_reader_9.read_file()
+
 
 # Make samples
 
@@ -300,6 +325,16 @@ sample_7_IV = LIBRASample(
     time="11/29/2024 11:43 AM",
 )
 
+sample_8_IV = LIBRASample(
+    samples=[
+        LSCSample.from_file(file_reader_9, label)
+        for label in ["IV 1-8-1", "IV 1-8-2", "IV 1-8-3", "IV 1-8-4"]
+    ],
+    time="12/6/2024 2:22 PM",
+)
+
+background_file_9 = LSCSample.from_file(file_reader_9, "1L-BL-1")
+
 sample_4_OV = LIBRASample(
     samples=[
         LSCSample.from_file(file_reader_8, label)
@@ -332,6 +367,7 @@ IV_stream = GasStream(
         sample_5_IV,
         sample_6_IV,
         sample_7_IV,
+        sample_8_IV,
     ],
     start_time=start_time,
 )
@@ -350,6 +386,7 @@ sample_4_IV.substract_background(background_sample=blank_sample_4)
 sample_5_IV.substract_background(background_sample=sample_5_IV_background)
 sample_6_IV.substract_background(background_sample=background_file_7)
 sample_7_IV.substract_background(background_sample=background_file_8)
+sample_8_IV.substract_background(background_sample=background_file_9)
 sample_1_OV.substract_background(background_sample=blank_sample_1_OV)
 sample_2_OV.substract_background(background_sample=sample_2_OV_background)
 sample_3_OV.substract_background(background_sample=background_file_7)
