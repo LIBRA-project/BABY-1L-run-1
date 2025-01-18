@@ -1,7 +1,7 @@
 {
     "modelled_TBR": {
-        "mean": 0.0020419073550656465,
-        "std_dev": 2.7903583345107764e-05
+        "mean": 0.0020419073550656456,
+        "std_dev": 2.7903583345108685e-05
     },
     "modelled_baby_radius": {
         "value": 7.0,
@@ -34,23 +34,23 @@
         }
     ],
     "neutron_rate_used_in_model": {
-        "value": 106500000.0,
+        "value": 96960000.0,
         "unit": "neutron / second"
     },
     "measured_TBR": {
-        "value": 0.0020532774806919763,
+        "value": 0.0022553016882600604,
         "unit": "particle / neutron"
     },
     "TBR_used_in_model": {
-        "value": 0.0020532774806919763,
+        "value": 0.0022553016882600604,
         "unit": "particle / neutron"
     },
     "k_top": {
-        "value": 8.9e-08,
+        "value": 9.6e-08,
         "unit": "meter / second"
     },
     "k_wall": {
-        "value": 1.5130000000000003e-09,
+        "value": 1.6320000000000002e-09,
         "unit": "meter / second"
     },
     "cumulative_tritium_release": {
