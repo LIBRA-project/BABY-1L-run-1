@@ -531,6 +531,8 @@ neutron_rate = (
     A325_neutron_rate
 ) / 2  # the neutron rate is divided by two to acount for the double counting (two detectors)
 
+neutron_rate = 9.696e+07 * ureg.neutron * ureg.s**-1  # TODO: from Collin's foil analysis replace by more robust method
+
 # TBR from OpenMC
 
 from pathlib import Path
@@ -564,7 +566,7 @@ measured_TBR = (T_produced / quantity_to_activity(T_consumed)).to(
 )
 
 optimised_ratio = 1.7e-2
-k_top = 8.9e-8 * ureg.m * ureg.s**-1
+k_top = 9.6e-8 * ureg.m * ureg.s**-1
 k_wall = optimised_ratio * k_top
 
 
