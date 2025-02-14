@@ -530,9 +530,9 @@ def baby_model():
     nuclides = ["zr90", "nb93"]
 
     # cell filters
-    z_plane_zr = openmc.ZPlane(99.465)
-    z_plane_nb = openmc.ZPlane(89.265)
-    z_plane_diamond = openmc.ZPlane(84.715)
+    # z_plane_zr 99.465
+    # z_plane_nb 89.265
+    # z_plane_diamond = 84.715
 
     cell_filter_list = [
         openmc.CellFilter(act_foils_zr_cell),
@@ -540,9 +540,9 @@ def baby_model():
     ]
 
     # surface filters
-    act_foils_surface_zr_filter = openmc.SurfaceFilter(z_plane_zr)
-    act_foils_surface_nb_filter = openmc.SurfaceFilter(z_plane_nb)
-    diamond_surface_filter = openmc.SurfaceFilter(z_plane_diamond)
+    act_foils_surface_zr_filter = openmc.SurfaceFilter(64)
+    act_foils_surface_nb_filter = openmc.SurfaceFilter(66)
+    diamond_surface_filter = openmc.SurfaceFilter(60)
 
     # dosimetry tallies from IRDFF-II nuclear data library
     zr90_n2n_acef = "irdff2_xs/dos-irdff2-4025.acef"
