@@ -1,6 +1,7 @@
 import openmc
-import vault
-from libra_toolbox.neutronics.neutron_source import A325_generator_diamond
+import argparse
+from libra_toolbox.neutronics import A325_generator_diamond, vault
+from openmc_fusion_benchmarks import from_irdff as irdff
 import helpers
 
 
@@ -16,7 +17,7 @@ def baby_geometry(x_c: float, y_c: float, z_c: float):
         the sphere, cllif cell, and cells
     """
 
-    epoxy_thickness = 2.54  # 1 inch
+    epoxy_thickness = 1.905  # before was 2.54 cm = 1 inch
     alumina_compressed_thickness = 2.54  # 1 inch
     base_thickness = 0.786
     alumina_thickness = 0.635
@@ -186,6 +187,77 @@ def baby_geometry(x_c: float, y_c: float, z_c: float):
         )
         lead_blocks.append(lead_block_region)
 
+    ######## Diamond detectors #################
+    dt_thickness = 0.05  # 0.5 mm
+    dt_width = 0.8  # 8 mm
+    dt_height = 0.4  # 4 mm
+    z_dt_distance = (
+        source_z - 9.6
+    )  # diamond detector was about 9.6 +/- 0.2 cm below the point source
+
+    diamond_detect = openmc.model.RectangularParallelepiped(
+        x_c - dt_width / 2,
+        x_c + dt_width / 2,
+        y_c - dt_height / 2,
+        y_c + dt_height / 2,
+        z_dt_distance - dt_thickness,
+        z_dt_distance,
+    )
+
+    ######## Neutron Detectors: Activation Foils #################
+    act_foils_radius = 1.8
+    act_foils_thickness = 0.1
+
+    act_foils_zr = openmc.model.RightCircularCylinder(
+        (x_c, y_c, source_z + source_external_r),
+        act_foils_thickness,
+        act_foils_radius,
+        axis="z",
+    )
+
+    act_foils_nb = openmc.model.RightCircularCylinder(
+        (x_c, y_c, source_z - source_external_r - act_foils_thickness),
+        act_foils_thickness,
+        act_foils_radius,
+        axis="z",
+    )
+
+    ######## other experiment #################
+    # The following section defines a new experiment carried out inside the Nuclear Vault.
+    # The goal is to evaluate its influence on our analyses and ensure accurate assessments.
+    # coordinates of the center of the other experimentin the Vault
+    x_c_ns = 500.5
+    y_c_ns = 225.0
+    z_c_ns = 138.0
+    exp_h = 41.5
+    lead_r = source_external_r + 5.1
+    hdpe_r = source_external_r + 15.0
+    coating_h = 11.5
+    x_c_coating = 524.5
+
+    exp_ext_cyl = openmc.model.RightCircularCylinder(
+        (x_c_ns, y_c_ns, z_c_ns), exp_h, source_external_r, axis="x"
+    )
+    exp_int_cyl = openmc.model.RightCircularCylinder(
+        (x_c_ns + 0.25, y_c_ns, z_c_ns), exp_h - 0.50, source_internal_r, axis="x"
+    )
+    lead_cyl = openmc.model.RightCircularCylinder(
+        (x_c_coating, y_c_ns, z_c_ns), coating_h, lead_r, axis="x"
+    )
+    hdpe_cyl = openmc.model.RightCircularCylinder(
+        (x_c_coating, y_c_ns, z_c_ns), coating_h, hdpe_r, axis="x"
+    )
+
+    # new domain
+    experimental_lab = openmc.model.RectangularParallelepiped(
+        100.0,
+        800.0,
+        10.0,
+        400.0,
+        20.0,
+        200.0,
+    )
+
     # regions
     source_wall_region = -ext_cyl_source & +source_region
     source_region = -source_region
@@ -209,6 +281,9 @@ def baby_geometry(x_c: float, y_c: float, z_c: float):
     lead_block_2_region = -lead_blocks[1]
     lead_block_3_region = -lead_blocks[2]
     lead_block_4_region = -lead_blocks[3]
+    diamond_detect_region = -diamond_detect
+    act_foils_zr_region = -act_foils_zr
+    act_foils_nb_region = -act_foils_nb
     he_region = (
         +z_plane_5
         & -z_plane_12
@@ -228,6 +303,9 @@ def baby_geometry(x_c: float, y_c: float, z_c: float):
         & ~lead_block_2_region
         & ~lead_block_3_region
         & ~lead_block_4_region
+        & ~diamond_detect_region
+        & ~act_foils_zr_region
+        & ~act_foils_nb_region
     )
     sphere_region = (
         -sphere
@@ -248,6 +326,41 @@ def baby_geometry(x_c: float, y_c: float, z_c: float):
         & ~lead_block_2_region
         & ~lead_block_3_region
         & ~lead_block_4_region
+        & ~diamond_detect_region
+        & ~act_foils_zr_region
+        & ~act_foils_nb_region
+    )
+    exp_wall_region = -exp_ext_cyl & +exp_int_cyl
+    exp_source_region = -exp_int_cyl
+    lead_region = -lead_cyl & +exp_ext_cyl
+    hdpe_region = -hdpe_cyl & +lead_cyl
+    exp_region = (
+        -experimental_lab
+        & ~sphere_region
+        & ~exp_wall_region
+        & ~exp_source_region
+        & ~lead_region
+        & ~hdpe_region
+        & ~he_region
+        & ~source_wall_region
+        & ~source_region
+        & ~epoxy_region
+        & ~alumina_compressed_region
+        & ~alumina_region
+        & ~cllif_region
+        & ~gap_region
+        & ~firebrick_region
+        & ~vessel_region
+        & ~cap_region
+        & ~heater_region
+        & ~table_under_source_region
+        & ~lead_block_1_region
+        & ~lead_block_2_region
+        & ~lead_block_3_region
+        & ~lead_block_4_region
+        & ~diamond_detect_region
+        & ~act_foils_zr_region
+        & ~act_foils_nb_region
     )
 
     # cells
@@ -287,6 +400,22 @@ def baby_geometry(x_c: float, y_c: float, z_c: float):
     lead_block_3_cell.fill = lead
     lead_block_4_cell = openmc.Cell(region=lead_block_4_region)
     lead_block_4_cell.fill = lead
+    diamond_detect_cell = openmc.Cell(region=diamond_detect_region)
+    diamond_detect_cell.fill = diamond
+    act_foils_zr_cell = openmc.Cell(region=act_foils_zr_region)
+    act_foils_zr_cell.fill = Zr
+    act_foils_nb_cell = openmc.Cell(region=act_foils_nb_region)
+    act_foils_nb_cell.fill = Nb
+    exp_wall_cell = openmc.Cell(region=exp_wall_region)
+    exp_wall_cell.fill = SS304
+    exp_source_cell = openmc.Cell(region=exp_source_region)
+    exp_source_cell.fill = None
+    lead_cell = openmc.Cell(region=lead_region)
+    lead_cell.fill = lead
+    hdpe_cell = openmc.Cell(region=hdpe_region)
+    hdpe_cell.fill = HDPE
+    exp_cell = openmc.Cell(region=exp_region)
+    exp_cell.fill = air
 
     cells = [
         source_wall_cell_1,
@@ -307,9 +436,24 @@ def baby_geometry(x_c: float, y_c: float, z_c: float):
         lead_block_2_cell,
         lead_block_3_cell,
         lead_block_4_cell,
+        diamond_detect_cell,
+        act_foils_zr_cell,
+        act_foils_nb_cell,
+        exp_wall_cell,
+        exp_source_cell,
+        lead_cell,
+        hdpe_cell,
+        exp_cell,
     ]
 
-    return sphere, cllif_cell, cells
+    return (
+        experimental_lab,
+        cllif_cell,
+        diamond_detect_cell,
+        act_foils_zr_cell,
+        act_foils_nb_cell,
+        cells,
+    )
 
 
 def baby_model():
@@ -330,13 +474,29 @@ def baby_model():
         air,
         epoxy,
         he,
+        HDPE,
+        diamond,
+        Zr,
+        Nb,
     ]
 
     # BABY coordinates
     x_c = 587  # cm
     y_c = 60  # cm
     z_c = 100  # cm
-    sphere, cllif_cell, cells = baby_geometry(x_c, y_c, z_c)
+    (
+        experimental_lab,
+        cllif_cell,
+        diamond_detect_cell,
+        act_foils_zr_cell,
+        act_foils_nb_cell,
+        cells,
+    ) = baby_geometry(x_c, y_c, z_c)
+
+    # The coordinates of the source in the Nuclear Vault used in a separate experiment
+    x_c_ns = 500.5
+    y_c_ns = 225.0
+    z_c_ns = 138.0
 
     ############################################################################
     # Define Settings
@@ -344,24 +504,176 @@ def baby_model():
     settings = openmc.Settings()
 
     src = A325_generator_diamond((x_c, y_c, z_c - 5.635), (1, 0, 0))
+    # The underlying source is part of a separate experiment carried out inside the Nuclear Vault
+    # src = A325_generator_diamond((x_c_ns - 20.5, y_c_ns, z_c_ns), (1, 0, 0))
     settings.source = src
     settings.batches = 100
     settings.inactive = 0
     settings.run_mode = "fixed source"
     settings.particles = int(1e4)
     settings.output = {"tallies": False}
-    settings.photon_transport = False
+    settings.photon_transport = True
 
     ############################################################################
-    overall_exclusion_region = -sphere
+    overall_exclusion_region = -experimental_lab
 
     ############################################################################
     # Specify Tallies
     tallies = openmc.Tallies()
 
+    # sets up filters for the tallies
+    # particle filters
+    neutron_filter = openmc.ParticleFilter(["neutron"])
+    photon_filter = openmc.ParticleFilter(["photon"])
+    energy_bins = openmc.mgxs.GROUP_STRUCTURES["VITAMIN-J-175"]
+    energy_filter = openmc.EnergyFilter(energy_bins)
+    nuclides = ["zr90", "nb93"]
+
+    # cell filters
+    # z_plane_zr 99.465
+    # z_plane_nb 89.265
+    # z_plane_diamond = 84.715
+
+    cell_filter_list = [
+        openmc.CellFilter(act_foils_zr_cell),
+        openmc.CellFilter(act_foils_nb_cell),
+    ]
+
+    # surface filters
+    act_foils_surface_zr_filter = openmc.SurfaceFilter(64)
+    act_foils_surface_nb_filter = openmc.SurfaceFilter(66)
+    diamond_surface_filter = openmc.SurfaceFilter(60)
+
+    # dosimetry tallies from IRDFF-II nuclear data library
+    zr90_n2n_acef = "irdff2_xs/dos-irdff2-4025.acef"
+    nb93_n2n_acef = "irdff2_xs/dos-irdff2-4125.acef"
+
+    irdff_xs = [zr90_n2n_acef, nb93_n2n_acef]
+    reactions = [16, 11016]
+
+    # define tallies according to simulation type
+
+    for n, r, x, c in zip(nuclides, reactions, irdff_xs, cell_filter_list):
+        tally = openmc.Tally(name=f"rr_{n}")
+        irdff_xs = irdff.cross_section(x)
+        multiplier = openmc.EnergyFunctionFilter.from_tabulated1d(irdff_xs[r])
+        tally.filters = [c, neutron_filter, multiplier]
+        tally.scores = ["flux"]
+        tallies.append(tally)
+
+    act_foils_zr_flux_tally = openmc.Tally(name="act_foils_zr_flux")
+    act_foils_zr_flux_tally.scores = ["flux"]
+    act_foils_zr_flux_tally.filters = [
+        openmc.CellFromFilter(act_foils_zr_cell),
+        neutron_filter,
+        energy_filter,
+    ]
+    tallies.append(act_foils_zr_flux_tally)
+
+    act_foils_zr_current_tally = openmc.Tally(name="act_foils_zr_current")
+    act_foils_zr_current_tally.scores = ["current"]
+    act_foils_zr_current_tally.filters = [
+        openmc.CellFromFilter(act_foils_zr_cell),
+        neutron_filter,
+        energy_filter,
+        act_foils_surface_zr_filter,
+    ]
+    tallies.append(act_foils_zr_current_tally)
+
+    act_foils_nb_flux_tally = openmc.Tally(name="act_foils_nb_flux")
+    act_foils_nb_flux_tally.scores = ["flux"]
+    act_foils_nb_flux_tally.filters = [
+        openmc.CellFromFilter(act_foils_nb_cell),
+        neutron_filter,
+        energy_filter,
+    ]
+    tallies.append(act_foils_nb_flux_tally)
+
+    act_foils_nb_current_tally = openmc.Tally(name="act_foils_nb_current")
+    act_foils_nb_current_tally.scores = ["current"]
+    act_foils_nb_current_tally.filters = [
+        openmc.CellFromFilter(act_foils_nb_cell),
+        neutron_filter,
+        energy_filter,
+        act_foils_surface_nb_filter,
+    ]
+    tallies.append(act_foils_nb_current_tally)
+
+    diamond_flux_tally = openmc.Tally(name="diamond_flux")
+    diamond_flux_tally.scores = ["flux"]
+    diamond_flux_tally.filters = [
+        openmc.CellFilter(diamond_detect_cell),
+        neutron_filter,
+        energy_filter,
+    ]
+    tallies.append(diamond_flux_tally)
+
+    diamond_current_tally = openmc.Tally(name="diamond_current")
+    diamond_current_tally.scores = ["current"]
+    diamond_current_tally.filters = [
+        openmc.CellFromFilter(diamond_detect_cell),
+        neutron_filter,
+        energy_filter,
+        diamond_surface_filter,
+    ]
+    tallies.append(diamond_current_tally)
+
+    diamond_elastic_tally = openmc.Tally(name="elastic_scattering")
+    diamond_elastic_tally.scores = ["elastic"]
+    diamond_elastic_tally.filters = [
+        openmc.CellFilter(diamond_detect_cell),
+        neutron_filter,
+        energy_filter,
+    ]
+    tallies.append(diamond_elastic_tally)
+
+    # Istantaneous neutron dose tallies
+    energy_bins_n, dose_coeffs_n = openmc.data.dose_coefficients(
+        particle="neutron", geometry="ISO"  # Refer to ICRP-116 (Section 3.2)
+    )
+    energy_function_filter_n = openmc.EnergyFunctionFilter(energy_bins_n, dose_coeffs_n)
+    energy_function_filter_n.interpolation = (
+        "cubic"  # cubic interpolation is recommended by ICRP
+    )
+
+    mesh = openmc.RegularMesh()
+    mesh.dimension = (130, 90, 60)
+    mesh.lower_left = (-100.00, -200.00, -100.00)
+    mesh.upper_right = (1200.00, 700.00, 500.00)
+
+    mesh_filter = openmc.MeshFilter(mesh)
+
+    neutron_dose_tally = openmc.Tally(name="neutron_dose_on_mesh")
+    neutron_dose_tally.filters = [
+        mesh_filter,
+        neutron_filter,
+        energy_function_filter_n,
+    ]
+    neutron_dose_tally.scores = ["flux"]
+    tallies.append(neutron_dose_tally)
+
+    # Istantaneous photon dose tallies
+    energy_bins_p, dose_coeffs_p = openmc.data.dose_coefficients(
+        particle="photon", geometry="ISO"  # Refer to ICRP-116 (Section 3.2)
+    )
+    energy_function_filter_p = openmc.EnergyFunctionFilter(energy_bins_p, dose_coeffs_p)
+    energy_function_filter_p.interpolation = (
+        "cubic"  # cubic interpolation is recommended by ICRP
+    )
+
+    photon_dose_tally = openmc.Tally(name="photon_dose_on_mesh")
+    photon_dose_tally.filters = [
+        mesh_filter,
+        photon_filter,
+        energy_function_filter_p,
+    ]
+    photon_dose_tally.scores = ["flux"]
+    tallies.append(photon_dose_tally)
+
     tbr_tally = openmc.Tally(name="TBR")
     tbr_tally.scores = ["(n,Xt)"]
     tbr_tally.filters = [openmc.CellFilter(cllif_cell)]
+    tbr_tally.nuclides = ["Li6", "Li7"]
     tallies.append(tbr_tally)
 
     model = vault.build_vault_model(
@@ -486,6 +798,32 @@ lead.add_nuclide("Pb206", 0.241, "ao")
 lead.add_nuclide("Pb207", 0.221, "ao")
 lead.add_nuclide("Pb208", 0.524, "ao")
 
+# High Density Polyethylene
+# Reference:  PNNL Report 15870 (Rev. 1)
+HDPE = openmc.Material(name="HDPE")
+HDPE.set_density("g/cm3", 0.95)
+HDPE.add_element("H", 0.143724, "wo")
+HDPE.add_element("C", 0.856276, "wo")
+
+# Diamond detector
+diamond = openmc.Material(name="Diamond")
+diamond.add_element("C", 1.0, "ao")
+diamond.set_density("g/cm3", 3.51)
+
+# Activation Foils (Zr, Nb)
+# Zr90(n,2n)Zr89
+Zr = openmc.Material(name="Zirconium")
+Zr.set_density("g/cm3", 6.5)
+Zr.add_nuclide("Zr90", 0.5145, "ao")
+Zr.add_nuclide("Zr91", 0.1122, "ao")
+Zr.add_nuclide("Zr92", 0.1715, "ao")
+Zr.add_nuclide("Zr94", 0.1738, "ao")
+Zr.add_nuclide("Zr96", 0.028, "ao")
+
+# Nb93(n,2n)Nb92m
+Nb = openmc.Material(name="Niobium Nb")
+Nb.set_density("g/cm3", 8.4)
+Nb.add_nuclide("Nb93", 1.0, "ao")
 
 if __name__ == "__main__":
     model = baby_model()

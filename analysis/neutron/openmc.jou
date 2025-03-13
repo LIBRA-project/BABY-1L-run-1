@@ -1,0 +1,4928 @@
+set echo off
+set info off
+set warning off
+graphics pause
+set journal off
+set default autosize off
+#CELL 1
+sphere radius 0.0001
+#{ id1 = Id("body") }
+body { id1 } move 1900.0 400.0 100.0
+body { id1 } name "Cell_1"
+group "mat:water" add body { id1 } 
+#CELL 2
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2 = Id("body") }
+section body { id2 } with xplane offset 1143.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id3 = Id("body") }
+section body { id3 } with xplane offset -81.28 
+#{ id4 = Id("body") }
+intersect body { id2 } { id3 }
+#{ id5 = Id("body") }
+#{id6 = ( id4 == id5 ) ? id3 : id5}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id7 = Id("body") }
+section body { id7 } with yplane offset 650.24 reverse
+#{ id8 = Id("body") }
+intersect body { id6 } { id7 }
+#{ id9 = Id("body") }
+#{id10 = ( id8 == id9 ) ? id7 : id9}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id11 = Id("body") }
+section body { id11 } with yplane offset -99.38 
+#{ id12 = Id("body") }
+intersect body { id10 } { id11 }
+#{ id13 = Id("body") }
+#{id14 = ( id12 == id13 ) ? id11 : id13}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id15 = Id("body") }
+section body { id15 } with zplane offset 424.18 reverse
+#{ id16 = Id("body") }
+intersect body { id14 } { id15 }
+#{ id17 = Id("body") }
+#{id18 = ( id16 == id17 ) ? id15 : id17}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id19 = Id("body") }
+section body { id19 } with zplane offset 0.0 
+#{ id20 = Id("body") }
+intersect body { id18 } { id19 }
+#{ id21 = Id("body") }
+#{id22 = ( id20 == id21 ) ? id19 : id21}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id23 = Id("body") }
+body { id23 } move 0.0 0.0 -5000.0
+Rotate body { id23 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id23 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id24 = Id("body") }
+intersect body { id23 } { id24 }
+#{ id25 = Id("body") }
+intersect body { id22 } { id24 }
+#{ id26 = Id("body") }
+#{id27 = ( id25 == id26 ) ? id24 : id26}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id28 = Id("body") }
+section body { id28 } with xplane offset 1150.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id29 = Id("body") }
+section body { id29 } with xplane offset 0.0 
+#{ id30 = Id("body") }
+intersect body { id28 } { id29 }
+#{ id31 = Id("body") }
+#{id32 = ( id30 == id31 ) ? id29 : id31}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id33 = Id("body") }
+section body { id33 } with yplane offset 650.24 reverse
+#{ id34 = Id("body") }
+intersect body { id32 } { id33 }
+#{ id35 = Id("body") }
+#{id36 = ( id34 == id35 ) ? id33 : id35}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id37 = Id("body") }
+section body { id37 } with yplane offset 568.96 
+#{ id38 = Id("body") }
+intersect body { id36 } { id37 }
+#{ id39 = Id("body") }
+#{id40 = ( id38 == id39 ) ? id37 : id39}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id41 = Id("body") }
+section body { id41 } with zplane offset 363.22 reverse
+#{ id42 = Id("body") }
+intersect body { id40 } { id41 }
+#{ id43 = Id("body") }
+#{id44 = ( id42 == id43 ) ? id41 : id43}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id45 = Id("body") }
+section body { id45 } with zplane offset 0.0 
+#{ id46 = Id("body") }
+intersect body { id44 } { id45 }
+#{ id47 = Id("body") }
+#{id48 = ( id46 == id47 ) ? id45 : id47}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id49 = Id("body") }
+body { id49 } move 0.0 0.0 -5000.0
+Rotate body { id49 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id49 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id50 = Id("body") }
+intersect body { id49 } { id50 }
+#{ id51 = Id("body") }
+intersect body { id48 } { id50 }
+#{ id52 = Id("body") }
+#{id53 = ( id51 == id52 ) ? id50 : id52}
+cylinder height 5000.0 radius 15.24
+#{ id54 = Id("body") }
+rotate body { id54 } about x angle 90
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id55 = Id("body") }
+subtract body { id54 } from body { id55 }
+body { id55 } move 753.11 0 111.76
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id56 = Id("body") }
+section body { id56 } with yplane offset 538.48 reverse
+unite body { id55 } { id56 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id57 = Id("body") }
+section body { id57 } with yplane offset 650.24 
+unite body { id55 } { id57 }
+#{ id58 = Id("body") }
+intersect body { id53 } { id55 }
+#{ id59 = Id("body") }
+#{id60 = ( id58 == id59 ) ? id55 : id59}
+cylinder height 5000.0 radius 5.0
+#{ id61 = Id("body") }
+rotate body { id61 } about x angle 90
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id62 = Id("body") }
+subtract body { id61 } from body { id62 }
+body { id62 } move 317.1 0 50.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id63 = Id("body") }
+section body { id63 } with yplane offset 568.96 reverse
+unite body { id62 } { id63 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id64 = Id("body") }
+section body { id64 } with yplane offset 650.24 
+unite body { id62 } { id64 }
+#{ id65 = Id("body") }
+intersect body { id60 } { id62 }
+#{ id66 = Id("body") }
+#{id67 = ( id65 == id66 ) ? id62 : id66}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id68 = Id("body") }
+subtract body { id67 } from body { id68 }
+#{ id69 = Id("body") }
+#{ id70 = Id("body") }
+intersect body { id27 } { id69 }
+#{ id71 = Id("body") }
+#{id72 = ( id70 == id71 ) ? id69 : id71}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id73 = Id("body") }
+section body { id73 } with xplane offset 1014.3 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id74 = Id("body") }
+section body { id74 } with xplane offset 594.3 
+#{ id75 = Id("body") }
+intersect body { id73 } { id74 }
+#{ id76 = Id("body") }
+#{id77 = ( id75 == id76 ) ? id74 : id76}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id78 = Id("body") }
+section body { id78 } with yplane offset 568.95 reverse
+#{ id79 = Id("body") }
+intersect body { id77 } { id78 }
+#{ id80 = Id("body") }
+#{id81 = ( id79 == id80 ) ? id78 : id80}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id82 = Id("body") }
+section body { id82 } with yplane offset 538.47 
+#{ id83 = Id("body") }
+intersect body { id81 } { id82 }
+#{ id84 = Id("body") }
+#{id85 = ( id83 == id84 ) ? id82 : id84}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id86 = Id("body") }
+section body { id86 } with zplane offset 363.22 reverse
+#{ id87 = Id("body") }
+intersect body { id85 } { id86 }
+#{ id88 = Id("body") }
+#{id89 = ( id87 == id88 ) ? id86 : id88}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id90 = Id("body") }
+section body { id90 } with zplane offset 10.16 
+#{ id91 = Id("body") }
+intersect body { id89 } { id90 }
+#{ id92 = Id("body") }
+#{id93 = ( id91 == id92 ) ? id90 : id92}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id94 = Id("body") }
+body { id94 } move 0.0 0.0 -5000.0
+Rotate body { id94 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id94 } move 963.7538435371465 -47.13546646187924 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id95 = Id("body") }
+intersect body { id94 } { id95 }
+#{ id96 = Id("body") }
+intersect body { id93 } { id95 }
+#{ id97 = Id("body") }
+#{id98 = ( id96 == id97 ) ? id95 : id97}
+cylinder height 5000.0 radius 15.24
+#{ id99 = Id("body") }
+rotate body { id99 } about x angle 90
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id100 = Id("body") }
+subtract body { id99 } from body { id100 }
+body { id100 } move 753.11 0 111.76
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id101 = Id("body") }
+section body { id101 } with yplane offset 538.48 reverse
+unite body { id100 } { id101 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id102 = Id("body") }
+section body { id102 } with yplane offset 650.24 
+unite body { id100 } { id102 }
+#{ id103 = Id("body") }
+intersect body { id98 } { id100 }
+#{ id104 = Id("body") }
+#{id105 = ( id103 == id104 ) ? id100 : id104}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id106 = Id("body") }
+subtract body { id105 } from body { id106 }
+#{ id107 = Id("body") }
+#{ id108 = Id("body") }
+intersect body { id72 } { id107 }
+#{ id109 = Id("body") }
+#{id110 = ( id108 == id109 ) ? id107 : id109}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id111 = Id("body") }
+section body { id111 } with xplane offset 1150.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id112 = Id("body") }
+section body { id112 } with xplane offset 0.0 
+#{ id113 = Id("body") }
+intersect body { id111 } { id112 }
+#{ id114 = Id("body") }
+#{id115 = ( id113 == id114 ) ? id112 : id114}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id116 = Id("body") }
+section body { id116 } with yplane offset 0.0 reverse
+#{ id117 = Id("body") }
+intersect body { id115 } { id116 }
+#{ id118 = Id("body") }
+#{id119 = ( id117 == id118 ) ? id116 : id118}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id120 = Id("body") }
+section body { id120 } with yplane offset -99.38 
+#{ id121 = Id("body") }
+intersect body { id119 } { id120 }
+#{ id122 = Id("body") }
+#{id123 = ( id121 == id122 ) ? id120 : id122}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id124 = Id("body") }
+section body { id124 } with zplane offset 363.22 reverse
+#{ id125 = Id("body") }
+intersect body { id123 } { id124 }
+#{ id126 = Id("body") }
+#{id127 = ( id125 == id126 ) ? id124 : id126}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id128 = Id("body") }
+section body { id128 } with zplane offset 0.0 
+#{ id129 = Id("body") }
+intersect body { id127 } { id128 }
+#{ id130 = Id("body") }
+#{id131 = ( id129 == id130 ) ? id128 : id130}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id132 = Id("body") }
+body { id132 } move 0.0 0.0 -5000.0
+Rotate body { id132 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id132 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id133 = Id("body") }
+intersect body { id132 } { id133 }
+#{ id134 = Id("body") }
+intersect body { id131 } { id133 }
+#{ id135 = Id("body") }
+#{id136 = ( id134 == id135 ) ? id133 : id135}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id137 = Id("body") }
+subtract body { id136 } from body { id137 }
+#{ id138 = Id("body") }
+#{ id139 = Id("body") }
+intersect body { id110 } { id138 }
+#{ id140 = Id("body") }
+#{id141 = ( id139 == id140 ) ? id138 : id140}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id142 = Id("body") }
+section body { id142 } with xplane offset 0.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id143 = Id("body") }
+section body { id143 } with xplane offset -81.28 
+#{ id144 = Id("body") }
+intersect body { id142 } { id143 }
+#{ id145 = Id("body") }
+#{id146 = ( id144 == id145 ) ? id143 : id145}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id147 = Id("body") }
+section body { id147 } with yplane offset 650.24 reverse
+#{ id148 = Id("body") }
+intersect body { id146 } { id147 }
+#{ id149 = Id("body") }
+#{id150 = ( id148 == id149 ) ? id147 : id149}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id151 = Id("body") }
+section body { id151 } with yplane offset -99.38 
+#{ id152 = Id("body") }
+intersect body { id150 } { id151 }
+#{ id153 = Id("body") }
+#{id154 = ( id152 == id153 ) ? id151 : id153}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id155 = Id("body") }
+section body { id155 } with zplane offset 363.22 reverse
+#{ id156 = Id("body") }
+intersect body { id154 } { id155 }
+#{ id157 = Id("body") }
+#{id158 = ( id156 == id157 ) ? id155 : id157}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id159 = Id("body") }
+section body { id159 } with zplane offset 0.0 
+#{ id160 = Id("body") }
+intersect body { id158 } { id159 }
+#{ id161 = Id("body") }
+#{id162 = ( id160 == id161 ) ? id159 : id161}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id163 = Id("body") }
+section body { id163 } with xplane offset 45.1 
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id164 = Id("body") }
+section body { id164 } with xplane offset -104.9 reverse
+unite body { id163 } { id164 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id165 = Id("body") }
+section body { id165 } with yplane offset 499.42 
+unite body { id163 } { id165 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id166 = Id("body") }
+section body { id166 } with yplane offset 281.33 reverse
+unite body { id163 } { id166 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id167 = Id("body") }
+section body { id167 } with zplane offset 213.36 
+unite body { id163 } { id167 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id168 = Id("body") }
+section body { id168 } with zplane offset 10.16 reverse
+unite body { id163 } { id168 }
+#{ id169 = Id("body") }
+intersect body { id162 } { id163 }
+#{ id170 = Id("body") }
+#{id171 = ( id169 == id170 ) ? id163 : id170}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id172 = Id("body") }
+subtract body { id171 } from body { id172 }
+#{ id173 = Id("body") }
+#{ id174 = Id("body") }
+intersect body { id141 } { id173 }
+#{ id175 = Id("body") }
+#{id176 = ( id174 == id175 ) ? id173 : id175}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id177 = Id("body") }
+section body { id177 } with xplane offset 1095.1 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id178 = Id("body") }
+section body { id178 } with xplane offset 945.1 
+#{ id179 = Id("body") }
+intersect body { id177 } { id178 }
+#{ id180 = Id("body") }
+#{id181 = ( id179 == id180 ) ? id178 : id180}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id182 = Id("body") }
+section body { id182 } with yplane offset 568.96 reverse
+#{ id183 = Id("body") }
+intersect body { id181 } { id182 }
+#{ id184 = Id("body") }
+#{id185 = ( id183 == id184 ) ? id182 : id184}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id186 = Id("body") }
+section body { id186 } with yplane offset 0.0 
+#{ id187 = Id("body") }
+intersect body { id185 } { id186 }
+#{ id188 = Id("body") }
+#{id189 = ( id187 == id188 ) ? id186 : id188}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id190 = Id("body") }
+section body { id190 } with zplane offset 363.22 reverse
+#{ id191 = Id("body") }
+intersect body { id189 } { id190 }
+#{ id192 = Id("body") }
+#{id193 = ( id191 == id192 ) ? id190 : id192}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id194 = Id("body") }
+section body { id194 } with zplane offset 0.0 
+#{ id195 = Id("body") }
+intersect body { id193 } { id194 }
+#{ id196 = Id("body") }
+#{id197 = ( id195 == id196 ) ? id194 : id196}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id198 = Id("body") }
+body { id198 } move 0.0 0.0 -5000.0
+Rotate body { id198 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id198 } move 963.7538435371465 -47.13546646187924 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id199 = Id("body") }
+subtract body { id198 } from body { id199 }
+#{ id200 = Id("body") }
+intersect body { id197 } { id199 }
+#{ id201 = Id("body") }
+#{id202 = ( id200 == id201 ) ? id199 : id201}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id203 = Id("body") }
+body { id203 } move 0.0 0.0 -5000.0
+Rotate body { id203 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id203 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id204 = Id("body") }
+intersect body { id203 } { id204 }
+#{ id205 = Id("body") }
+intersect body { id202 } { id204 }
+#{ id206 = Id("body") }
+#{id207 = ( id205 == id206 ) ? id204 : id206}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id208 = Id("body") }
+subtract body { id207 } from body { id208 }
+#{ id209 = Id("body") }
+#{ id210 = Id("body") }
+intersect body { id176 } { id209 }
+#{ id211 = Id("body") }
+#{id212 = ( id210 == id211 ) ? id209 : id211}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id213 = Id("body") }
+section body { id213 } with xplane offset 1148.72 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id214 = Id("body") }
+section body { id214 } with xplane offset -81.28 
+#{ id215 = Id("body") }
+intersect body { id213 } { id214 }
+#{ id216 = Id("body") }
+#{id217 = ( id215 == id216 ) ? id214 : id216}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id218 = Id("body") }
+section body { id218 } with yplane offset 650.24 reverse
+#{ id219 = Id("body") }
+intersect body { id217 } { id218 }
+#{ id220 = Id("body") }
+#{id221 = ( id219 == id220 ) ? id218 : id220}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id222 = Id("body") }
+section body { id222 } with yplane offset -99.38 
+#{ id223 = Id("body") }
+intersect body { id221 } { id222 }
+#{ id224 = Id("body") }
+#{id225 = ( id223 == id224 ) ? id222 : id224}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id226 = Id("body") }
+section body { id226 } with zplane offset 424.18 reverse
+#{ id227 = Id("body") }
+intersect body { id225 } { id226 }
+#{ id228 = Id("body") }
+#{id229 = ( id227 == id228 ) ? id226 : id228}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id230 = Id("body") }
+section body { id230 } with zplane offset 363.22 
+#{ id231 = Id("body") }
+intersect body { id229 } { id230 }
+#{ id232 = Id("body") }
+#{id233 = ( id231 == id232 ) ? id230 : id232}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id234 = Id("body") }
+body { id234 } move 0.0 0.0 -5000.0
+Rotate body { id234 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id234 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id235 = Id("body") }
+intersect body { id234 } { id235 }
+#{ id236 = Id("body") }
+intersect body { id233 } { id235 }
+#{ id237 = Id("body") }
+#{id238 = ( id236 == id237 ) ? id235 : id237}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id239 = Id("body") }
+subtract body { id238 } from body { id239 }
+#{ id240 = Id("body") }
+#{ id241 = Id("body") }
+intersect body { id212 } { id240 }
+#{ id242 = Id("body") }
+#{id243 = ( id241 == id242 ) ? id240 : id242}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id244 = Id("body") }
+section body { id244 } with xplane offset 1064.77 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id245 = Id("body") }
+section body { id245 } with xplane offset 64.77 
+#{ id246 = Id("body") }
+intersect body { id244 } { id245 }
+#{ id247 = Id("body") }
+#{id248 = ( id246 == id247 ) ? id245 : id247}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id249 = Id("body") }
+section body { id249 } with yplane offset 568.96 reverse
+#{ id250 = Id("body") }
+intersect body { id248 } { id249 }
+#{ id251 = Id("body") }
+#{id252 = ( id250 == id251 ) ? id249 : id251}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id253 = Id("body") }
+section body { id253 } with yplane offset 0.0 
+#{ id254 = Id("body") }
+intersect body { id252 } { id253 }
+#{ id255 = Id("body") }
+#{id256 = ( id254 == id255 ) ? id253 : id255}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id257 = Id("body") }
+section body { id257 } with zplane offset 10.16 reverse
+#{ id258 = Id("body") }
+intersect body { id256 } { id257 }
+#{ id259 = Id("body") }
+#{id260 = ( id258 == id259 ) ? id257 : id259}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id261 = Id("body") }
+section body { id261 } with zplane offset 0.0 
+#{ id262 = Id("body") }
+intersect body { id260 } { id261 }
+#{ id263 = Id("body") }
+#{id264 = ( id262 == id263 ) ? id261 : id263}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id265 = Id("body") }
+body { id265 } move 0.0 0.0 -5000.0
+Rotate body { id265 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id265 } move 963.7538435371465 -47.13546646187924 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id266 = Id("body") }
+intersect body { id265 } { id266 }
+#{ id267 = Id("body") }
+intersect body { id264 } { id266 }
+#{ id268 = Id("body") }
+#{id269 = ( id267 == id268 ) ? id266 : id268}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id270 = Id("body") }
+subtract body { id269 } from body { id270 }
+#{ id271 = Id("body") }
+#{ id272 = Id("body") }
+intersect body { id243 } { id271 }
+#{ id273 = Id("body") }
+#{id274 = ( id272 == id273 ) ? id271 : id273}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id275 = Id("body") }
+section body { id275 } with xplane offset 61.47 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id276 = Id("body") }
+section body { id276 } with xplane offset 0.51 
+#{ id277 = Id("body") }
+intersect body { id275 } { id276 }
+#{ id278 = Id("body") }
+#{id279 = ( id277 == id278 ) ? id276 : id278}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id280 = Id("body") }
+section body { id280 } with yplane offset 512.46 reverse
+#{ id281 = Id("body") }
+intersect body { id279 } { id280 }
+#{ id282 = Id("body") }
+#{id283 = ( id281 == id282 ) ? id280 : id282}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id284 = Id("body") }
+section body { id284 } with yplane offset 268.62 
+#{ id285 = Id("body") }
+intersect body { id283 } { id284 }
+#{ id286 = Id("body") }
+#{id287 = ( id285 == id286 ) ? id284 : id286}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id288 = Id("body") }
+section body { id288 } with zplane offset 223.52 reverse
+#{ id289 = Id("body") }
+intersect body { id287 } { id288 }
+#{ id290 = Id("body") }
+#{id291 = ( id289 == id290 ) ? id288 : id290}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id292 = Id("body") }
+section body { id292 } with zplane offset 0.0 
+#{ id293 = Id("body") }
+intersect body { id291 } { id292 }
+#{ id294 = Id("body") }
+#{id295 = ( id293 == id294 ) ? id292 : id294}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id296 = Id("body") }
+body { id296 } move 0.0 0.0 -5000.0
+Rotate body { id296 } about 0 0 0 direction -0.8660265528314685 0.49999800978688297 0.0 Angle 90.0
+body { id296 } move 223.19019250519648 386.57880483055055 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id297 = Id("body") }
+intersect body { id296 } { id297 }
+#{ id298 = Id("body") }
+intersect body { id295 } { id297 }
+#{ id299 = Id("body") }
+#{id300 = ( id298 == id299 ) ? id297 : id299}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id301 = Id("body") }
+body { id301 } move 0.0 0.0 -5000.0
+Rotate body { id301 } about 0 0 0 direction 0.8660265528314685 0.49999800978688297 -0.0 Angle 90.0
+body { id301 } move -113.7260639381776 196.98036630475988 -0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id302 = Id("body") }
+intersect body { id301 } { id302 }
+#{ id303 = Id("body") }
+intersect body { id300 } { id302 }
+#{ id304 = Id("body") }
+#{id305 = ( id303 == id304 ) ? id302 : id304}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id306 = Id("body") }
+subtract body { id305 } from body { id306 }
+#{ id307 = Id("body") }
+#{ id308 = Id("body") }
+intersect body { id274 } { id307 }
+#{ id309 = Id("body") }
+#{id310 = ( id308 == id309 ) ? id307 : id309}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id311 = Id("body") }
+section body { id311 } with xplane offset 0.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id312 = Id("body") }
+section body { id312 } with xplane offset -38.1 
+#{ id313 = Id("body") }
+intersect body { id311 } { id312 }
+#{ id314 = Id("body") }
+#{id315 = ( id313 == id314 ) ? id312 : id314}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id316 = Id("body") }
+section body { id316 } with yplane offset 499.42 reverse
+#{ id317 = Id("body") }
+intersect body { id315 } { id316 }
+#{ id318 = Id("body") }
+#{id319 = ( id317 == id318 ) ? id316 : id318}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id320 = Id("body") }
+section body { id320 } with yplane offset 466.4 
+#{ id321 = Id("body") }
+intersect body { id319 } { id320 }
+#{ id322 = Id("body") }
+#{id323 = ( id321 == id322 ) ? id320 : id322}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id324 = Id("body") }
+section body { id324 } with zplane offset 213.36 reverse
+#{ id325 = Id("body") }
+intersect body { id323 } { id324 }
+#{ id326 = Id("body") }
+#{id327 = ( id325 == id326 ) ? id324 : id326}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id328 = Id("body") }
+section body { id328 } with zplane offset 10.16 
+#{ id329 = Id("body") }
+intersect body { id327 } { id328 }
+#{ id330 = Id("body") }
+#{id331 = ( id329 == id330 ) ? id328 : id330}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id332 = Id("body") }
+subtract body { id331 } from body { id332 }
+#{ id333 = Id("body") }
+#{ id334 = Id("body") }
+intersect body { id310 } { id333 }
+#{ id335 = Id("body") }
+#{id336 = ( id334 == id335 ) ? id333 : id335}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id337 = Id("body") }
+section body { id337 } with xplane offset 0.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id338 = Id("body") }
+section body { id338 } with xplane offset -38.1 
+#{ id339 = Id("body") }
+intersect body { id337 } { id338 }
+#{ id340 = Id("body") }
+#{id341 = ( id339 == id340 ) ? id338 : id340}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id342 = Id("body") }
+section body { id342 } with yplane offset 314.35 reverse
+#{ id343 = Id("body") }
+intersect body { id341 } { id342 }
+#{ id344 = Id("body") }
+#{id345 = ( id343 == id344 ) ? id342 : id344}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id346 = Id("body") }
+section body { id346 } with yplane offset 281.33 
+#{ id347 = Id("body") }
+intersect body { id345 } { id346 }
+#{ id348 = Id("body") }
+#{id349 = ( id347 == id348 ) ? id346 : id348}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id350 = Id("body") }
+section body { id350 } with zplane offset 213.36 reverse
+#{ id351 = Id("body") }
+intersect body { id349 } { id350 }
+#{ id352 = Id("body") }
+#{id353 = ( id351 == id352 ) ? id350 : id352}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id354 = Id("body") }
+section body { id354 } with zplane offset 10.16 
+#{ id355 = Id("body") }
+intersect body { id353 } { id354 }
+#{ id356 = Id("body") }
+#{id357 = ( id355 == id356 ) ? id354 : id356}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id358 = Id("body") }
+subtract body { id357 } from body { id358 }
+#{ id359 = Id("body") }
+#{ id360 = Id("body") }
+intersect body { id336 } { id359 }
+#{ id361 = Id("body") }
+#{id362 = ( id360 == id361 ) ? id359 : id361}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id363 = Id("body") }
+section body { id363 } with xplane offset 42.43 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id364 = Id("body") }
+section body { id364 } with xplane offset 31.0 
+#{ id365 = Id("body") }
+intersect body { id363 } { id364 }
+#{ id366 = Id("body") }
+#{id367 = ( id365 == id366 ) ? id364 : id366}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id368 = Id("body") }
+section body { id368 } with yplane offset 529.59 reverse
+#{ id369 = Id("body") }
+intersect body { id367 } { id368 }
+#{ id370 = Id("body") }
+#{id371 = ( id369 == id370 ) ? id368 : id370}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id372 = Id("body") }
+section body { id372 } with yplane offset 39.37 
+#{ id373 = Id("body") }
+intersect body { id371 } { id372 }
+#{ id374 = Id("body") }
+#{id375 = ( id373 == id374 ) ? id372 : id374}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id376 = Id("body") }
+section body { id376 } with zplane offset 279.4 reverse
+#{ id377 = Id("body") }
+intersect body { id375 } { id376 }
+#{ id378 = Id("body") }
+#{id379 = ( id377 == id378 ) ? id376 : id378}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id380 = Id("body") }
+section body { id380 } with zplane offset 276.86 
+#{ id381 = Id("body") }
+intersect body { id379 } { id380 }
+#{ id382 = Id("body") }
+#{id383 = ( id381 == id382 ) ? id380 : id382}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id384 = Id("body") }
+section body { id384 } with xplane offset 42.43 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id385 = Id("body") }
+section body { id385 } with xplane offset 31.0 
+#{ id386 = Id("body") }
+intersect body { id384 } { id385 }
+#{ id387 = Id("body") }
+#{id388 = ( id386 == id387 ) ? id385 : id387}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id389 = Id("body") }
+section body { id389 } with yplane offset 529.59 reverse
+#{ id390 = Id("body") }
+intersect body { id388 } { id389 }
+#{ id391 = Id("body") }
+#{id392 = ( id390 == id391 ) ? id389 : id391}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id393 = Id("body") }
+section body { id393 } with yplane offset 39.37 
+#{ id394 = Id("body") }
+intersect body { id392 } { id393 }
+#{ id395 = Id("body") }
+#{id396 = ( id394 == id395 ) ? id393 : id395}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id397 = Id("body") }
+section body { id397 } with zplane offset 299.72 reverse
+#{ id398 = Id("body") }
+intersect body { id396 } { id397 }
+#{ id399 = Id("body") }
+#{id400 = ( id398 == id399 ) ? id397 : id399}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id401 = Id("body") }
+section body { id401 } with zplane offset 297.18 
+#{ id402 = Id("body") }
+intersect body { id400 } { id401 }
+#{ id403 = Id("body") }
+#{id404 = ( id402 == id403 ) ? id401 : id403}
+unite body { id383 } { id404 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id405 = Id("body") }
+section body { id405 } with xplane offset 37.99 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id406 = Id("body") }
+section body { id406 } with xplane offset 35.45 
+#{ id407 = Id("body") }
+intersect body { id405 } { id406 }
+#{ id408 = Id("body") }
+#{id409 = ( id407 == id408 ) ? id406 : id408}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id410 = Id("body") }
+section body { id410 } with yplane offset 529.59 reverse
+#{ id411 = Id("body") }
+intersect body { id409 } { id410 }
+#{ id412 = Id("body") }
+#{id413 = ( id411 == id412 ) ? id410 : id412}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id414 = Id("body") }
+section body { id414 } with yplane offset 39.37 
+#{ id415 = Id("body") }
+intersect body { id413 } { id414 }
+#{ id416 = Id("body") }
+#{id417 = ( id415 == id416 ) ? id414 : id416}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id418 = Id("body") }
+section body { id418 } with zplane offset 299.72 reverse
+#{ id419 = Id("body") }
+intersect body { id417 } { id418 }
+#{ id420 = Id("body") }
+#{id421 = ( id419 == id420 ) ? id418 : id420}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id422 = Id("body") }
+section body { id422 } with zplane offset 276.86 
+#{ id423 = Id("body") }
+intersect body { id421 } { id422 }
+#{ id424 = Id("body") }
+#{id425 = ( id423 == id424 ) ? id422 : id424}
+unite body { id383 } { id425 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id426 = Id("body") }
+subtract body { id383 } from body { id426 }
+#{ id427 = Id("body") }
+#{ id428 = Id("body") }
+intersect body { id362 } { id427 }
+#{ id429 = Id("body") }
+#{id430 = ( id428 == id429 ) ? id427 : id429}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id431 = Id("body") }
+section body { id431 } with xplane offset 703.59 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id432 = Id("body") }
+section body { id432 } with xplane offset 636.75 
+#{ id433 = Id("body") }
+intersect body { id431 } { id432 }
+#{ id434 = Id("body") }
+#{id435 = ( id433 == id434 ) ? id432 : id434}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id436 = Id("body") }
+section body { id436 } with yplane offset 538.47 reverse
+#{ id437 = Id("body") }
+intersect body { id435 } { id436 }
+#{ id438 = Id("body") }
+#{id439 = ( id437 == id438 ) ? id436 : id438}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id440 = Id("body") }
+section body { id440 } with yplane offset 412.74 
+#{ id441 = Id("body") }
+intersect body { id439 } { id440 }
+#{ id442 = Id("body") }
+#{id443 = ( id441 == id442 ) ? id440 : id442}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id444 = Id("body") }
+section body { id444 } with zplane offset 152.4 reverse
+#{ id445 = Id("body") }
+intersect body { id443 } { id444 }
+#{ id446 = Id("body") }
+#{id447 = ( id445 == id446 ) ? id444 : id446}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id448 = Id("body") }
+section body { id448 } with zplane offset 10.16 
+#{ id449 = Id("body") }
+intersect body { id447 } { id448 }
+#{ id450 = Id("body") }
+#{id451 = ( id449 == id450 ) ? id448 : id450}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id452 = Id("body") }
+subtract body { id451 } from body { id452 }
+#{ id453 = Id("body") }
+#{ id454 = Id("body") }
+intersect body { id430 } { id453 }
+#{ id455 = Id("body") }
+#{id456 = ( id454 == id455 ) ? id453 : id455}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id457 = Id("body") }
+section body { id457 } with xplane offset 878.84 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id458 = Id("body") }
+section body { id458 } with xplane offset 830.58 
+#{ id459 = Id("body") }
+intersect body { id457 } { id458 }
+#{ id460 = Id("body") }
+#{id461 = ( id459 == id460 ) ? id458 : id460}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id462 = Id("body") }
+section body { id462 } with yplane offset 538.47 reverse
+#{ id463 = Id("body") }
+intersect body { id461 } { id462 }
+#{ id464 = Id("body") }
+#{id465 = ( id463 == id464 ) ? id462 : id464}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id466 = Id("body") }
+section body { id466 } with yplane offset 412.74 
+#{ id467 = Id("body") }
+intersect body { id465 } { id466 }
+#{ id468 = Id("body") }
+#{id469 = ( id467 == id468 ) ? id466 : id468}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id470 = Id("body") }
+section body { id470 } with zplane offset 135.89 reverse
+#{ id471 = Id("body") }
+intersect body { id469 } { id470 }
+#{ id472 = Id("body") }
+#{id473 = ( id471 == id472 ) ? id470 : id472}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id474 = Id("body") }
+section body { id474 } with zplane offset 10.16 
+#{ id475 = Id("body") }
+intersect body { id473 } { id474 }
+#{ id476 = Id("body") }
+#{id477 = ( id475 == id476 ) ? id474 : id476}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id478 = Id("body") }
+subtract body { id477 } from body { id478 }
+#{ id479 = Id("body") }
+#{ id480 = Id("body") }
+intersect body { id456 } { id479 }
+#{ id481 = Id("body") }
+#{id482 = ( id480 == id481 ) ? id479 : id481}
+cylinder height 5000.0 radius 32.0
+#{ id483 = Id("body") }
+body { id483 } move 753.11 497.84 0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id484 = Id("body") }
+section body { id484 } with zplane offset 99.7 
+#{ id485 = Id("body") }
+intersect body { id483 } { id484 }
+#{ id486 = Id("body") }
+#{id487 = ( id485 == id486 ) ? id484 : id486}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id488 = Id("body") }
+section body { id488 } with zplane offset 107.7 reverse
+#{ id489 = Id("body") }
+intersect body { id487 } { id488 }
+#{ id490 = Id("body") }
+#{id491 = ( id489 == id490 ) ? id488 : id490}
+cylinder height 5000.0 radius 20.95
+#{ id492 = Id("body") }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id493 = Id("body") }
+subtract body { id492 } from body { id493 }
+body { id493 } move 753.11 497.84 0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id494 = Id("body") }
+section body { id494 } with zplane offset 99.7 reverse
+unite body { id493 } { id494 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id495 = Id("body") }
+section body { id495 } with zplane offset 174.7 
+unite body { id493 } { id495 }
+#{ id496 = Id("body") }
+intersect body { id491 } { id493 }
+#{ id497 = Id("body") }
+#{id498 = ( id496 == id497 ) ? id493 : id497}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id499 = Id("body") }
+subtract body { id498 } from body { id499 }
+#{ id500 = Id("body") }
+#{ id501 = Id("body") }
+intersect body { id482 } { id500 }
+#{ id502 = Id("body") }
+#{id503 = ( id501 == id502 ) ? id500 : id502}
+cylinder height 5000.0 radius 32.0
+#{ id504 = Id("body") }
+body { id504 } move 753.11 497.84 0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id505 = Id("body") }
+section body { id505 } with zplane offset 115.83 
+#{ id506 = Id("body") }
+intersect body { id504 } { id505 }
+#{ id507 = Id("body") }
+#{id508 = ( id506 == id507 ) ? id505 : id507}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id509 = Id("body") }
+section body { id509 } with zplane offset 123.83 reverse
+#{ id510 = Id("body") }
+intersect body { id508 } { id509 }
+#{ id511 = Id("body") }
+#{id512 = ( id510 == id511 ) ? id509 : id511}
+cylinder height 5000.0 radius 20.95
+#{ id513 = Id("body") }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id514 = Id("body") }
+subtract body { id513 } from body { id514 }
+body { id514 } move 753.11 497.84 0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id515 = Id("body") }
+section body { id515 } with zplane offset 99.7 reverse
+unite body { id514 } { id515 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id516 = Id("body") }
+section body { id516 } with zplane offset 174.7 
+unite body { id514 } { id516 }
+#{ id517 = Id("body") }
+intersect body { id512 } { id514 }
+#{ id518 = Id("body") }
+#{id519 = ( id517 == id518 ) ? id514 : id518}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id520 = Id("body") }
+subtract body { id519 } from body { id520 }
+#{ id521 = Id("body") }
+#{ id522 = Id("body") }
+intersect body { id503 } { id521 }
+#{ id523 = Id("body") }
+#{id524 = ( id522 == id523 ) ? id521 : id523}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id525 = Id("body") }
+section body { id525 } with xplane offset 795.02 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id526 = Id("body") }
+section body { id526 } with xplane offset 711.2 
+#{ id527 = Id("body") }
+intersect body { id525 } { id526 }
+#{ id528 = Id("body") }
+#{id529 = ( id527 == id528 ) ? id526 : id528}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id530 = Id("body") }
+section body { id530 } with yplane offset 518.16 reverse
+#{ id531 = Id("body") }
+intersect body { id529 } { id530 }
+#{ id532 = Id("body") }
+#{id533 = ( id531 == id532 ) ? id530 : id532}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id534 = Id("body") }
+section body { id534 } with yplane offset 477.52 
+#{ id535 = Id("body") }
+intersect body { id533 } { id534 }
+#{ id536 = Id("body") }
+#{id537 = ( id535 == id536 ) ? id534 : id536}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id538 = Id("body") }
+section body { id538 } with zplane offset 133.99 reverse
+#{ id539 = Id("body") }
+intersect body { id537 } { id538 }
+#{ id540 = Id("body") }
+#{id541 = ( id539 == id540 ) ? id538 : id540}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id542 = Id("body") }
+section body { id542 } with zplane offset 89.54 
+#{ id543 = Id("body") }
+intersect body { id541 } { id542 }
+#{ id544 = Id("body") }
+#{id545 = ( id543 == id544 ) ? id542 : id544}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id546 = Id("body") }
+section body { id546 } with xplane offset 785.24 
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id547 = Id("body") }
+section body { id547 } with xplane offset 720.97 reverse
+unite body { id546 } { id547 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id548 = Id("body") }
+section body { id548 } with yplane offset 522.52 
+unite body { id546 } { id548 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id549 = Id("body") }
+section body { id549 } with yplane offset 472.52 reverse
+unite body { id546 } { id549 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id550 = Id("body") }
+section body { id550 } with zplane offset 123.83 
+unite body { id546 } { id550 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id551 = Id("body") }
+section body { id551 } with zplane offset 99.7 reverse
+unite body { id546 } { id551 }
+#{ id552 = Id("body") }
+intersect body { id545 } { id546 }
+#{ id553 = Id("body") }
+#{id554 = ( id552 == id553 ) ? id546 : id553}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id555 = Id("body") }
+section body { id555 } with xplane offset 795.02 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id556 = Id("body") }
+section body { id556 } with xplane offset 787.4 
+#{ id557 = Id("body") }
+intersect body { id555 } { id556 }
+#{ id558 = Id("body") }
+#{id559 = ( id557 == id558 ) ? id556 : id558}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id560 = Id("body") }
+section body { id560 } with yplane offset 485.14 reverse
+#{ id561 = Id("body") }
+intersect body { id559 } { id560 }
+#{ id562 = Id("body") }
+#{id563 = ( id561 == id562 ) ? id560 : id562}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id564 = Id("body") }
+section body { id564 } with yplane offset 477.52 
+#{ id565 = Id("body") }
+intersect body { id563 } { id564 }
+#{ id566 = Id("body") }
+#{id567 = ( id565 == id566 ) ? id564 : id566}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id568 = Id("body") }
+section body { id568 } with zplane offset 88.9 reverse
+#{ id569 = Id("body") }
+intersect body { id567 } { id568 }
+#{ id570 = Id("body") }
+#{id571 = ( id569 == id570 ) ? id568 : id570}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id572 = Id("body") }
+section body { id572 } with zplane offset 10.16 
+#{ id573 = Id("body") }
+intersect body { id571 } { id572 }
+#{ id574 = Id("body") }
+#{id575 = ( id573 == id574 ) ? id572 : id574}
+unite body { id554 } { id575 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id576 = Id("body") }
+section body { id576 } with xplane offset 795.02 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id577 = Id("body") }
+section body { id577 } with xplane offset 787.4 
+#{ id578 = Id("body") }
+intersect body { id576 } { id577 }
+#{ id579 = Id("body") }
+#{id580 = ( id578 == id579 ) ? id577 : id579}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id581 = Id("body") }
+section body { id581 } with yplane offset 518.16 reverse
+#{ id582 = Id("body") }
+intersect body { id580 } { id581 }
+#{ id583 = Id("body") }
+#{id584 = ( id582 == id583 ) ? id581 : id583}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id585 = Id("body") }
+section body { id585 } with yplane offset 510.54 
+#{ id586 = Id("body") }
+intersect body { id584 } { id585 }
+#{ id587 = Id("body") }
+#{id588 = ( id586 == id587 ) ? id585 : id587}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id589 = Id("body") }
+section body { id589 } with zplane offset 88.9 reverse
+#{ id590 = Id("body") }
+intersect body { id588 } { id589 }
+#{ id591 = Id("body") }
+#{id592 = ( id590 == id591 ) ? id589 : id591}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id593 = Id("body") }
+section body { id593 } with zplane offset 10.16 
+#{ id594 = Id("body") }
+intersect body { id592 } { id593 }
+#{ id595 = Id("body") }
+#{id596 = ( id594 == id595 ) ? id593 : id595}
+unite body { id554 } { id596 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id597 = Id("body") }
+section body { id597 } with xplane offset 718.82 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id598 = Id("body") }
+section body { id598 } with xplane offset 711.2 
+#{ id599 = Id("body") }
+intersect body { id597 } { id598 }
+#{ id600 = Id("body") }
+#{id601 = ( id599 == id600 ) ? id598 : id600}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id602 = Id("body") }
+section body { id602 } with yplane offset 485.14 reverse
+#{ id603 = Id("body") }
+intersect body { id601 } { id602 }
+#{ id604 = Id("body") }
+#{id605 = ( id603 == id604 ) ? id602 : id604}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id606 = Id("body") }
+section body { id606 } with yplane offset 477.52 
+#{ id607 = Id("body") }
+intersect body { id605 } { id606 }
+#{ id608 = Id("body") }
+#{id609 = ( id607 == id608 ) ? id606 : id608}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id610 = Id("body") }
+section body { id610 } with zplane offset 88.9 reverse
+#{ id611 = Id("body") }
+intersect body { id609 } { id610 }
+#{ id612 = Id("body") }
+#{id613 = ( id611 == id612 ) ? id610 : id612}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id614 = Id("body") }
+section body { id614 } with zplane offset 10.16 
+#{ id615 = Id("body") }
+intersect body { id613 } { id614 }
+#{ id616 = Id("body") }
+#{id617 = ( id615 == id616 ) ? id614 : id616}
+unite body { id554 } { id617 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id618 = Id("body") }
+section body { id618 } with xplane offset 795.02 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id619 = Id("body") }
+section body { id619 } with xplane offset 711.2 
+#{ id620 = Id("body") }
+intersect body { id618 } { id619 }
+#{ id621 = Id("body") }
+#{id622 = ( id620 == id621 ) ? id619 : id621}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id623 = Id("body") }
+section body { id623 } with yplane offset 518.16 reverse
+#{ id624 = Id("body") }
+intersect body { id622 } { id623 }
+#{ id625 = Id("body") }
+#{id626 = ( id624 == id625 ) ? id623 : id625}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id627 = Id("body") }
+section body { id627 } with yplane offset 477.52 
+#{ id628 = Id("body") }
+intersect body { id626 } { id627 }
+#{ id629 = Id("body") }
+#{id630 = ( id628 == id629 ) ? id627 : id629}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id631 = Id("body") }
+section body { id631 } with zplane offset 89.54 reverse
+#{ id632 = Id("body") }
+intersect body { id630 } { id631 }
+#{ id633 = Id("body") }
+#{id634 = ( id632 == id633 ) ? id631 : id633}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id635 = Id("body") }
+section body { id635 } with zplane offset 88.9 
+#{ id636 = Id("body") }
+intersect body { id634 } { id635 }
+#{ id637 = Id("body") }
+#{id638 = ( id636 == id637 ) ? id635 : id637}
+unite body { id554 } { id638 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id639 = Id("body") }
+subtract body { id554 } from body { id639 }
+#{ id640 = Id("body") }
+#{ id641 = Id("body") }
+intersect body { id524 } { id640 }
+#{ id642 = Id("body") }
+#{id643 = ( id641 == id642 ) ? id640 : id642}
+sphere radius 0.0001
+#{ id644 = Id("body") }
+body { id644 } move 1900.0 400.0 100.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id645 = Id("body") }
+subtract body { id644 } from body { id645 }
+#{ id646 = Id("body") }
+intersect body { id643 } { id645 }
+#{ id647 = Id("body") }
+#{id648 = ( id646 == id647 ) ? id645 : id647}
+body { id648 } name "Cell_2"
+group "mat:Air" add body { id648 } 
+#CELL 3
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id649 = Id("body") }
+section body { id649 } with xplane offset 795.02 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id650 = Id("body") }
+section body { id650 } with xplane offset 711.2 
+#{ id651 = Id("body") }
+intersect body { id649 } { id650 }
+#{ id652 = Id("body") }
+#{id653 = ( id651 == id652 ) ? id650 : id652}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id654 = Id("body") }
+section body { id654 } with yplane offset 518.16 reverse
+#{ id655 = Id("body") }
+intersect body { id653 } { id654 }
+#{ id656 = Id("body") }
+#{id657 = ( id655 == id656 ) ? id654 : id656}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id658 = Id("body") }
+section body { id658 } with yplane offset 477.52 
+#{ id659 = Id("body") }
+intersect body { id657 } { id658 }
+#{ id660 = Id("body") }
+#{id661 = ( id659 == id660 ) ? id658 : id660}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id662 = Id("body") }
+section body { id662 } with zplane offset 133.99 reverse
+#{ id663 = Id("body") }
+intersect body { id661 } { id662 }
+#{ id664 = Id("body") }
+#{id665 = ( id663 == id664 ) ? id662 : id664}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id666 = Id("body") }
+section body { id666 } with zplane offset 89.54 
+#{ id667 = Id("body") }
+intersect body { id665 } { id666 }
+#{ id668 = Id("body") }
+#{id669 = ( id667 == id668 ) ? id666 : id668}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id670 = Id("body") }
+section body { id670 } with xplane offset 785.24 
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id671 = Id("body") }
+section body { id671 } with xplane offset 720.97 reverse
+unite body { id670 } { id671 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id672 = Id("body") }
+section body { id672 } with yplane offset 522.52 
+unite body { id670 } { id672 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id673 = Id("body") }
+section body { id673 } with yplane offset 472.52 reverse
+unite body { id670 } { id673 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id674 = Id("body") }
+section body { id674 } with zplane offset 123.83 
+unite body { id670 } { id674 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id675 = Id("body") }
+section body { id675 } with zplane offset 99.7 reverse
+unite body { id670 } { id675 }
+#{ id676 = Id("body") }
+intersect body { id669 } { id670 }
+#{ id677 = Id("body") }
+#{id678 = ( id676 == id677 ) ? id670 : id677}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id679 = Id("body") }
+section body { id679 } with xplane offset 795.02 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id680 = Id("body") }
+section body { id680 } with xplane offset 787.4 
+#{ id681 = Id("body") }
+intersect body { id679 } { id680 }
+#{ id682 = Id("body") }
+#{id683 = ( id681 == id682 ) ? id680 : id682}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id684 = Id("body") }
+section body { id684 } with yplane offset 485.14 reverse
+#{ id685 = Id("body") }
+intersect body { id683 } { id684 }
+#{ id686 = Id("body") }
+#{id687 = ( id685 == id686 ) ? id684 : id686}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id688 = Id("body") }
+section body { id688 } with yplane offset 477.52 
+#{ id689 = Id("body") }
+intersect body { id687 } { id688 }
+#{ id690 = Id("body") }
+#{id691 = ( id689 == id690 ) ? id688 : id690}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id692 = Id("body") }
+section body { id692 } with zplane offset 88.9 reverse
+#{ id693 = Id("body") }
+intersect body { id691 } { id692 }
+#{ id694 = Id("body") }
+#{id695 = ( id693 == id694 ) ? id692 : id694}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id696 = Id("body") }
+section body { id696 } with zplane offset 10.16 
+#{ id697 = Id("body") }
+intersect body { id695 } { id696 }
+#{ id698 = Id("body") }
+#{id699 = ( id697 == id698 ) ? id696 : id698}
+unite body { id678 } { id699 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id700 = Id("body") }
+section body { id700 } with xplane offset 795.02 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id701 = Id("body") }
+section body { id701 } with xplane offset 787.4 
+#{ id702 = Id("body") }
+intersect body { id700 } { id701 }
+#{ id703 = Id("body") }
+#{id704 = ( id702 == id703 ) ? id701 : id703}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id705 = Id("body") }
+section body { id705 } with yplane offset 518.16 reverse
+#{ id706 = Id("body") }
+intersect body { id704 } { id705 }
+#{ id707 = Id("body") }
+#{id708 = ( id706 == id707 ) ? id705 : id707}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id709 = Id("body") }
+section body { id709 } with yplane offset 510.54 
+#{ id710 = Id("body") }
+intersect body { id708 } { id709 }
+#{ id711 = Id("body") }
+#{id712 = ( id710 == id711 ) ? id709 : id711}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id713 = Id("body") }
+section body { id713 } with zplane offset 88.9 reverse
+#{ id714 = Id("body") }
+intersect body { id712 } { id713 }
+#{ id715 = Id("body") }
+#{id716 = ( id714 == id715 ) ? id713 : id715}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id717 = Id("body") }
+section body { id717 } with zplane offset 10.16 
+#{ id718 = Id("body") }
+intersect body { id716 } { id717 }
+#{ id719 = Id("body") }
+#{id720 = ( id718 == id719 ) ? id717 : id719}
+unite body { id678 } { id720 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id721 = Id("body") }
+section body { id721 } with xplane offset 718.82 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id722 = Id("body") }
+section body { id722 } with xplane offset 711.2 
+#{ id723 = Id("body") }
+intersect body { id721 } { id722 }
+#{ id724 = Id("body") }
+#{id725 = ( id723 == id724 ) ? id722 : id724}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id726 = Id("body") }
+section body { id726 } with yplane offset 485.14 reverse
+#{ id727 = Id("body") }
+intersect body { id725 } { id726 }
+#{ id728 = Id("body") }
+#{id729 = ( id727 == id728 ) ? id726 : id728}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id730 = Id("body") }
+section body { id730 } with yplane offset 477.52 
+#{ id731 = Id("body") }
+intersect body { id729 } { id730 }
+#{ id732 = Id("body") }
+#{id733 = ( id731 == id732 ) ? id730 : id732}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id734 = Id("body") }
+section body { id734 } with zplane offset 88.9 reverse
+#{ id735 = Id("body") }
+intersect body { id733 } { id734 }
+#{ id736 = Id("body") }
+#{id737 = ( id735 == id736 ) ? id734 : id736}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id738 = Id("body") }
+section body { id738 } with zplane offset 10.16 
+#{ id739 = Id("body") }
+intersect body { id737 } { id738 }
+#{ id740 = Id("body") }
+#{id741 = ( id739 == id740 ) ? id738 : id740}
+unite body { id678 } { id741 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id742 = Id("body") }
+section body { id742 } with xplane offset 795.02 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id743 = Id("body") }
+section body { id743 } with xplane offset 711.2 
+#{ id744 = Id("body") }
+intersect body { id742 } { id743 }
+#{ id745 = Id("body") }
+#{id746 = ( id744 == id745 ) ? id743 : id745}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id747 = Id("body") }
+section body { id747 } with yplane offset 518.16 reverse
+#{ id748 = Id("body") }
+intersect body { id746 } { id747 }
+#{ id749 = Id("body") }
+#{id750 = ( id748 == id749 ) ? id747 : id749}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id751 = Id("body") }
+section body { id751 } with yplane offset 477.52 
+#{ id752 = Id("body") }
+intersect body { id750 } { id751 }
+#{ id753 = Id("body") }
+#{id754 = ( id752 == id753 ) ? id751 : id753}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id755 = Id("body") }
+section body { id755 } with zplane offset 89.54 reverse
+#{ id756 = Id("body") }
+intersect body { id754 } { id755 }
+#{ id757 = Id("body") }
+#{id758 = ( id756 == id757 ) ? id755 : id757}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id759 = Id("body") }
+section body { id759 } with zplane offset 88.9 
+#{ id760 = Id("body") }
+intersect body { id758 } { id759 }
+#{ id761 = Id("body") }
+#{id762 = ( id760 == id761 ) ? id759 : id761}
+unite body { id678 } { id762 }
+body { id678 } name "Cell_3"
+group "mat:1" add body { id678 } 
+#CELL 4
+cylinder height 5000.0 radius 32.0
+#{ id763 = Id("body") }
+body { id763 } move 753.11 497.84 0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id764 = Id("body") }
+section body { id764 } with zplane offset 115.83 
+#{ id765 = Id("body") }
+intersect body { id763 } { id764 }
+#{ id766 = Id("body") }
+#{id767 = ( id765 == id766 ) ? id764 : id766}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id768 = Id("body") }
+section body { id768 } with zplane offset 123.83 reverse
+#{ id769 = Id("body") }
+intersect body { id767 } { id768 }
+#{ id770 = Id("body") }
+#{id771 = ( id769 == id770 ) ? id768 : id770}
+cylinder height 5000.0 radius 20.95
+#{ id772 = Id("body") }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id773 = Id("body") }
+subtract body { id772 } from body { id773 }
+body { id773 } move 753.11 497.84 0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id774 = Id("body") }
+section body { id774 } with zplane offset 99.7 reverse
+unite body { id773 } { id774 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id775 = Id("body") }
+section body { id775 } with zplane offset 174.7 
+unite body { id773 } { id775 }
+#{ id776 = Id("body") }
+intersect body { id771 } { id773 }
+#{ id777 = Id("body") }
+#{id778 = ( id776 == id777 ) ? id773 : id777}
+body { id778 } name "Cell_4"
+group "mat:2" add body { id778 } 
+#CELL 5
+cylinder height 5000.0 radius 32.0
+#{ id779 = Id("body") }
+body { id779 } move 753.11 497.84 0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id780 = Id("body") }
+section body { id780 } with zplane offset 99.7 
+#{ id781 = Id("body") }
+intersect body { id779 } { id780 }
+#{ id782 = Id("body") }
+#{id783 = ( id781 == id782 ) ? id780 : id782}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id784 = Id("body") }
+section body { id784 } with zplane offset 107.7 reverse
+#{ id785 = Id("body") }
+intersect body { id783 } { id784 }
+#{ id786 = Id("body") }
+#{id787 = ( id785 == id786 ) ? id784 : id786}
+cylinder height 5000.0 radius 20.95
+#{ id788 = Id("body") }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id789 = Id("body") }
+subtract body { id788 } from body { id789 }
+body { id789 } move 753.11 497.84 0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id790 = Id("body") }
+section body { id790 } with zplane offset 99.7 reverse
+unite body { id789 } { id790 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id791 = Id("body") }
+section body { id791 } with zplane offset 174.7 
+unite body { id789 } { id791 }
+#{ id792 = Id("body") }
+intersect body { id787 } { id789 }
+#{ id793 = Id("body") }
+#{id794 = ( id792 == id793 ) ? id789 : id793}
+body { id794 } name "Cell_5"
+group "mat:2" add body { id794 } 
+#CELL 6
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id795 = Id("body") }
+section body { id795 } with xplane offset 42.43 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id796 = Id("body") }
+section body { id796 } with xplane offset 31.0 
+#{ id797 = Id("body") }
+intersect body { id795 } { id796 }
+#{ id798 = Id("body") }
+#{id799 = ( id797 == id798 ) ? id796 : id798}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id800 = Id("body") }
+section body { id800 } with yplane offset 529.59 reverse
+#{ id801 = Id("body") }
+intersect body { id799 } { id800 }
+#{ id802 = Id("body") }
+#{id803 = ( id801 == id802 ) ? id800 : id802}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id804 = Id("body") }
+section body { id804 } with yplane offset 39.37 
+#{ id805 = Id("body") }
+intersect body { id803 } { id804 }
+#{ id806 = Id("body") }
+#{id807 = ( id805 == id806 ) ? id804 : id806}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id808 = Id("body") }
+section body { id808 } with zplane offset 279.4 reverse
+#{ id809 = Id("body") }
+intersect body { id807 } { id808 }
+#{ id810 = Id("body") }
+#{id811 = ( id809 == id810 ) ? id808 : id810}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id812 = Id("body") }
+section body { id812 } with zplane offset 276.86 
+#{ id813 = Id("body") }
+intersect body { id811 } { id812 }
+#{ id814 = Id("body") }
+#{id815 = ( id813 == id814 ) ? id812 : id814}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id816 = Id("body") }
+section body { id816 } with xplane offset 42.43 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id817 = Id("body") }
+section body { id817 } with xplane offset 31.0 
+#{ id818 = Id("body") }
+intersect body { id816 } { id817 }
+#{ id819 = Id("body") }
+#{id820 = ( id818 == id819 ) ? id817 : id819}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id821 = Id("body") }
+section body { id821 } with yplane offset 529.59 reverse
+#{ id822 = Id("body") }
+intersect body { id820 } { id821 }
+#{ id823 = Id("body") }
+#{id824 = ( id822 == id823 ) ? id821 : id823}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id825 = Id("body") }
+section body { id825 } with yplane offset 39.37 
+#{ id826 = Id("body") }
+intersect body { id824 } { id825 }
+#{ id827 = Id("body") }
+#{id828 = ( id826 == id827 ) ? id825 : id827}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id829 = Id("body") }
+section body { id829 } with zplane offset 299.72 reverse
+#{ id830 = Id("body") }
+intersect body { id828 } { id829 }
+#{ id831 = Id("body") }
+#{id832 = ( id830 == id831 ) ? id829 : id831}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id833 = Id("body") }
+section body { id833 } with zplane offset 297.18 
+#{ id834 = Id("body") }
+intersect body { id832 } { id833 }
+#{ id835 = Id("body") }
+#{id836 = ( id834 == id835 ) ? id833 : id835}
+unite body { id815 } { id836 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id837 = Id("body") }
+section body { id837 } with xplane offset 37.99 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id838 = Id("body") }
+section body { id838 } with xplane offset 35.45 
+#{ id839 = Id("body") }
+intersect body { id837 } { id838 }
+#{ id840 = Id("body") }
+#{id841 = ( id839 == id840 ) ? id838 : id840}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id842 = Id("body") }
+section body { id842 } with yplane offset 529.59 reverse
+#{ id843 = Id("body") }
+intersect body { id841 } { id842 }
+#{ id844 = Id("body") }
+#{id845 = ( id843 == id844 ) ? id842 : id844}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id846 = Id("body") }
+section body { id846 } with yplane offset 39.37 
+#{ id847 = Id("body") }
+intersect body { id845 } { id846 }
+#{ id848 = Id("body") }
+#{id849 = ( id847 == id848 ) ? id846 : id848}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id850 = Id("body") }
+section body { id850 } with zplane offset 299.72 reverse
+#{ id851 = Id("body") }
+intersect body { id849 } { id850 }
+#{ id852 = Id("body") }
+#{id853 = ( id851 == id852 ) ? id850 : id852}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id854 = Id("body") }
+section body { id854 } with zplane offset 276.86 
+#{ id855 = Id("body") }
+intersect body { id853 } { id854 }
+#{ id856 = Id("body") }
+#{id857 = ( id855 == id856 ) ? id854 : id856}
+unite body { id815 } { id857 }
+body { id815 } name "Cell_6"
+group "mat:6" add body { id815 } 
+#CELL 7
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id858 = Id("body") }
+section body { id858 } with xplane offset 1150.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id859 = Id("body") }
+section body { id859 } with xplane offset 0.0 
+#{ id860 = Id("body") }
+intersect body { id858 } { id859 }
+#{ id861 = Id("body") }
+#{id862 = ( id860 == id861 ) ? id859 : id861}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id863 = Id("body") }
+section body { id863 } with yplane offset 650.24 reverse
+#{ id864 = Id("body") }
+intersect body { id862 } { id863 }
+#{ id865 = Id("body") }
+#{id866 = ( id864 == id865 ) ? id863 : id865}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id867 = Id("body") }
+section body { id867 } with yplane offset 568.96 
+#{ id868 = Id("body") }
+intersect body { id866 } { id867 }
+#{ id869 = Id("body") }
+#{id870 = ( id868 == id869 ) ? id867 : id869}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id871 = Id("body") }
+section body { id871 } with zplane offset 363.22 reverse
+#{ id872 = Id("body") }
+intersect body { id870 } { id871 }
+#{ id873 = Id("body") }
+#{id874 = ( id872 == id873 ) ? id871 : id873}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id875 = Id("body") }
+section body { id875 } with zplane offset 0.0 
+#{ id876 = Id("body") }
+intersect body { id874 } { id875 }
+#{ id877 = Id("body") }
+#{id878 = ( id876 == id877 ) ? id875 : id877}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id879 = Id("body") }
+body { id879 } move 0.0 0.0 -5000.0
+Rotate body { id879 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id879 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id880 = Id("body") }
+intersect body { id879 } { id880 }
+#{ id881 = Id("body") }
+intersect body { id878 } { id880 }
+#{ id882 = Id("body") }
+#{id883 = ( id881 == id882 ) ? id880 : id882}
+cylinder height 5000.0 radius 15.24
+#{ id884 = Id("body") }
+rotate body { id884 } about x angle 90
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id885 = Id("body") }
+subtract body { id884 } from body { id885 }
+body { id885 } move 753.11 0 111.76
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id886 = Id("body") }
+section body { id886 } with yplane offset 538.48 reverse
+unite body { id885 } { id886 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id887 = Id("body") }
+section body { id887 } with yplane offset 650.24 
+unite body { id885 } { id887 }
+#{ id888 = Id("body") }
+intersect body { id883 } { id885 }
+#{ id889 = Id("body") }
+#{id890 = ( id888 == id889 ) ? id885 : id889}
+cylinder height 5000.0 radius 5.0
+#{ id891 = Id("body") }
+rotate body { id891 } about x angle 90
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id892 = Id("body") }
+subtract body { id891 } from body { id892 }
+body { id892 } move 317.1 0 50.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id893 = Id("body") }
+section body { id893 } with yplane offset 568.96 reverse
+unite body { id892 } { id893 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id894 = Id("body") }
+section body { id894 } with yplane offset 650.24 
+unite body { id892 } { id894 }
+#{ id895 = Id("body") }
+intersect body { id890 } { id892 }
+#{ id896 = Id("body") }
+#{id897 = ( id895 == id896 ) ? id892 : id896}
+body { id897 } name "Cell_7"
+group "mat:4" add body { id897 } 
+#CELL 8
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id898 = Id("body") }
+section body { id898 } with xplane offset 1064.77 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id899 = Id("body") }
+section body { id899 } with xplane offset 64.77 
+#{ id900 = Id("body") }
+intersect body { id898 } { id899 }
+#{ id901 = Id("body") }
+#{id902 = ( id900 == id901 ) ? id899 : id901}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id903 = Id("body") }
+section body { id903 } with yplane offset 568.96 reverse
+#{ id904 = Id("body") }
+intersect body { id902 } { id903 }
+#{ id905 = Id("body") }
+#{id906 = ( id904 == id905 ) ? id903 : id905}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id907 = Id("body") }
+section body { id907 } with yplane offset 0.0 
+#{ id908 = Id("body") }
+intersect body { id906 } { id907 }
+#{ id909 = Id("body") }
+#{id910 = ( id908 == id909 ) ? id907 : id909}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id911 = Id("body") }
+section body { id911 } with zplane offset 10.16 reverse
+#{ id912 = Id("body") }
+intersect body { id910 } { id911 }
+#{ id913 = Id("body") }
+#{id914 = ( id912 == id913 ) ? id911 : id913}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id915 = Id("body") }
+section body { id915 } with zplane offset 0.0 
+#{ id916 = Id("body") }
+intersect body { id914 } { id915 }
+#{ id917 = Id("body") }
+#{id918 = ( id916 == id917 ) ? id915 : id917}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id919 = Id("body") }
+body { id919 } move 0.0 0.0 -5000.0
+Rotate body { id919 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id919 } move 963.7538435371465 -47.13546646187924 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id920 = Id("body") }
+intersect body { id919 } { id920 }
+#{ id921 = Id("body") }
+intersect body { id918 } { id920 }
+#{ id922 = Id("body") }
+#{id923 = ( id921 == id922 ) ? id920 : id922}
+body { id923 } name "Cell_8"
+group "mat:4" add body { id923 } 
+#CELL 9
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id924 = Id("body") }
+section body { id924 } with xplane offset 1148.72 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id925 = Id("body") }
+section body { id925 } with xplane offset -81.28 
+#{ id926 = Id("body") }
+intersect body { id924 } { id925 }
+#{ id927 = Id("body") }
+#{id928 = ( id926 == id927 ) ? id925 : id927}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id929 = Id("body") }
+section body { id929 } with yplane offset 650.24 reverse
+#{ id930 = Id("body") }
+intersect body { id928 } { id929 }
+#{ id931 = Id("body") }
+#{id932 = ( id930 == id931 ) ? id929 : id931}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id933 = Id("body") }
+section body { id933 } with yplane offset -99.38 
+#{ id934 = Id("body") }
+intersect body { id932 } { id933 }
+#{ id935 = Id("body") }
+#{id936 = ( id934 == id935 ) ? id933 : id935}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id937 = Id("body") }
+section body { id937 } with zplane offset 424.18 reverse
+#{ id938 = Id("body") }
+intersect body { id936 } { id937 }
+#{ id939 = Id("body") }
+#{id940 = ( id938 == id939 ) ? id937 : id939}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id941 = Id("body") }
+section body { id941 } with zplane offset 363.22 
+#{ id942 = Id("body") }
+intersect body { id940 } { id941 }
+#{ id943 = Id("body") }
+#{id944 = ( id942 == id943 ) ? id941 : id943}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id945 = Id("body") }
+body { id945 } move 0.0 0.0 -5000.0
+Rotate body { id945 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id945 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id946 = Id("body") }
+intersect body { id945 } { id946 }
+#{ id947 = Id("body") }
+intersect body { id944 } { id946 }
+#{ id948 = Id("body") }
+#{id949 = ( id947 == id948 ) ? id946 : id948}
+body { id949 } name "Cell_9"
+group "mat:4" add body { id949 } 
+#CELL 10
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id950 = Id("body") }
+section body { id950 } with xplane offset 0.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id951 = Id("body") }
+section body { id951 } with xplane offset -81.28 
+#{ id952 = Id("body") }
+intersect body { id950 } { id951 }
+#{ id953 = Id("body") }
+#{id954 = ( id952 == id953 ) ? id951 : id953}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id955 = Id("body") }
+section body { id955 } with yplane offset 650.24 reverse
+#{ id956 = Id("body") }
+intersect body { id954 } { id955 }
+#{ id957 = Id("body") }
+#{id958 = ( id956 == id957 ) ? id955 : id957}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id959 = Id("body") }
+section body { id959 } with yplane offset -99.38 
+#{ id960 = Id("body") }
+intersect body { id958 } { id959 }
+#{ id961 = Id("body") }
+#{id962 = ( id960 == id961 ) ? id959 : id961}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id963 = Id("body") }
+section body { id963 } with zplane offset 363.22 reverse
+#{ id964 = Id("body") }
+intersect body { id962 } { id963 }
+#{ id965 = Id("body") }
+#{id966 = ( id964 == id965 ) ? id963 : id965}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id967 = Id("body") }
+section body { id967 } with zplane offset 0.0 
+#{ id968 = Id("body") }
+intersect body { id966 } { id967 }
+#{ id969 = Id("body") }
+#{id970 = ( id968 == id969 ) ? id967 : id969}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id971 = Id("body") }
+section body { id971 } with xplane offset 45.1 
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id972 = Id("body") }
+section body { id972 } with xplane offset -104.9 reverse
+unite body { id971 } { id972 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id973 = Id("body") }
+section body { id973 } with yplane offset 499.42 
+unite body { id971 } { id973 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id974 = Id("body") }
+section body { id974 } with yplane offset 281.33 reverse
+unite body { id971 } { id974 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id975 = Id("body") }
+section body { id975 } with zplane offset 213.36 
+unite body { id971 } { id975 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id976 = Id("body") }
+section body { id976 } with zplane offset 10.16 reverse
+unite body { id971 } { id976 }
+#{ id977 = Id("body") }
+intersect body { id970 } { id971 }
+#{ id978 = Id("body") }
+#{id979 = ( id977 == id978 ) ? id971 : id978}
+body { id979 } name "Cell_10"
+group "mat:4" add body { id979 } 
+#CELL 11
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id980 = Id("body") }
+section body { id980 } with xplane offset 1095.1 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id981 = Id("body") }
+section body { id981 } with xplane offset 945.1 
+#{ id982 = Id("body") }
+intersect body { id980 } { id981 }
+#{ id983 = Id("body") }
+#{id984 = ( id982 == id983 ) ? id981 : id983}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id985 = Id("body") }
+section body { id985 } with yplane offset 568.96 reverse
+#{ id986 = Id("body") }
+intersect body { id984 } { id985 }
+#{ id987 = Id("body") }
+#{id988 = ( id986 == id987 ) ? id985 : id987}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id989 = Id("body") }
+section body { id989 } with yplane offset 0.0 
+#{ id990 = Id("body") }
+intersect body { id988 } { id989 }
+#{ id991 = Id("body") }
+#{id992 = ( id990 == id991 ) ? id989 : id991}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id993 = Id("body") }
+section body { id993 } with zplane offset 363.22 reverse
+#{ id994 = Id("body") }
+intersect body { id992 } { id993 }
+#{ id995 = Id("body") }
+#{id996 = ( id994 == id995 ) ? id993 : id995}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id997 = Id("body") }
+section body { id997 } with zplane offset 0.0 
+#{ id998 = Id("body") }
+intersect body { id996 } { id997 }
+#{ id999 = Id("body") }
+#{id1000 = ( id998 == id999 ) ? id997 : id999}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1001 = Id("body") }
+body { id1001 } move 0.0 0.0 -5000.0
+Rotate body { id1001 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id1001 } move 963.7538435371465 -47.13546646187924 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1002 = Id("body") }
+subtract body { id1001 } from body { id1002 }
+#{ id1003 = Id("body") }
+intersect body { id1000 } { id1002 }
+#{ id1004 = Id("body") }
+#{id1005 = ( id1003 == id1004 ) ? id1002 : id1004}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1006 = Id("body") }
+body { id1006 } move 0.0 0.0 -5000.0
+Rotate body { id1006 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id1006 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1007 = Id("body") }
+intersect body { id1006 } { id1007 }
+#{ id1008 = Id("body") }
+intersect body { id1005 } { id1007 }
+#{ id1009 = Id("body") }
+#{id1010 = ( id1008 == id1009 ) ? id1007 : id1009}
+body { id1010 } name "Cell_11"
+group "mat:4" add body { id1010 } 
+#CELL 12
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1011 = Id("body") }
+section body { id1011 } with xplane offset 1150.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1012 = Id("body") }
+section body { id1012 } with xplane offset 0.0 
+#{ id1013 = Id("body") }
+intersect body { id1011 } { id1012 }
+#{ id1014 = Id("body") }
+#{id1015 = ( id1013 == id1014 ) ? id1012 : id1014}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1016 = Id("body") }
+section body { id1016 } with yplane offset 0.0 reverse
+#{ id1017 = Id("body") }
+intersect body { id1015 } { id1016 }
+#{ id1018 = Id("body") }
+#{id1019 = ( id1017 == id1018 ) ? id1016 : id1018}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1020 = Id("body") }
+section body { id1020 } with yplane offset -99.38 
+#{ id1021 = Id("body") }
+intersect body { id1019 } { id1020 }
+#{ id1022 = Id("body") }
+#{id1023 = ( id1021 == id1022 ) ? id1020 : id1022}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1024 = Id("body") }
+section body { id1024 } with zplane offset 363.22 reverse
+#{ id1025 = Id("body") }
+intersect body { id1023 } { id1024 }
+#{ id1026 = Id("body") }
+#{id1027 = ( id1025 == id1026 ) ? id1024 : id1026}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1028 = Id("body") }
+section body { id1028 } with zplane offset 0.0 
+#{ id1029 = Id("body") }
+intersect body { id1027 } { id1028 }
+#{ id1030 = Id("body") }
+#{id1031 = ( id1029 == id1030 ) ? id1028 : id1030}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1032 = Id("body") }
+body { id1032 } move 0.0 0.0 -5000.0
+Rotate body { id1032 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id1032 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1033 = Id("body") }
+intersect body { id1032 } { id1033 }
+#{ id1034 = Id("body") }
+intersect body { id1031 } { id1033 }
+#{ id1035 = Id("body") }
+#{id1036 = ( id1034 == id1035 ) ? id1033 : id1035}
+body { id1036 } name "Cell_12"
+group "mat:4" add body { id1036 } 
+#CELL 13
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1037 = Id("body") }
+section body { id1037 } with xplane offset 1143.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1038 = Id("body") }
+section body { id1038 } with xplane offset -1104.9 
+#{ id1039 = Id("body") }
+intersect body { id1037 } { id1038 }
+#{ id1040 = Id("body") }
+#{id1041 = ( id1039 == id1040 ) ? id1038 : id1040}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1042 = Id("body") }
+section body { id1042 } with yplane offset 1898.99 reverse
+#{ id1043 = Id("body") }
+intersect body { id1041 } { id1042 }
+#{ id1044 = Id("body") }
+#{id1045 = ( id1043 == id1044 ) ? id1042 : id1044}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1046 = Id("body") }
+section body { id1046 } with yplane offset -99.38 
+#{ id1047 = Id("body") }
+intersect body { id1045 } { id1046 }
+#{ id1048 = Id("body") }
+#{id1049 = ( id1047 == id1048 ) ? id1046 : id1048}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1050 = Id("body") }
+section body { id1050 } with zplane offset 0.0 reverse
+#{ id1051 = Id("body") }
+intersect body { id1049 } { id1050 }
+#{ id1052 = Id("body") }
+#{id1053 = ( id1051 == id1052 ) ? id1050 : id1052}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1054 = Id("body") }
+section body { id1054 } with zplane offset -81.28 
+#{ id1055 = Id("body") }
+intersect body { id1053 } { id1054 }
+#{ id1056 = Id("body") }
+#{id1057 = ( id1055 == id1056 ) ? id1054 : id1056}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1058 = Id("body") }
+body { id1058 } move 0.0 0.0 -5000.0
+Rotate body { id1058 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id1058 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1059 = Id("body") }
+intersect body { id1058 } { id1059 }
+#{ id1060 = Id("body") }
+intersect body { id1057 } { id1059 }
+#{ id1061 = Id("body") }
+#{id1062 = ( id1060 == id1061 ) ? id1059 : id1061}
+body { id1062 } name "Cell_13"
+group "mat:4" add body { id1062 } 
+#CELL 14
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1063 = Id("body") }
+section body { id1063 } with xplane offset 1014.3 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1064 = Id("body") }
+section body { id1064 } with xplane offset 594.3 
+#{ id1065 = Id("body") }
+intersect body { id1063 } { id1064 }
+#{ id1066 = Id("body") }
+#{id1067 = ( id1065 == id1066 ) ? id1064 : id1066}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1068 = Id("body") }
+section body { id1068 } with yplane offset 568.95 reverse
+#{ id1069 = Id("body") }
+intersect body { id1067 } { id1068 }
+#{ id1070 = Id("body") }
+#{id1071 = ( id1069 == id1070 ) ? id1068 : id1070}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1072 = Id("body") }
+section body { id1072 } with yplane offset 538.47 
+#{ id1073 = Id("body") }
+intersect body { id1071 } { id1072 }
+#{ id1074 = Id("body") }
+#{id1075 = ( id1073 == id1074 ) ? id1072 : id1074}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1076 = Id("body") }
+section body { id1076 } with zplane offset 363.22 reverse
+#{ id1077 = Id("body") }
+intersect body { id1075 } { id1076 }
+#{ id1078 = Id("body") }
+#{id1079 = ( id1077 == id1078 ) ? id1076 : id1078}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1080 = Id("body") }
+section body { id1080 } with zplane offset 10.16 
+#{ id1081 = Id("body") }
+intersect body { id1079 } { id1080 }
+#{ id1082 = Id("body") }
+#{id1083 = ( id1081 == id1082 ) ? id1080 : id1082}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1084 = Id("body") }
+body { id1084 } move 0.0 0.0 -5000.0
+Rotate body { id1084 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id1084 } move 963.7538435371465 -47.13546646187924 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1085 = Id("body") }
+intersect body { id1084 } { id1085 }
+#{ id1086 = Id("body") }
+intersect body { id1083 } { id1085 }
+#{ id1087 = Id("body") }
+#{id1088 = ( id1086 == id1087 ) ? id1085 : id1087}
+cylinder height 5000.0 radius 15.24
+#{ id1089 = Id("body") }
+rotate body { id1089 } about x angle 90
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1090 = Id("body") }
+subtract body { id1089 } from body { id1090 }
+body { id1090 } move 753.11 0 111.76
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1091 = Id("body") }
+section body { id1091 } with yplane offset 538.48 reverse
+unite body { id1090 } { id1091 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1092 = Id("body") }
+section body { id1092 } with yplane offset 650.24 
+unite body { id1090 } { id1092 }
+#{ id1093 = Id("body") }
+intersect body { id1088 } { id1090 }
+#{ id1094 = Id("body") }
+#{id1095 = ( id1093 == id1094 ) ? id1090 : id1094}
+body { id1095 } name "Cell_14"
+group "mat:4" add body { id1095 } 
+#CELL 15
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1096 = Id("body") }
+section body { id1096 } with xplane offset 878.84 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1097 = Id("body") }
+section body { id1097 } with xplane offset 830.58 
+#{ id1098 = Id("body") }
+intersect body { id1096 } { id1097 }
+#{ id1099 = Id("body") }
+#{id1100 = ( id1098 == id1099 ) ? id1097 : id1099}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1101 = Id("body") }
+section body { id1101 } with yplane offset 538.47 reverse
+#{ id1102 = Id("body") }
+intersect body { id1100 } { id1101 }
+#{ id1103 = Id("body") }
+#{id1104 = ( id1102 == id1103 ) ? id1101 : id1103}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1105 = Id("body") }
+section body { id1105 } with yplane offset 412.74 
+#{ id1106 = Id("body") }
+intersect body { id1104 } { id1105 }
+#{ id1107 = Id("body") }
+#{id1108 = ( id1106 == id1107 ) ? id1105 : id1107}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1109 = Id("body") }
+section body { id1109 } with zplane offset 135.89 reverse
+#{ id1110 = Id("body") }
+intersect body { id1108 } { id1109 }
+#{ id1111 = Id("body") }
+#{id1112 = ( id1110 == id1111 ) ? id1109 : id1111}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1113 = Id("body") }
+section body { id1113 } with zplane offset 10.16 
+#{ id1114 = Id("body") }
+intersect body { id1112 } { id1113 }
+#{ id1115 = Id("body") }
+#{id1116 = ( id1114 == id1115 ) ? id1113 : id1115}
+body { id1116 } name "Cell_15"
+group "mat:5" add body { id1116 } 
+#CELL 16
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1117 = Id("body") }
+section body { id1117 } with xplane offset 703.59 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1118 = Id("body") }
+section body { id1118 } with xplane offset 636.75 
+#{ id1119 = Id("body") }
+intersect body { id1117 } { id1118 }
+#{ id1120 = Id("body") }
+#{id1121 = ( id1119 == id1120 ) ? id1118 : id1120}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1122 = Id("body") }
+section body { id1122 } with yplane offset 538.47 reverse
+#{ id1123 = Id("body") }
+intersect body { id1121 } { id1122 }
+#{ id1124 = Id("body") }
+#{id1125 = ( id1123 == id1124 ) ? id1122 : id1124}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1126 = Id("body") }
+section body { id1126 } with yplane offset 412.74 
+#{ id1127 = Id("body") }
+intersect body { id1125 } { id1126 }
+#{ id1128 = Id("body") }
+#{id1129 = ( id1127 == id1128 ) ? id1126 : id1128}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1130 = Id("body") }
+section body { id1130 } with zplane offset 152.4 reverse
+#{ id1131 = Id("body") }
+intersect body { id1129 } { id1130 }
+#{ id1132 = Id("body") }
+#{id1133 = ( id1131 == id1132 ) ? id1130 : id1132}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1134 = Id("body") }
+section body { id1134 } with zplane offset 10.16 
+#{ id1135 = Id("body") }
+intersect body { id1133 } { id1134 }
+#{ id1136 = Id("body") }
+#{id1137 = ( id1135 == id1136 ) ? id1134 : id1136}
+body { id1137 } name "Cell_16"
+group "mat:5" add body { id1137 } 
+#CELL 17
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1138 = Id("body") }
+section body { id1138 } with xplane offset 0.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1139 = Id("body") }
+section body { id1139 } with xplane offset -38.1 
+#{ id1140 = Id("body") }
+intersect body { id1138 } { id1139 }
+#{ id1141 = Id("body") }
+#{id1142 = ( id1140 == id1141 ) ? id1139 : id1141}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1143 = Id("body") }
+section body { id1143 } with yplane offset 314.35 reverse
+#{ id1144 = Id("body") }
+intersect body { id1142 } { id1143 }
+#{ id1145 = Id("body") }
+#{id1146 = ( id1144 == id1145 ) ? id1143 : id1145}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1147 = Id("body") }
+section body { id1147 } with yplane offset 281.33 
+#{ id1148 = Id("body") }
+intersect body { id1146 } { id1147 }
+#{ id1149 = Id("body") }
+#{id1150 = ( id1148 == id1149 ) ? id1147 : id1149}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1151 = Id("body") }
+section body { id1151 } with zplane offset 213.36 reverse
+#{ id1152 = Id("body") }
+intersect body { id1150 } { id1151 }
+#{ id1153 = Id("body") }
+#{id1154 = ( id1152 == id1153 ) ? id1151 : id1153}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1155 = Id("body") }
+section body { id1155 } with zplane offset 10.16 
+#{ id1156 = Id("body") }
+intersect body { id1154 } { id1155 }
+#{ id1157 = Id("body") }
+#{id1158 = ( id1156 == id1157 ) ? id1155 : id1157}
+body { id1158 } name "Cell_17"
+group "mat:RicoRad" add body { id1158 } 
+#CELL 18
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1159 = Id("body") }
+section body { id1159 } with xplane offset 0.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1160 = Id("body") }
+section body { id1160 } with xplane offset -38.1 
+#{ id1161 = Id("body") }
+intersect body { id1159 } { id1160 }
+#{ id1162 = Id("body") }
+#{id1163 = ( id1161 == id1162 ) ? id1160 : id1162}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1164 = Id("body") }
+section body { id1164 } with yplane offset 499.42 reverse
+#{ id1165 = Id("body") }
+intersect body { id1163 } { id1164 }
+#{ id1166 = Id("body") }
+#{id1167 = ( id1165 == id1166 ) ? id1164 : id1166}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1168 = Id("body") }
+section body { id1168 } with yplane offset 466.4 
+#{ id1169 = Id("body") }
+intersect body { id1167 } { id1168 }
+#{ id1170 = Id("body") }
+#{id1171 = ( id1169 == id1170 ) ? id1168 : id1170}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1172 = Id("body") }
+section body { id1172 } with zplane offset 213.36 reverse
+#{ id1173 = Id("body") }
+intersect body { id1171 } { id1172 }
+#{ id1174 = Id("body") }
+#{id1175 = ( id1173 == id1174 ) ? id1172 : id1174}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1176 = Id("body") }
+section body { id1176 } with zplane offset 10.16 
+#{ id1177 = Id("body") }
+intersect body { id1175 } { id1176 }
+#{ id1178 = Id("body") }
+#{id1179 = ( id1177 == id1178 ) ? id1176 : id1178}
+body { id1179 } name "Cell_18"
+group "mat:RicoRad" add body { id1179 } 
+#CELL 19
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1180 = Id("body") }
+section body { id1180 } with xplane offset 61.47 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1181 = Id("body") }
+section body { id1181 } with xplane offset 0.51 
+#{ id1182 = Id("body") }
+intersect body { id1180 } { id1181 }
+#{ id1183 = Id("body") }
+#{id1184 = ( id1182 == id1183 ) ? id1181 : id1183}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1185 = Id("body") }
+section body { id1185 } with yplane offset 512.46 reverse
+#{ id1186 = Id("body") }
+intersect body { id1184 } { id1185 }
+#{ id1187 = Id("body") }
+#{id1188 = ( id1186 == id1187 ) ? id1185 : id1187}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1189 = Id("body") }
+section body { id1189 } with yplane offset 268.62 
+#{ id1190 = Id("body") }
+intersect body { id1188 } { id1189 }
+#{ id1191 = Id("body") }
+#{id1192 = ( id1190 == id1191 ) ? id1189 : id1191}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1193 = Id("body") }
+section body { id1193 } with zplane offset 223.52 reverse
+#{ id1194 = Id("body") }
+intersect body { id1192 } { id1193 }
+#{ id1195 = Id("body") }
+#{id1196 = ( id1194 == id1195 ) ? id1193 : id1195}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1197 = Id("body") }
+section body { id1197 } with zplane offset 0.0 
+#{ id1198 = Id("body") }
+intersect body { id1196 } { id1197 }
+#{ id1199 = Id("body") }
+#{id1200 = ( id1198 == id1199 ) ? id1197 : id1199}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1201 = Id("body") }
+body { id1201 } move 0.0 0.0 -5000.0
+Rotate body { id1201 } about 0 0 0 direction -0.8660265528314685 0.49999800978688297 0.0 Angle 90.0
+body { id1201 } move 223.19019250519648 386.57880483055055 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1202 = Id("body") }
+intersect body { id1201 } { id1202 }
+#{ id1203 = Id("body") }
+intersect body { id1200 } { id1202 }
+#{ id1204 = Id("body") }
+#{id1205 = ( id1203 == id1204 ) ? id1202 : id1204}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1206 = Id("body") }
+body { id1206 } move 0.0 0.0 -5000.0
+Rotate body { id1206 } about 0 0 0 direction 0.8660265528314685 0.49999800978688297 -0.0 Angle 90.0
+body { id1206 } move -113.7260639381776 196.98036630475988 -0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1207 = Id("body") }
+intersect body { id1206 } { id1207 }
+#{ id1208 = Id("body") }
+intersect body { id1205 } { id1207 }
+#{ id1209 = Id("body") }
+#{id1210 = ( id1208 == id1209 ) ? id1207 : id1209}
+body { id1210 } name "Cell_19"
+group "mat:4" add body { id1210 } 
+#CELL 20
+sphere radius 2500.0
+#{ id1211 = Id("body") }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1212 = Id("body") }
+section body { id1212 } with xplane offset 61.47 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1213 = Id("body") }
+section body { id1213 } with xplane offset 0.51 
+#{ id1214 = Id("body") }
+intersect body { id1212 } { id1213 }
+#{ id1215 = Id("body") }
+#{id1216 = ( id1214 == id1215 ) ? id1213 : id1215}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1217 = Id("body") }
+section body { id1217 } with yplane offset 512.46 reverse
+#{ id1218 = Id("body") }
+intersect body { id1216 } { id1217 }
+#{ id1219 = Id("body") }
+#{id1220 = ( id1218 == id1219 ) ? id1217 : id1219}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1221 = Id("body") }
+section body { id1221 } with yplane offset 268.62 
+#{ id1222 = Id("body") }
+intersect body { id1220 } { id1221 }
+#{ id1223 = Id("body") }
+#{id1224 = ( id1222 == id1223 ) ? id1221 : id1223}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1225 = Id("body") }
+section body { id1225 } with zplane offset 223.52 reverse
+#{ id1226 = Id("body") }
+intersect body { id1224 } { id1225 }
+#{ id1227 = Id("body") }
+#{id1228 = ( id1226 == id1227 ) ? id1225 : id1227}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1229 = Id("body") }
+section body { id1229 } with zplane offset 0.0 
+#{ id1230 = Id("body") }
+intersect body { id1228 } { id1229 }
+#{ id1231 = Id("body") }
+#{id1232 = ( id1230 == id1231 ) ? id1229 : id1231}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1233 = Id("body") }
+body { id1233 } move 0.0 0.0 -5000.0
+Rotate body { id1233 } about 0 0 0 direction -0.8660265528314685 0.49999800978688297 0.0 Angle 90.0
+body { id1233 } move 223.19019250519648 386.57880483055055 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1234 = Id("body") }
+intersect body { id1233 } { id1234 }
+#{ id1235 = Id("body") }
+intersect body { id1232 } { id1234 }
+#{ id1236 = Id("body") }
+#{id1237 = ( id1235 == id1236 ) ? id1234 : id1236}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1238 = Id("body") }
+body { id1238 } move 0.0 0.0 -5000.0
+Rotate body { id1238 } about 0 0 0 direction 0.8660265528314685 0.49999800978688297 -0.0 Angle 90.0
+body { id1238 } move -113.7260639381776 196.98036630475988 -0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1239 = Id("body") }
+intersect body { id1238 } { id1239 }
+#{ id1240 = Id("body") }
+intersect body { id1237 } { id1239 }
+#{ id1241 = Id("body") }
+#{id1242 = ( id1240 == id1241 ) ? id1239 : id1241}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1243 = Id("body") }
+subtract body { id1242 } from body { id1243 }
+#{ id1244 = Id("body") }
+#{ id1245 = Id("body") }
+intersect body { id1211 } { id1244 }
+#{ id1246 = Id("body") }
+#{id1247 = ( id1245 == id1246 ) ? id1244 : id1246}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1248 = Id("body") }
+section body { id1248 } with xplane offset 0.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1249 = Id("body") }
+section body { id1249 } with xplane offset -38.1 
+#{ id1250 = Id("body") }
+intersect body { id1248 } { id1249 }
+#{ id1251 = Id("body") }
+#{id1252 = ( id1250 == id1251 ) ? id1249 : id1251}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1253 = Id("body") }
+section body { id1253 } with yplane offset 499.42 reverse
+#{ id1254 = Id("body") }
+intersect body { id1252 } { id1253 }
+#{ id1255 = Id("body") }
+#{id1256 = ( id1254 == id1255 ) ? id1253 : id1255}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1257 = Id("body") }
+section body { id1257 } with yplane offset 466.4 
+#{ id1258 = Id("body") }
+intersect body { id1256 } { id1257 }
+#{ id1259 = Id("body") }
+#{id1260 = ( id1258 == id1259 ) ? id1257 : id1259}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1261 = Id("body") }
+section body { id1261 } with zplane offset 213.36 reverse
+#{ id1262 = Id("body") }
+intersect body { id1260 } { id1261 }
+#{ id1263 = Id("body") }
+#{id1264 = ( id1262 == id1263 ) ? id1261 : id1263}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1265 = Id("body") }
+section body { id1265 } with zplane offset 10.16 
+#{ id1266 = Id("body") }
+intersect body { id1264 } { id1265 }
+#{ id1267 = Id("body") }
+#{id1268 = ( id1266 == id1267 ) ? id1265 : id1267}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1269 = Id("body") }
+subtract body { id1268 } from body { id1269 }
+#{ id1270 = Id("body") }
+#{ id1271 = Id("body") }
+intersect body { id1247 } { id1270 }
+#{ id1272 = Id("body") }
+#{id1273 = ( id1271 == id1272 ) ? id1270 : id1272}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1274 = Id("body") }
+section body { id1274 } with xplane offset 0.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1275 = Id("body") }
+section body { id1275 } with xplane offset -38.1 
+#{ id1276 = Id("body") }
+intersect body { id1274 } { id1275 }
+#{ id1277 = Id("body") }
+#{id1278 = ( id1276 == id1277 ) ? id1275 : id1277}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1279 = Id("body") }
+section body { id1279 } with yplane offset 314.35 reverse
+#{ id1280 = Id("body") }
+intersect body { id1278 } { id1279 }
+#{ id1281 = Id("body") }
+#{id1282 = ( id1280 == id1281 ) ? id1279 : id1281}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1283 = Id("body") }
+section body { id1283 } with yplane offset 281.33 
+#{ id1284 = Id("body") }
+intersect body { id1282 } { id1283 }
+#{ id1285 = Id("body") }
+#{id1286 = ( id1284 == id1285 ) ? id1283 : id1285}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1287 = Id("body") }
+section body { id1287 } with zplane offset 213.36 reverse
+#{ id1288 = Id("body") }
+intersect body { id1286 } { id1287 }
+#{ id1289 = Id("body") }
+#{id1290 = ( id1288 == id1289 ) ? id1287 : id1289}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1291 = Id("body") }
+section body { id1291 } with zplane offset 10.16 
+#{ id1292 = Id("body") }
+intersect body { id1290 } { id1291 }
+#{ id1293 = Id("body") }
+#{id1294 = ( id1292 == id1293 ) ? id1291 : id1293}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1295 = Id("body") }
+subtract body { id1294 } from body { id1295 }
+#{ id1296 = Id("body") }
+#{ id1297 = Id("body") }
+intersect body { id1273 } { id1296 }
+#{ id1298 = Id("body") }
+#{id1299 = ( id1297 == id1298 ) ? id1296 : id1298}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1300 = Id("body") }
+section body { id1300 } with xplane offset 703.59 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1301 = Id("body") }
+section body { id1301 } with xplane offset 636.75 
+#{ id1302 = Id("body") }
+intersect body { id1300 } { id1301 }
+#{ id1303 = Id("body") }
+#{id1304 = ( id1302 == id1303 ) ? id1301 : id1303}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1305 = Id("body") }
+section body { id1305 } with yplane offset 538.47 reverse
+#{ id1306 = Id("body") }
+intersect body { id1304 } { id1305 }
+#{ id1307 = Id("body") }
+#{id1308 = ( id1306 == id1307 ) ? id1305 : id1307}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1309 = Id("body") }
+section body { id1309 } with yplane offset 412.74 
+#{ id1310 = Id("body") }
+intersect body { id1308 } { id1309 }
+#{ id1311 = Id("body") }
+#{id1312 = ( id1310 == id1311 ) ? id1309 : id1311}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1313 = Id("body") }
+section body { id1313 } with zplane offset 152.4 reverse
+#{ id1314 = Id("body") }
+intersect body { id1312 } { id1313 }
+#{ id1315 = Id("body") }
+#{id1316 = ( id1314 == id1315 ) ? id1313 : id1315}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1317 = Id("body") }
+section body { id1317 } with zplane offset 10.16 
+#{ id1318 = Id("body") }
+intersect body { id1316 } { id1317 }
+#{ id1319 = Id("body") }
+#{id1320 = ( id1318 == id1319 ) ? id1317 : id1319}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1321 = Id("body") }
+subtract body { id1320 } from body { id1321 }
+#{ id1322 = Id("body") }
+#{ id1323 = Id("body") }
+intersect body { id1299 } { id1322 }
+#{ id1324 = Id("body") }
+#{id1325 = ( id1323 == id1324 ) ? id1322 : id1324}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1326 = Id("body") }
+section body { id1326 } with xplane offset 878.84 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1327 = Id("body") }
+section body { id1327 } with xplane offset 830.58 
+#{ id1328 = Id("body") }
+intersect body { id1326 } { id1327 }
+#{ id1329 = Id("body") }
+#{id1330 = ( id1328 == id1329 ) ? id1327 : id1329}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1331 = Id("body") }
+section body { id1331 } with yplane offset 538.47 reverse
+#{ id1332 = Id("body") }
+intersect body { id1330 } { id1331 }
+#{ id1333 = Id("body") }
+#{id1334 = ( id1332 == id1333 ) ? id1331 : id1333}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1335 = Id("body") }
+section body { id1335 } with yplane offset 412.74 
+#{ id1336 = Id("body") }
+intersect body { id1334 } { id1335 }
+#{ id1337 = Id("body") }
+#{id1338 = ( id1336 == id1337 ) ? id1335 : id1337}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1339 = Id("body") }
+section body { id1339 } with zplane offset 135.89 reverse
+#{ id1340 = Id("body") }
+intersect body { id1338 } { id1339 }
+#{ id1341 = Id("body") }
+#{id1342 = ( id1340 == id1341 ) ? id1339 : id1341}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1343 = Id("body") }
+section body { id1343 } with zplane offset 10.16 
+#{ id1344 = Id("body") }
+intersect body { id1342 } { id1343 }
+#{ id1345 = Id("body") }
+#{id1346 = ( id1344 == id1345 ) ? id1343 : id1345}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1347 = Id("body") }
+subtract body { id1346 } from body { id1347 }
+#{ id1348 = Id("body") }
+#{ id1349 = Id("body") }
+intersect body { id1325 } { id1348 }
+#{ id1350 = Id("body") }
+#{id1351 = ( id1349 == id1350 ) ? id1348 : id1350}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1352 = Id("body") }
+section body { id1352 } with xplane offset 1014.3 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1353 = Id("body") }
+section body { id1353 } with xplane offset 594.3 
+#{ id1354 = Id("body") }
+intersect body { id1352 } { id1353 }
+#{ id1355 = Id("body") }
+#{id1356 = ( id1354 == id1355 ) ? id1353 : id1355}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1357 = Id("body") }
+section body { id1357 } with yplane offset 568.95 reverse
+#{ id1358 = Id("body") }
+intersect body { id1356 } { id1357 }
+#{ id1359 = Id("body") }
+#{id1360 = ( id1358 == id1359 ) ? id1357 : id1359}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1361 = Id("body") }
+section body { id1361 } with yplane offset 538.47 
+#{ id1362 = Id("body") }
+intersect body { id1360 } { id1361 }
+#{ id1363 = Id("body") }
+#{id1364 = ( id1362 == id1363 ) ? id1361 : id1363}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1365 = Id("body") }
+section body { id1365 } with zplane offset 363.22 reverse
+#{ id1366 = Id("body") }
+intersect body { id1364 } { id1365 }
+#{ id1367 = Id("body") }
+#{id1368 = ( id1366 == id1367 ) ? id1365 : id1367}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1369 = Id("body") }
+section body { id1369 } with zplane offset 10.16 
+#{ id1370 = Id("body") }
+intersect body { id1368 } { id1369 }
+#{ id1371 = Id("body") }
+#{id1372 = ( id1370 == id1371 ) ? id1369 : id1371}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1373 = Id("body") }
+body { id1373 } move 0.0 0.0 -5000.0
+Rotate body { id1373 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id1373 } move 963.7538435371465 -47.13546646187924 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1374 = Id("body") }
+intersect body { id1373 } { id1374 }
+#{ id1375 = Id("body") }
+intersect body { id1372 } { id1374 }
+#{ id1376 = Id("body") }
+#{id1377 = ( id1375 == id1376 ) ? id1374 : id1376}
+cylinder height 5000.0 radius 15.24
+#{ id1378 = Id("body") }
+rotate body { id1378 } about x angle 90
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1379 = Id("body") }
+subtract body { id1378 } from body { id1379 }
+body { id1379 } move 753.11 0 111.76
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1380 = Id("body") }
+section body { id1380 } with yplane offset 538.48 reverse
+unite body { id1379 } { id1380 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1381 = Id("body") }
+section body { id1381 } with yplane offset 650.24 
+unite body { id1379 } { id1381 }
+#{ id1382 = Id("body") }
+intersect body { id1377 } { id1379 }
+#{ id1383 = Id("body") }
+#{id1384 = ( id1382 == id1383 ) ? id1379 : id1383}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1385 = Id("body") }
+subtract body { id1384 } from body { id1385 }
+#{ id1386 = Id("body") }
+#{ id1387 = Id("body") }
+intersect body { id1351 } { id1386 }
+#{ id1388 = Id("body") }
+#{id1389 = ( id1387 == id1388 ) ? id1386 : id1388}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1390 = Id("body") }
+section body { id1390 } with xplane offset 1143.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1391 = Id("body") }
+section body { id1391 } with xplane offset -1104.9 
+#{ id1392 = Id("body") }
+intersect body { id1390 } { id1391 }
+#{ id1393 = Id("body") }
+#{id1394 = ( id1392 == id1393 ) ? id1391 : id1393}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1395 = Id("body") }
+section body { id1395 } with yplane offset 1898.99 reverse
+#{ id1396 = Id("body") }
+intersect body { id1394 } { id1395 }
+#{ id1397 = Id("body") }
+#{id1398 = ( id1396 == id1397 ) ? id1395 : id1397}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1399 = Id("body") }
+section body { id1399 } with yplane offset -99.38 
+#{ id1400 = Id("body") }
+intersect body { id1398 } { id1399 }
+#{ id1401 = Id("body") }
+#{id1402 = ( id1400 == id1401 ) ? id1399 : id1401}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1403 = Id("body") }
+section body { id1403 } with zplane offset 0.0 reverse
+#{ id1404 = Id("body") }
+intersect body { id1402 } { id1403 }
+#{ id1405 = Id("body") }
+#{id1406 = ( id1404 == id1405 ) ? id1403 : id1405}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1407 = Id("body") }
+section body { id1407 } with zplane offset -81.28 
+#{ id1408 = Id("body") }
+intersect body { id1406 } { id1407 }
+#{ id1409 = Id("body") }
+#{id1410 = ( id1408 == id1409 ) ? id1407 : id1409}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1411 = Id("body") }
+body { id1411 } move 0.0 0.0 -5000.0
+Rotate body { id1411 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id1411 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1412 = Id("body") }
+intersect body { id1411 } { id1412 }
+#{ id1413 = Id("body") }
+intersect body { id1410 } { id1412 }
+#{ id1414 = Id("body") }
+#{id1415 = ( id1413 == id1414 ) ? id1412 : id1414}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1416 = Id("body") }
+subtract body { id1415 } from body { id1416 }
+#{ id1417 = Id("body") }
+#{ id1418 = Id("body") }
+intersect body { id1389 } { id1417 }
+#{ id1419 = Id("body") }
+#{id1420 = ( id1418 == id1419 ) ? id1417 : id1419}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1421 = Id("body") }
+section body { id1421 } with xplane offset 1150.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1422 = Id("body") }
+section body { id1422 } with xplane offset 0.0 
+#{ id1423 = Id("body") }
+intersect body { id1421 } { id1422 }
+#{ id1424 = Id("body") }
+#{id1425 = ( id1423 == id1424 ) ? id1422 : id1424}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1426 = Id("body") }
+section body { id1426 } with yplane offset 0.0 reverse
+#{ id1427 = Id("body") }
+intersect body { id1425 } { id1426 }
+#{ id1428 = Id("body") }
+#{id1429 = ( id1427 == id1428 ) ? id1426 : id1428}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1430 = Id("body") }
+section body { id1430 } with yplane offset -99.38 
+#{ id1431 = Id("body") }
+intersect body { id1429 } { id1430 }
+#{ id1432 = Id("body") }
+#{id1433 = ( id1431 == id1432 ) ? id1430 : id1432}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1434 = Id("body") }
+section body { id1434 } with zplane offset 363.22 reverse
+#{ id1435 = Id("body") }
+intersect body { id1433 } { id1434 }
+#{ id1436 = Id("body") }
+#{id1437 = ( id1435 == id1436 ) ? id1434 : id1436}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1438 = Id("body") }
+section body { id1438 } with zplane offset 0.0 
+#{ id1439 = Id("body") }
+intersect body { id1437 } { id1438 }
+#{ id1440 = Id("body") }
+#{id1441 = ( id1439 == id1440 ) ? id1438 : id1440}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1442 = Id("body") }
+body { id1442 } move 0.0 0.0 -5000.0
+Rotate body { id1442 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id1442 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1443 = Id("body") }
+intersect body { id1442 } { id1443 }
+#{ id1444 = Id("body") }
+intersect body { id1441 } { id1443 }
+#{ id1445 = Id("body") }
+#{id1446 = ( id1444 == id1445 ) ? id1443 : id1445}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1447 = Id("body") }
+subtract body { id1446 } from body { id1447 }
+#{ id1448 = Id("body") }
+#{ id1449 = Id("body") }
+intersect body { id1420 } { id1448 }
+#{ id1450 = Id("body") }
+#{id1451 = ( id1449 == id1450 ) ? id1448 : id1450}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1452 = Id("body") }
+section body { id1452 } with xplane offset 1095.1 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1453 = Id("body") }
+section body { id1453 } with xplane offset 945.1 
+#{ id1454 = Id("body") }
+intersect body { id1452 } { id1453 }
+#{ id1455 = Id("body") }
+#{id1456 = ( id1454 == id1455 ) ? id1453 : id1455}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1457 = Id("body") }
+section body { id1457 } with yplane offset 568.96 reverse
+#{ id1458 = Id("body") }
+intersect body { id1456 } { id1457 }
+#{ id1459 = Id("body") }
+#{id1460 = ( id1458 == id1459 ) ? id1457 : id1459}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1461 = Id("body") }
+section body { id1461 } with yplane offset 0.0 
+#{ id1462 = Id("body") }
+intersect body { id1460 } { id1461 }
+#{ id1463 = Id("body") }
+#{id1464 = ( id1462 == id1463 ) ? id1461 : id1463}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1465 = Id("body") }
+section body { id1465 } with zplane offset 363.22 reverse
+#{ id1466 = Id("body") }
+intersect body { id1464 } { id1465 }
+#{ id1467 = Id("body") }
+#{id1468 = ( id1466 == id1467 ) ? id1465 : id1467}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1469 = Id("body") }
+section body { id1469 } with zplane offset 0.0 
+#{ id1470 = Id("body") }
+intersect body { id1468 } { id1469 }
+#{ id1471 = Id("body") }
+#{id1472 = ( id1470 == id1471 ) ? id1469 : id1471}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1473 = Id("body") }
+body { id1473 } move 0.0 0.0 -5000.0
+Rotate body { id1473 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id1473 } move 963.7538435371465 -47.13546646187924 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1474 = Id("body") }
+subtract body { id1473 } from body { id1474 }
+#{ id1475 = Id("body") }
+intersect body { id1472 } { id1474 }
+#{ id1476 = Id("body") }
+#{id1477 = ( id1475 == id1476 ) ? id1474 : id1476}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1478 = Id("body") }
+body { id1478 } move 0.0 0.0 -5000.0
+Rotate body { id1478 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id1478 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1479 = Id("body") }
+intersect body { id1478 } { id1479 }
+#{ id1480 = Id("body") }
+intersect body { id1477 } { id1479 }
+#{ id1481 = Id("body") }
+#{id1482 = ( id1480 == id1481 ) ? id1479 : id1481}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1483 = Id("body") }
+subtract body { id1482 } from body { id1483 }
+#{ id1484 = Id("body") }
+#{ id1485 = Id("body") }
+intersect body { id1451 } { id1484 }
+#{ id1486 = Id("body") }
+#{id1487 = ( id1485 == id1486 ) ? id1484 : id1486}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1488 = Id("body") }
+section body { id1488 } with xplane offset 0.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1489 = Id("body") }
+section body { id1489 } with xplane offset -81.28 
+#{ id1490 = Id("body") }
+intersect body { id1488 } { id1489 }
+#{ id1491 = Id("body") }
+#{id1492 = ( id1490 == id1491 ) ? id1489 : id1491}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1493 = Id("body") }
+section body { id1493 } with yplane offset 650.24 reverse
+#{ id1494 = Id("body") }
+intersect body { id1492 } { id1493 }
+#{ id1495 = Id("body") }
+#{id1496 = ( id1494 == id1495 ) ? id1493 : id1495}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1497 = Id("body") }
+section body { id1497 } with yplane offset -99.38 
+#{ id1498 = Id("body") }
+intersect body { id1496 } { id1497 }
+#{ id1499 = Id("body") }
+#{id1500 = ( id1498 == id1499 ) ? id1497 : id1499}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1501 = Id("body") }
+section body { id1501 } with zplane offset 363.22 reverse
+#{ id1502 = Id("body") }
+intersect body { id1500 } { id1501 }
+#{ id1503 = Id("body") }
+#{id1504 = ( id1502 == id1503 ) ? id1501 : id1503}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1505 = Id("body") }
+section body { id1505 } with zplane offset 0.0 
+#{ id1506 = Id("body") }
+intersect body { id1504 } { id1505 }
+#{ id1507 = Id("body") }
+#{id1508 = ( id1506 == id1507 ) ? id1505 : id1507}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1509 = Id("body") }
+section body { id1509 } with xplane offset 45.1 
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1510 = Id("body") }
+section body { id1510 } with xplane offset -104.9 reverse
+unite body { id1509 } { id1510 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1511 = Id("body") }
+section body { id1511 } with yplane offset 499.42 
+unite body { id1509 } { id1511 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1512 = Id("body") }
+section body { id1512 } with yplane offset 281.33 reverse
+unite body { id1509 } { id1512 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1513 = Id("body") }
+section body { id1513 } with zplane offset 213.36 
+unite body { id1509 } { id1513 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1514 = Id("body") }
+section body { id1514 } with zplane offset 10.16 reverse
+unite body { id1509 } { id1514 }
+#{ id1515 = Id("body") }
+intersect body { id1508 } { id1509 }
+#{ id1516 = Id("body") }
+#{id1517 = ( id1515 == id1516 ) ? id1509 : id1516}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1518 = Id("body") }
+subtract body { id1517 } from body { id1518 }
+#{ id1519 = Id("body") }
+#{ id1520 = Id("body") }
+intersect body { id1487 } { id1519 }
+#{ id1521 = Id("body") }
+#{id1522 = ( id1520 == id1521 ) ? id1519 : id1521}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1523 = Id("body") }
+section body { id1523 } with xplane offset 1148.72 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1524 = Id("body") }
+section body { id1524 } with xplane offset -81.28 
+#{ id1525 = Id("body") }
+intersect body { id1523 } { id1524 }
+#{ id1526 = Id("body") }
+#{id1527 = ( id1525 == id1526 ) ? id1524 : id1526}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1528 = Id("body") }
+section body { id1528 } with yplane offset 650.24 reverse
+#{ id1529 = Id("body") }
+intersect body { id1527 } { id1528 }
+#{ id1530 = Id("body") }
+#{id1531 = ( id1529 == id1530 ) ? id1528 : id1530}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1532 = Id("body") }
+section body { id1532 } with yplane offset -99.38 
+#{ id1533 = Id("body") }
+intersect body { id1531 } { id1532 }
+#{ id1534 = Id("body") }
+#{id1535 = ( id1533 == id1534 ) ? id1532 : id1534}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1536 = Id("body") }
+section body { id1536 } with zplane offset 424.18 reverse
+#{ id1537 = Id("body") }
+intersect body { id1535 } { id1536 }
+#{ id1538 = Id("body") }
+#{id1539 = ( id1537 == id1538 ) ? id1536 : id1538}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1540 = Id("body") }
+section body { id1540 } with zplane offset 363.22 
+#{ id1541 = Id("body") }
+intersect body { id1539 } { id1540 }
+#{ id1542 = Id("body") }
+#{id1543 = ( id1541 == id1542 ) ? id1540 : id1542}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1544 = Id("body") }
+body { id1544 } move 0.0 0.0 -5000.0
+Rotate body { id1544 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id1544 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1545 = Id("body") }
+intersect body { id1544 } { id1545 }
+#{ id1546 = Id("body") }
+intersect body { id1543 } { id1545 }
+#{ id1547 = Id("body") }
+#{id1548 = ( id1546 == id1547 ) ? id1545 : id1547}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1549 = Id("body") }
+subtract body { id1548 } from body { id1549 }
+#{ id1550 = Id("body") }
+#{ id1551 = Id("body") }
+intersect body { id1522 } { id1550 }
+#{ id1552 = Id("body") }
+#{id1553 = ( id1551 == id1552 ) ? id1550 : id1552}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1554 = Id("body") }
+section body { id1554 } with xplane offset 1064.77 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1555 = Id("body") }
+section body { id1555 } with xplane offset 64.77 
+#{ id1556 = Id("body") }
+intersect body { id1554 } { id1555 }
+#{ id1557 = Id("body") }
+#{id1558 = ( id1556 == id1557 ) ? id1555 : id1557}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1559 = Id("body") }
+section body { id1559 } with yplane offset 568.96 reverse
+#{ id1560 = Id("body") }
+intersect body { id1558 } { id1559 }
+#{ id1561 = Id("body") }
+#{id1562 = ( id1560 == id1561 ) ? id1559 : id1561}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1563 = Id("body") }
+section body { id1563 } with yplane offset 0.0 
+#{ id1564 = Id("body") }
+intersect body { id1562 } { id1563 }
+#{ id1565 = Id("body") }
+#{id1566 = ( id1564 == id1565 ) ? id1563 : id1565}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1567 = Id("body") }
+section body { id1567 } with zplane offset 10.16 reverse
+#{ id1568 = Id("body") }
+intersect body { id1566 } { id1567 }
+#{ id1569 = Id("body") }
+#{id1570 = ( id1568 == id1569 ) ? id1567 : id1569}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1571 = Id("body") }
+section body { id1571 } with zplane offset 0.0 
+#{ id1572 = Id("body") }
+intersect body { id1570 } { id1571 }
+#{ id1573 = Id("body") }
+#{id1574 = ( id1572 == id1573 ) ? id1571 : id1573}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1575 = Id("body") }
+body { id1575 } move 0.0 0.0 -5000.0
+Rotate body { id1575 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id1575 } move 963.7538435371465 -47.13546646187924 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1576 = Id("body") }
+intersect body { id1575 } { id1576 }
+#{ id1577 = Id("body") }
+intersect body { id1574 } { id1576 }
+#{ id1578 = Id("body") }
+#{id1579 = ( id1577 == id1578 ) ? id1576 : id1578}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1580 = Id("body") }
+subtract body { id1579 } from body { id1580 }
+#{ id1581 = Id("body") }
+#{ id1582 = Id("body") }
+intersect body { id1553 } { id1581 }
+#{ id1583 = Id("body") }
+#{id1584 = ( id1582 == id1583 ) ? id1581 : id1583}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1585 = Id("body") }
+section body { id1585 } with xplane offset 1150.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1586 = Id("body") }
+section body { id1586 } with xplane offset 0.0 
+#{ id1587 = Id("body") }
+intersect body { id1585 } { id1586 }
+#{ id1588 = Id("body") }
+#{id1589 = ( id1587 == id1588 ) ? id1586 : id1588}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1590 = Id("body") }
+section body { id1590 } with yplane offset 650.24 reverse
+#{ id1591 = Id("body") }
+intersect body { id1589 } { id1590 }
+#{ id1592 = Id("body") }
+#{id1593 = ( id1591 == id1592 ) ? id1590 : id1592}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1594 = Id("body") }
+section body { id1594 } with yplane offset 568.96 
+#{ id1595 = Id("body") }
+intersect body { id1593 } { id1594 }
+#{ id1596 = Id("body") }
+#{id1597 = ( id1595 == id1596 ) ? id1594 : id1596}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1598 = Id("body") }
+section body { id1598 } with zplane offset 363.22 reverse
+#{ id1599 = Id("body") }
+intersect body { id1597 } { id1598 }
+#{ id1600 = Id("body") }
+#{id1601 = ( id1599 == id1600 ) ? id1598 : id1600}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1602 = Id("body") }
+section body { id1602 } with zplane offset 0.0 
+#{ id1603 = Id("body") }
+intersect body { id1601 } { id1602 }
+#{ id1604 = Id("body") }
+#{id1605 = ( id1603 == id1604 ) ? id1602 : id1604}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1606 = Id("body") }
+body { id1606 } move 0.0 0.0 -5000.0
+Rotate body { id1606 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id1606 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1607 = Id("body") }
+intersect body { id1606 } { id1607 }
+#{ id1608 = Id("body") }
+intersect body { id1605 } { id1607 }
+#{ id1609 = Id("body") }
+#{id1610 = ( id1608 == id1609 ) ? id1607 : id1609}
+cylinder height 5000.0 radius 15.24
+#{ id1611 = Id("body") }
+rotate body { id1611 } about x angle 90
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1612 = Id("body") }
+subtract body { id1611 } from body { id1612 }
+body { id1612 } move 753.11 0 111.76
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1613 = Id("body") }
+section body { id1613 } with yplane offset 538.48 reverse
+unite body { id1612 } { id1613 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1614 = Id("body") }
+section body { id1614 } with yplane offset 650.24 
+unite body { id1612 } { id1614 }
+#{ id1615 = Id("body") }
+intersect body { id1610 } { id1612 }
+#{ id1616 = Id("body") }
+#{id1617 = ( id1615 == id1616 ) ? id1612 : id1616}
+cylinder height 5000.0 radius 5.0
+#{ id1618 = Id("body") }
+rotate body { id1618 } about x angle 90
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1619 = Id("body") }
+subtract body { id1618 } from body { id1619 }
+body { id1619 } move 317.1 0 50.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1620 = Id("body") }
+section body { id1620 } with yplane offset 568.96 reverse
+unite body { id1619 } { id1620 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1621 = Id("body") }
+section body { id1621 } with yplane offset 650.24 
+unite body { id1619 } { id1621 }
+#{ id1622 = Id("body") }
+intersect body { id1617 } { id1619 }
+#{ id1623 = Id("body") }
+#{id1624 = ( id1622 == id1623 ) ? id1619 : id1623}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1625 = Id("body") }
+subtract body { id1624 } from body { id1625 }
+#{ id1626 = Id("body") }
+#{ id1627 = Id("body") }
+intersect body { id1584 } { id1626 }
+#{ id1628 = Id("body") }
+#{id1629 = ( id1627 == id1628 ) ? id1626 : id1628}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1630 = Id("body") }
+section body { id1630 } with xplane offset 42.43 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1631 = Id("body") }
+section body { id1631 } with xplane offset 31.0 
+#{ id1632 = Id("body") }
+intersect body { id1630 } { id1631 }
+#{ id1633 = Id("body") }
+#{id1634 = ( id1632 == id1633 ) ? id1631 : id1633}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1635 = Id("body") }
+section body { id1635 } with yplane offset 529.59 reverse
+#{ id1636 = Id("body") }
+intersect body { id1634 } { id1635 }
+#{ id1637 = Id("body") }
+#{id1638 = ( id1636 == id1637 ) ? id1635 : id1637}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1639 = Id("body") }
+section body { id1639 } with yplane offset 39.37 
+#{ id1640 = Id("body") }
+intersect body { id1638 } { id1639 }
+#{ id1641 = Id("body") }
+#{id1642 = ( id1640 == id1641 ) ? id1639 : id1641}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1643 = Id("body") }
+section body { id1643 } with zplane offset 279.4 reverse
+#{ id1644 = Id("body") }
+intersect body { id1642 } { id1643 }
+#{ id1645 = Id("body") }
+#{id1646 = ( id1644 == id1645 ) ? id1643 : id1645}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1647 = Id("body") }
+section body { id1647 } with zplane offset 276.86 
+#{ id1648 = Id("body") }
+intersect body { id1646 } { id1647 }
+#{ id1649 = Id("body") }
+#{id1650 = ( id1648 == id1649 ) ? id1647 : id1649}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1651 = Id("body") }
+section body { id1651 } with xplane offset 42.43 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1652 = Id("body") }
+section body { id1652 } with xplane offset 31.0 
+#{ id1653 = Id("body") }
+intersect body { id1651 } { id1652 }
+#{ id1654 = Id("body") }
+#{id1655 = ( id1653 == id1654 ) ? id1652 : id1654}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1656 = Id("body") }
+section body { id1656 } with yplane offset 529.59 reverse
+#{ id1657 = Id("body") }
+intersect body { id1655 } { id1656 }
+#{ id1658 = Id("body") }
+#{id1659 = ( id1657 == id1658 ) ? id1656 : id1658}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1660 = Id("body") }
+section body { id1660 } with yplane offset 39.37 
+#{ id1661 = Id("body") }
+intersect body { id1659 } { id1660 }
+#{ id1662 = Id("body") }
+#{id1663 = ( id1661 == id1662 ) ? id1660 : id1662}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1664 = Id("body") }
+section body { id1664 } with zplane offset 299.72 reverse
+#{ id1665 = Id("body") }
+intersect body { id1663 } { id1664 }
+#{ id1666 = Id("body") }
+#{id1667 = ( id1665 == id1666 ) ? id1664 : id1666}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1668 = Id("body") }
+section body { id1668 } with zplane offset 297.18 
+#{ id1669 = Id("body") }
+intersect body { id1667 } { id1668 }
+#{ id1670 = Id("body") }
+#{id1671 = ( id1669 == id1670 ) ? id1668 : id1670}
+unite body { id1650 } { id1671 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1672 = Id("body") }
+section body { id1672 } with xplane offset 37.99 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1673 = Id("body") }
+section body { id1673 } with xplane offset 35.45 
+#{ id1674 = Id("body") }
+intersect body { id1672 } { id1673 }
+#{ id1675 = Id("body") }
+#{id1676 = ( id1674 == id1675 ) ? id1673 : id1675}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1677 = Id("body") }
+section body { id1677 } with yplane offset 529.59 reverse
+#{ id1678 = Id("body") }
+intersect body { id1676 } { id1677 }
+#{ id1679 = Id("body") }
+#{id1680 = ( id1678 == id1679 ) ? id1677 : id1679}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1681 = Id("body") }
+section body { id1681 } with yplane offset 39.37 
+#{ id1682 = Id("body") }
+intersect body { id1680 } { id1681 }
+#{ id1683 = Id("body") }
+#{id1684 = ( id1682 == id1683 ) ? id1681 : id1683}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1685 = Id("body") }
+section body { id1685 } with zplane offset 299.72 reverse
+#{ id1686 = Id("body") }
+intersect body { id1684 } { id1685 }
+#{ id1687 = Id("body") }
+#{id1688 = ( id1686 == id1687 ) ? id1685 : id1687}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1689 = Id("body") }
+section body { id1689 } with zplane offset 276.86 
+#{ id1690 = Id("body") }
+intersect body { id1688 } { id1689 }
+#{ id1691 = Id("body") }
+#{id1692 = ( id1690 == id1691 ) ? id1689 : id1691}
+unite body { id1650 } { id1692 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1693 = Id("body") }
+subtract body { id1650 } from body { id1693 }
+#{ id1694 = Id("body") }
+#{ id1695 = Id("body") }
+intersect body { id1629 } { id1694 }
+#{ id1696 = Id("body") }
+#{id1697 = ( id1695 == id1696 ) ? id1694 : id1696}
+cylinder height 5000.0 radius 32.0
+#{ id1698 = Id("body") }
+body { id1698 } move 753.11 497.84 0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1699 = Id("body") }
+section body { id1699 } with zplane offset 99.7 
+#{ id1700 = Id("body") }
+intersect body { id1698 } { id1699 }
+#{ id1701 = Id("body") }
+#{id1702 = ( id1700 == id1701 ) ? id1699 : id1701}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1703 = Id("body") }
+section body { id1703 } with zplane offset 107.7 reverse
+#{ id1704 = Id("body") }
+intersect body { id1702 } { id1703 }
+#{ id1705 = Id("body") }
+#{id1706 = ( id1704 == id1705 ) ? id1703 : id1705}
+cylinder height 5000.0 radius 20.95
+#{ id1707 = Id("body") }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1708 = Id("body") }
+subtract body { id1707 } from body { id1708 }
+body { id1708 } move 753.11 497.84 0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1709 = Id("body") }
+section body { id1709 } with zplane offset 99.7 reverse
+unite body { id1708 } { id1709 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1710 = Id("body") }
+section body { id1710 } with zplane offset 174.7 
+unite body { id1708 } { id1710 }
+#{ id1711 = Id("body") }
+intersect body { id1706 } { id1708 }
+#{ id1712 = Id("body") }
+#{id1713 = ( id1711 == id1712 ) ? id1708 : id1712}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1714 = Id("body") }
+subtract body { id1713 } from body { id1714 }
+#{ id1715 = Id("body") }
+#{ id1716 = Id("body") }
+intersect body { id1697 } { id1715 }
+#{ id1717 = Id("body") }
+#{id1718 = ( id1716 == id1717 ) ? id1715 : id1717}
+cylinder height 5000.0 radius 32.0
+#{ id1719 = Id("body") }
+body { id1719 } move 753.11 497.84 0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1720 = Id("body") }
+section body { id1720 } with zplane offset 115.83 
+#{ id1721 = Id("body") }
+intersect body { id1719 } { id1720 }
+#{ id1722 = Id("body") }
+#{id1723 = ( id1721 == id1722 ) ? id1720 : id1722}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1724 = Id("body") }
+section body { id1724 } with zplane offset 123.83 reverse
+#{ id1725 = Id("body") }
+intersect body { id1723 } { id1724 }
+#{ id1726 = Id("body") }
+#{id1727 = ( id1725 == id1726 ) ? id1724 : id1726}
+cylinder height 5000.0 radius 20.95
+#{ id1728 = Id("body") }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1729 = Id("body") }
+subtract body { id1728 } from body { id1729 }
+body { id1729 } move 753.11 497.84 0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1730 = Id("body") }
+section body { id1730 } with zplane offset 99.7 reverse
+unite body { id1729 } { id1730 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1731 = Id("body") }
+section body { id1731 } with zplane offset 174.7 
+unite body { id1729 } { id1731 }
+#{ id1732 = Id("body") }
+intersect body { id1727 } { id1729 }
+#{ id1733 = Id("body") }
+#{id1734 = ( id1732 == id1733 ) ? id1729 : id1733}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1735 = Id("body") }
+subtract body { id1734 } from body { id1735 }
+#{ id1736 = Id("body") }
+#{ id1737 = Id("body") }
+intersect body { id1718 } { id1736 }
+#{ id1738 = Id("body") }
+#{id1739 = ( id1737 == id1738 ) ? id1736 : id1738}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1740 = Id("body") }
+section body { id1740 } with xplane offset 795.02 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1741 = Id("body") }
+section body { id1741 } with xplane offset 711.2 
+#{ id1742 = Id("body") }
+intersect body { id1740 } { id1741 }
+#{ id1743 = Id("body") }
+#{id1744 = ( id1742 == id1743 ) ? id1741 : id1743}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1745 = Id("body") }
+section body { id1745 } with yplane offset 518.16 reverse
+#{ id1746 = Id("body") }
+intersect body { id1744 } { id1745 }
+#{ id1747 = Id("body") }
+#{id1748 = ( id1746 == id1747 ) ? id1745 : id1747}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1749 = Id("body") }
+section body { id1749 } with yplane offset 477.52 
+#{ id1750 = Id("body") }
+intersect body { id1748 } { id1749 }
+#{ id1751 = Id("body") }
+#{id1752 = ( id1750 == id1751 ) ? id1749 : id1751}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1753 = Id("body") }
+section body { id1753 } with zplane offset 133.99 reverse
+#{ id1754 = Id("body") }
+intersect body { id1752 } { id1753 }
+#{ id1755 = Id("body") }
+#{id1756 = ( id1754 == id1755 ) ? id1753 : id1755}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1757 = Id("body") }
+section body { id1757 } with zplane offset 89.54 
+#{ id1758 = Id("body") }
+intersect body { id1756 } { id1757 }
+#{ id1759 = Id("body") }
+#{id1760 = ( id1758 == id1759 ) ? id1757 : id1759}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1761 = Id("body") }
+section body { id1761 } with xplane offset 785.24 
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1762 = Id("body") }
+section body { id1762 } with xplane offset 720.97 reverse
+unite body { id1761 } { id1762 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1763 = Id("body") }
+section body { id1763 } with yplane offset 522.52 
+unite body { id1761 } { id1763 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1764 = Id("body") }
+section body { id1764 } with yplane offset 472.52 reverse
+unite body { id1761 } { id1764 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1765 = Id("body") }
+section body { id1765 } with zplane offset 123.83 
+unite body { id1761 } { id1765 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1766 = Id("body") }
+section body { id1766 } with zplane offset 99.7 reverse
+unite body { id1761 } { id1766 }
+#{ id1767 = Id("body") }
+intersect body { id1760 } { id1761 }
+#{ id1768 = Id("body") }
+#{id1769 = ( id1767 == id1768 ) ? id1761 : id1768}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1770 = Id("body") }
+section body { id1770 } with xplane offset 795.02 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1771 = Id("body") }
+section body { id1771 } with xplane offset 787.4 
+#{ id1772 = Id("body") }
+intersect body { id1770 } { id1771 }
+#{ id1773 = Id("body") }
+#{id1774 = ( id1772 == id1773 ) ? id1771 : id1773}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1775 = Id("body") }
+section body { id1775 } with yplane offset 485.14 reverse
+#{ id1776 = Id("body") }
+intersect body { id1774 } { id1775 }
+#{ id1777 = Id("body") }
+#{id1778 = ( id1776 == id1777 ) ? id1775 : id1777}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1779 = Id("body") }
+section body { id1779 } with yplane offset 477.52 
+#{ id1780 = Id("body") }
+intersect body { id1778 } { id1779 }
+#{ id1781 = Id("body") }
+#{id1782 = ( id1780 == id1781 ) ? id1779 : id1781}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1783 = Id("body") }
+section body { id1783 } with zplane offset 88.9 reverse
+#{ id1784 = Id("body") }
+intersect body { id1782 } { id1783 }
+#{ id1785 = Id("body") }
+#{id1786 = ( id1784 == id1785 ) ? id1783 : id1785}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1787 = Id("body") }
+section body { id1787 } with zplane offset 10.16 
+#{ id1788 = Id("body") }
+intersect body { id1786 } { id1787 }
+#{ id1789 = Id("body") }
+#{id1790 = ( id1788 == id1789 ) ? id1787 : id1789}
+unite body { id1769 } { id1790 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1791 = Id("body") }
+section body { id1791 } with xplane offset 795.02 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1792 = Id("body") }
+section body { id1792 } with xplane offset 787.4 
+#{ id1793 = Id("body") }
+intersect body { id1791 } { id1792 }
+#{ id1794 = Id("body") }
+#{id1795 = ( id1793 == id1794 ) ? id1792 : id1794}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1796 = Id("body") }
+section body { id1796 } with yplane offset 518.16 reverse
+#{ id1797 = Id("body") }
+intersect body { id1795 } { id1796 }
+#{ id1798 = Id("body") }
+#{id1799 = ( id1797 == id1798 ) ? id1796 : id1798}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1800 = Id("body") }
+section body { id1800 } with yplane offset 510.54 
+#{ id1801 = Id("body") }
+intersect body { id1799 } { id1800 }
+#{ id1802 = Id("body") }
+#{id1803 = ( id1801 == id1802 ) ? id1800 : id1802}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1804 = Id("body") }
+section body { id1804 } with zplane offset 88.9 reverse
+#{ id1805 = Id("body") }
+intersect body { id1803 } { id1804 }
+#{ id1806 = Id("body") }
+#{id1807 = ( id1805 == id1806 ) ? id1804 : id1806}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1808 = Id("body") }
+section body { id1808 } with zplane offset 10.16 
+#{ id1809 = Id("body") }
+intersect body { id1807 } { id1808 }
+#{ id1810 = Id("body") }
+#{id1811 = ( id1809 == id1810 ) ? id1808 : id1810}
+unite body { id1769 } { id1811 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1812 = Id("body") }
+section body { id1812 } with xplane offset 718.82 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1813 = Id("body") }
+section body { id1813 } with xplane offset 711.2 
+#{ id1814 = Id("body") }
+intersect body { id1812 } { id1813 }
+#{ id1815 = Id("body") }
+#{id1816 = ( id1814 == id1815 ) ? id1813 : id1815}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1817 = Id("body") }
+section body { id1817 } with yplane offset 485.14 reverse
+#{ id1818 = Id("body") }
+intersect body { id1816 } { id1817 }
+#{ id1819 = Id("body") }
+#{id1820 = ( id1818 == id1819 ) ? id1817 : id1819}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1821 = Id("body") }
+section body { id1821 } with yplane offset 477.52 
+#{ id1822 = Id("body") }
+intersect body { id1820 } { id1821 }
+#{ id1823 = Id("body") }
+#{id1824 = ( id1822 == id1823 ) ? id1821 : id1823}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1825 = Id("body") }
+section body { id1825 } with zplane offset 88.9 reverse
+#{ id1826 = Id("body") }
+intersect body { id1824 } { id1825 }
+#{ id1827 = Id("body") }
+#{id1828 = ( id1826 == id1827 ) ? id1825 : id1827}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1829 = Id("body") }
+section body { id1829 } with zplane offset 10.16 
+#{ id1830 = Id("body") }
+intersect body { id1828 } { id1829 }
+#{ id1831 = Id("body") }
+#{id1832 = ( id1830 == id1831 ) ? id1829 : id1831}
+unite body { id1769 } { id1832 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1833 = Id("body") }
+section body { id1833 } with xplane offset 795.02 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1834 = Id("body") }
+section body { id1834 } with xplane offset 711.2 
+#{ id1835 = Id("body") }
+intersect body { id1833 } { id1834 }
+#{ id1836 = Id("body") }
+#{id1837 = ( id1835 == id1836 ) ? id1834 : id1836}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1838 = Id("body") }
+section body { id1838 } with yplane offset 518.16 reverse
+#{ id1839 = Id("body") }
+intersect body { id1837 } { id1838 }
+#{ id1840 = Id("body") }
+#{id1841 = ( id1839 == id1840 ) ? id1838 : id1840}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1842 = Id("body") }
+section body { id1842 } with yplane offset 477.52 
+#{ id1843 = Id("body") }
+intersect body { id1841 } { id1842 }
+#{ id1844 = Id("body") }
+#{id1845 = ( id1843 == id1844 ) ? id1842 : id1844}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1846 = Id("body") }
+section body { id1846 } with zplane offset 89.54 reverse
+#{ id1847 = Id("body") }
+intersect body { id1845 } { id1846 }
+#{ id1848 = Id("body") }
+#{id1849 = ( id1847 == id1848 ) ? id1846 : id1848}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1850 = Id("body") }
+section body { id1850 } with zplane offset 88.9 
+#{ id1851 = Id("body") }
+intersect body { id1849 } { id1850 }
+#{ id1852 = Id("body") }
+#{id1853 = ( id1851 == id1852 ) ? id1850 : id1852}
+unite body { id1769 } { id1853 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1854 = Id("body") }
+subtract body { id1769 } from body { id1854 }
+#{ id1855 = Id("body") }
+#{ id1856 = Id("body") }
+intersect body { id1739 } { id1855 }
+#{ id1857 = Id("body") }
+#{id1858 = ( id1856 == id1857 ) ? id1855 : id1857}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1859 = Id("body") }
+section body { id1859 } with xplane offset 1143.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1860 = Id("body") }
+section body { id1860 } with xplane offset -81.28 
+#{ id1861 = Id("body") }
+intersect body { id1859 } { id1860 }
+#{ id1862 = Id("body") }
+#{id1863 = ( id1861 == id1862 ) ? id1860 : id1862}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1864 = Id("body") }
+section body { id1864 } with yplane offset 650.24 reverse
+#{ id1865 = Id("body") }
+intersect body { id1863 } { id1864 }
+#{ id1866 = Id("body") }
+#{id1867 = ( id1865 == id1866 ) ? id1864 : id1866}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1868 = Id("body") }
+section body { id1868 } with yplane offset -99.38 
+#{ id1869 = Id("body") }
+intersect body { id1867 } { id1868 }
+#{ id1870 = Id("body") }
+#{id1871 = ( id1869 == id1870 ) ? id1868 : id1870}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1872 = Id("body") }
+section body { id1872 } with zplane offset 424.18 reverse
+#{ id1873 = Id("body") }
+intersect body { id1871 } { id1872 }
+#{ id1874 = Id("body") }
+#{id1875 = ( id1873 == id1874 ) ? id1872 : id1874}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1876 = Id("body") }
+section body { id1876 } with zplane offset 0.0 
+#{ id1877 = Id("body") }
+intersect body { id1875 } { id1876 }
+#{ id1878 = Id("body") }
+#{id1879 = ( id1877 == id1878 ) ? id1876 : id1878}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1880 = Id("body") }
+body { id1880 } move 0.0 0.0 -5000.0
+Rotate body { id1880 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id1880 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1881 = Id("body") }
+intersect body { id1880 } { id1881 }
+#{ id1882 = Id("body") }
+intersect body { id1879 } { id1881 }
+#{ id1883 = Id("body") }
+#{id1884 = ( id1882 == id1883 ) ? id1881 : id1883}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1885 = Id("body") }
+section body { id1885 } with xplane offset 1150.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1886 = Id("body") }
+section body { id1886 } with xplane offset 0.0 
+#{ id1887 = Id("body") }
+intersect body { id1885 } { id1886 }
+#{ id1888 = Id("body") }
+#{id1889 = ( id1887 == id1888 ) ? id1886 : id1888}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1890 = Id("body") }
+section body { id1890 } with yplane offset 650.24 reverse
+#{ id1891 = Id("body") }
+intersect body { id1889 } { id1890 }
+#{ id1892 = Id("body") }
+#{id1893 = ( id1891 == id1892 ) ? id1890 : id1892}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1894 = Id("body") }
+section body { id1894 } with yplane offset 568.96 
+#{ id1895 = Id("body") }
+intersect body { id1893 } { id1894 }
+#{ id1896 = Id("body") }
+#{id1897 = ( id1895 == id1896 ) ? id1894 : id1896}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1898 = Id("body") }
+section body { id1898 } with zplane offset 363.22 reverse
+#{ id1899 = Id("body") }
+intersect body { id1897 } { id1898 }
+#{ id1900 = Id("body") }
+#{id1901 = ( id1899 == id1900 ) ? id1898 : id1900}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1902 = Id("body") }
+section body { id1902 } with zplane offset 0.0 
+#{ id1903 = Id("body") }
+intersect body { id1901 } { id1902 }
+#{ id1904 = Id("body") }
+#{id1905 = ( id1903 == id1904 ) ? id1902 : id1904}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1906 = Id("body") }
+body { id1906 } move 0.0 0.0 -5000.0
+Rotate body { id1906 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id1906 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1907 = Id("body") }
+intersect body { id1906 } { id1907 }
+#{ id1908 = Id("body") }
+intersect body { id1905 } { id1907 }
+#{ id1909 = Id("body") }
+#{id1910 = ( id1908 == id1909 ) ? id1907 : id1909}
+cylinder height 5000.0 radius 15.24
+#{ id1911 = Id("body") }
+rotate body { id1911 } about x angle 90
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1912 = Id("body") }
+subtract body { id1911 } from body { id1912 }
+body { id1912 } move 753.11 0 111.76
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1913 = Id("body") }
+section body { id1913 } with yplane offset 538.48 reverse
+unite body { id1912 } { id1913 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1914 = Id("body") }
+section body { id1914 } with yplane offset 650.24 
+unite body { id1912 } { id1914 }
+#{ id1915 = Id("body") }
+intersect body { id1910 } { id1912 }
+#{ id1916 = Id("body") }
+#{id1917 = ( id1915 == id1916 ) ? id1912 : id1916}
+cylinder height 5000.0 radius 5.0
+#{ id1918 = Id("body") }
+rotate body { id1918 } about x angle 90
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1919 = Id("body") }
+subtract body { id1918 } from body { id1919 }
+body { id1919 } move 317.1 0 50.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1920 = Id("body") }
+section body { id1920 } with yplane offset 568.96 reverse
+unite body { id1919 } { id1920 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1921 = Id("body") }
+section body { id1921 } with yplane offset 650.24 
+unite body { id1919 } { id1921 }
+#{ id1922 = Id("body") }
+intersect body { id1917 } { id1919 }
+#{ id1923 = Id("body") }
+#{id1924 = ( id1922 == id1923 ) ? id1919 : id1923}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1925 = Id("body") }
+subtract body { id1924 } from body { id1925 }
+#{ id1926 = Id("body") }
+#{ id1927 = Id("body") }
+intersect body { id1884 } { id1926 }
+#{ id1928 = Id("body") }
+#{id1929 = ( id1927 == id1928 ) ? id1926 : id1928}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1930 = Id("body") }
+section body { id1930 } with xplane offset 1014.3 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1931 = Id("body") }
+section body { id1931 } with xplane offset 594.3 
+#{ id1932 = Id("body") }
+intersect body { id1930 } { id1931 }
+#{ id1933 = Id("body") }
+#{id1934 = ( id1932 == id1933 ) ? id1931 : id1933}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1935 = Id("body") }
+section body { id1935 } with yplane offset 568.95 reverse
+#{ id1936 = Id("body") }
+intersect body { id1934 } { id1935 }
+#{ id1937 = Id("body") }
+#{id1938 = ( id1936 == id1937 ) ? id1935 : id1937}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1939 = Id("body") }
+section body { id1939 } with yplane offset 538.47 
+#{ id1940 = Id("body") }
+intersect body { id1938 } { id1939 }
+#{ id1941 = Id("body") }
+#{id1942 = ( id1940 == id1941 ) ? id1939 : id1941}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1943 = Id("body") }
+section body { id1943 } with zplane offset 363.22 reverse
+#{ id1944 = Id("body") }
+intersect body { id1942 } { id1943 }
+#{ id1945 = Id("body") }
+#{id1946 = ( id1944 == id1945 ) ? id1943 : id1945}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1947 = Id("body") }
+section body { id1947 } with zplane offset 10.16 
+#{ id1948 = Id("body") }
+intersect body { id1946 } { id1947 }
+#{ id1949 = Id("body") }
+#{id1950 = ( id1948 == id1949 ) ? id1947 : id1949}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1951 = Id("body") }
+body { id1951 } move 0.0 0.0 -5000.0
+Rotate body { id1951 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id1951 } move 963.7538435371465 -47.13546646187924 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1952 = Id("body") }
+intersect body { id1951 } { id1952 }
+#{ id1953 = Id("body") }
+intersect body { id1950 } { id1952 }
+#{ id1954 = Id("body") }
+#{id1955 = ( id1953 == id1954 ) ? id1952 : id1954}
+cylinder height 5000.0 radius 15.24
+#{ id1956 = Id("body") }
+rotate body { id1956 } about x angle 90
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1957 = Id("body") }
+subtract body { id1956 } from body { id1957 }
+body { id1957 } move 753.11 0 111.76
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1958 = Id("body") }
+section body { id1958 } with yplane offset 538.48 reverse
+unite body { id1957 } { id1958 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1959 = Id("body") }
+section body { id1959 } with yplane offset 650.24 
+unite body { id1957 } { id1959 }
+#{ id1960 = Id("body") }
+intersect body { id1955 } { id1957 }
+#{ id1961 = Id("body") }
+#{id1962 = ( id1960 == id1961 ) ? id1957 : id1961}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1963 = Id("body") }
+subtract body { id1962 } from body { id1963 }
+#{ id1964 = Id("body") }
+#{ id1965 = Id("body") }
+intersect body { id1929 } { id1964 }
+#{ id1966 = Id("body") }
+#{id1967 = ( id1965 == id1966 ) ? id1964 : id1966}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1968 = Id("body") }
+section body { id1968 } with xplane offset 1150.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1969 = Id("body") }
+section body { id1969 } with xplane offset 0.0 
+#{ id1970 = Id("body") }
+intersect body { id1968 } { id1969 }
+#{ id1971 = Id("body") }
+#{id1972 = ( id1970 == id1971 ) ? id1969 : id1971}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1973 = Id("body") }
+section body { id1973 } with yplane offset 0.0 reverse
+#{ id1974 = Id("body") }
+intersect body { id1972 } { id1973 }
+#{ id1975 = Id("body") }
+#{id1976 = ( id1974 == id1975 ) ? id1973 : id1975}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1977 = Id("body") }
+section body { id1977 } with yplane offset -99.38 
+#{ id1978 = Id("body") }
+intersect body { id1976 } { id1977 }
+#{ id1979 = Id("body") }
+#{id1980 = ( id1978 == id1979 ) ? id1977 : id1979}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1981 = Id("body") }
+section body { id1981 } with zplane offset 363.22 reverse
+#{ id1982 = Id("body") }
+intersect body { id1980 } { id1981 }
+#{ id1983 = Id("body") }
+#{id1984 = ( id1982 == id1983 ) ? id1981 : id1983}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1985 = Id("body") }
+section body { id1985 } with zplane offset 0.0 
+#{ id1986 = Id("body") }
+intersect body { id1984 } { id1985 }
+#{ id1987 = Id("body") }
+#{id1988 = ( id1986 == id1987 ) ? id1985 : id1987}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id1989 = Id("body") }
+body { id1989 } move 0.0 0.0 -5000.0
+Rotate body { id1989 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id1989 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1990 = Id("body") }
+intersect body { id1989 } { id1990 }
+#{ id1991 = Id("body") }
+intersect body { id1988 } { id1990 }
+#{ id1992 = Id("body") }
+#{id1993 = ( id1991 == id1992 ) ? id1990 : id1992}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1994 = Id("body") }
+subtract body { id1993 } from body { id1994 }
+#{ id1995 = Id("body") }
+#{ id1996 = Id("body") }
+intersect body { id1967 } { id1995 }
+#{ id1997 = Id("body") }
+#{id1998 = ( id1996 == id1997 ) ? id1995 : id1997}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id1999 = Id("body") }
+section body { id1999 } with xplane offset 0.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2000 = Id("body") }
+section body { id2000 } with xplane offset -81.28 
+#{ id2001 = Id("body") }
+intersect body { id1999 } { id2000 }
+#{ id2002 = Id("body") }
+#{id2003 = ( id2001 == id2002 ) ? id2000 : id2002}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2004 = Id("body") }
+section body { id2004 } with yplane offset 650.24 reverse
+#{ id2005 = Id("body") }
+intersect body { id2003 } { id2004 }
+#{ id2006 = Id("body") }
+#{id2007 = ( id2005 == id2006 ) ? id2004 : id2006}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2008 = Id("body") }
+section body { id2008 } with yplane offset -99.38 
+#{ id2009 = Id("body") }
+intersect body { id2007 } { id2008 }
+#{ id2010 = Id("body") }
+#{id2011 = ( id2009 == id2010 ) ? id2008 : id2010}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2012 = Id("body") }
+section body { id2012 } with zplane offset 363.22 reverse
+#{ id2013 = Id("body") }
+intersect body { id2011 } { id2012 }
+#{ id2014 = Id("body") }
+#{id2015 = ( id2013 == id2014 ) ? id2012 : id2014}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2016 = Id("body") }
+section body { id2016 } with zplane offset 0.0 
+#{ id2017 = Id("body") }
+intersect body { id2015 } { id2016 }
+#{ id2018 = Id("body") }
+#{id2019 = ( id2017 == id2018 ) ? id2016 : id2018}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2020 = Id("body") }
+section body { id2020 } with xplane offset 45.1 
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2021 = Id("body") }
+section body { id2021 } with xplane offset -104.9 reverse
+unite body { id2020 } { id2021 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2022 = Id("body") }
+section body { id2022 } with yplane offset 499.42 
+unite body { id2020 } { id2022 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2023 = Id("body") }
+section body { id2023 } with yplane offset 281.33 reverse
+unite body { id2020 } { id2023 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2024 = Id("body") }
+section body { id2024 } with zplane offset 213.36 
+unite body { id2020 } { id2024 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2025 = Id("body") }
+section body { id2025 } with zplane offset 10.16 reverse
+unite body { id2020 } { id2025 }
+#{ id2026 = Id("body") }
+intersect body { id2019 } { id2020 }
+#{ id2027 = Id("body") }
+#{id2028 = ( id2026 == id2027 ) ? id2020 : id2027}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2029 = Id("body") }
+subtract body { id2028 } from body { id2029 }
+#{ id2030 = Id("body") }
+#{ id2031 = Id("body") }
+intersect body { id1998 } { id2030 }
+#{ id2032 = Id("body") }
+#{id2033 = ( id2031 == id2032 ) ? id2030 : id2032}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2034 = Id("body") }
+section body { id2034 } with xplane offset 1095.1 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2035 = Id("body") }
+section body { id2035 } with xplane offset 945.1 
+#{ id2036 = Id("body") }
+intersect body { id2034 } { id2035 }
+#{ id2037 = Id("body") }
+#{id2038 = ( id2036 == id2037 ) ? id2035 : id2037}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2039 = Id("body") }
+section body { id2039 } with yplane offset 568.96 reverse
+#{ id2040 = Id("body") }
+intersect body { id2038 } { id2039 }
+#{ id2041 = Id("body") }
+#{id2042 = ( id2040 == id2041 ) ? id2039 : id2041}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2043 = Id("body") }
+section body { id2043 } with yplane offset 0.0 
+#{ id2044 = Id("body") }
+intersect body { id2042 } { id2043 }
+#{ id2045 = Id("body") }
+#{id2046 = ( id2044 == id2045 ) ? id2043 : id2045}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2047 = Id("body") }
+section body { id2047 } with zplane offset 363.22 reverse
+#{ id2048 = Id("body") }
+intersect body { id2046 } { id2047 }
+#{ id2049 = Id("body") }
+#{id2050 = ( id2048 == id2049 ) ? id2047 : id2049}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2051 = Id("body") }
+section body { id2051 } with zplane offset 0.0 
+#{ id2052 = Id("body") }
+intersect body { id2050 } { id2051 }
+#{ id2053 = Id("body") }
+#{id2054 = ( id2052 == id2053 ) ? id2051 : id2053}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id2055 = Id("body") }
+body { id2055 } move 0.0 0.0 -5000.0
+Rotate body { id2055 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id2055 } move 963.7538435371465 -47.13546646187924 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2056 = Id("body") }
+subtract body { id2055 } from body { id2056 }
+#{ id2057 = Id("body") }
+intersect body { id2054 } { id2056 }
+#{ id2058 = Id("body") }
+#{id2059 = ( id2057 == id2058 ) ? id2056 : id2058}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id2060 = Id("body") }
+body { id2060 } move 0.0 0.0 -5000.0
+Rotate body { id2060 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id2060 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2061 = Id("body") }
+intersect body { id2060 } { id2061 }
+#{ id2062 = Id("body") }
+intersect body { id2059 } { id2061 }
+#{ id2063 = Id("body") }
+#{id2064 = ( id2062 == id2063 ) ? id2061 : id2063}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2065 = Id("body") }
+subtract body { id2064 } from body { id2065 }
+#{ id2066 = Id("body") }
+#{ id2067 = Id("body") }
+intersect body { id2033 } { id2066 }
+#{ id2068 = Id("body") }
+#{id2069 = ( id2067 == id2068 ) ? id2066 : id2068}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2070 = Id("body") }
+section body { id2070 } with xplane offset 1148.72 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2071 = Id("body") }
+section body { id2071 } with xplane offset -81.28 
+#{ id2072 = Id("body") }
+intersect body { id2070 } { id2071 }
+#{ id2073 = Id("body") }
+#{id2074 = ( id2072 == id2073 ) ? id2071 : id2073}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2075 = Id("body") }
+section body { id2075 } with yplane offset 650.24 reverse
+#{ id2076 = Id("body") }
+intersect body { id2074 } { id2075 }
+#{ id2077 = Id("body") }
+#{id2078 = ( id2076 == id2077 ) ? id2075 : id2077}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2079 = Id("body") }
+section body { id2079 } with yplane offset -99.38 
+#{ id2080 = Id("body") }
+intersect body { id2078 } { id2079 }
+#{ id2081 = Id("body") }
+#{id2082 = ( id2080 == id2081 ) ? id2079 : id2081}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2083 = Id("body") }
+section body { id2083 } with zplane offset 424.18 reverse
+#{ id2084 = Id("body") }
+intersect body { id2082 } { id2083 }
+#{ id2085 = Id("body") }
+#{id2086 = ( id2084 == id2085 ) ? id2083 : id2085}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2087 = Id("body") }
+section body { id2087 } with zplane offset 363.22 
+#{ id2088 = Id("body") }
+intersect body { id2086 } { id2087 }
+#{ id2089 = Id("body") }
+#{id2090 = ( id2088 == id2089 ) ? id2087 : id2089}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id2091 = Id("body") }
+body { id2091 } move 0.0 0.0 -5000.0
+Rotate body { id2091 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id2091 } move 1044.8465998927422 -51.10156726981154 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2092 = Id("body") }
+intersect body { id2091 } { id2092 }
+#{ id2093 = Id("body") }
+intersect body { id2090 } { id2092 }
+#{ id2094 = Id("body") }
+#{id2095 = ( id2093 == id2094 ) ? id2092 : id2094}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2096 = Id("body") }
+subtract body { id2095 } from body { id2096 }
+#{ id2097 = Id("body") }
+#{ id2098 = Id("body") }
+intersect body { id2069 } { id2097 }
+#{ id2099 = Id("body") }
+#{id2100 = ( id2098 == id2099 ) ? id2097 : id2099}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2101 = Id("body") }
+section body { id2101 } with xplane offset 1064.77 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2102 = Id("body") }
+section body { id2102 } with xplane offset 64.77 
+#{ id2103 = Id("body") }
+intersect body { id2101 } { id2102 }
+#{ id2104 = Id("body") }
+#{id2105 = ( id2103 == id2104 ) ? id2102 : id2104}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2106 = Id("body") }
+section body { id2106 } with yplane offset 568.96 reverse
+#{ id2107 = Id("body") }
+intersect body { id2105 } { id2106 }
+#{ id2108 = Id("body") }
+#{id2109 = ( id2107 == id2108 ) ? id2106 : id2108}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2110 = Id("body") }
+section body { id2110 } with yplane offset 0.0 
+#{ id2111 = Id("body") }
+intersect body { id2109 } { id2110 }
+#{ id2112 = Id("body") }
+#{id2113 = ( id2111 == id2112 ) ? id2110 : id2112}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2114 = Id("body") }
+section body { id2114 } with zplane offset 10.16 reverse
+#{ id2115 = Id("body") }
+intersect body { id2113 } { id2114 }
+#{ id2116 = Id("body") }
+#{id2117 = ( id2115 == id2116 ) ? id2114 : id2116}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2118 = Id("body") }
+section body { id2118 } with zplane offset 0.0 
+#{ id2119 = Id("body") }
+intersect body { id2117 } { id2118 }
+#{ id2120 = Id("body") }
+#{id2121 = ( id2119 == id2120 ) ? id2118 : id2120}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id2122 = Id("body") }
+body { id2122 } move 0.0 0.0 -5000.0
+Rotate body { id2122 } about 0 0 0 direction 0.04884981098579203 0.9988061353268974 -0.0 Angle 90.0
+body { id2122 } move 963.7538435371465 -47.13546646187924 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2123 = Id("body") }
+intersect body { id2122 } { id2123 }
+#{ id2124 = Id("body") }
+intersect body { id2121 } { id2123 }
+#{ id2125 = Id("body") }
+#{id2126 = ( id2124 == id2125 ) ? id2123 : id2125}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2127 = Id("body") }
+subtract body { id2126 } from body { id2127 }
+#{ id2128 = Id("body") }
+#{ id2129 = Id("body") }
+intersect body { id2100 } { id2128 }
+#{ id2130 = Id("body") }
+#{id2131 = ( id2129 == id2130 ) ? id2128 : id2130}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2132 = Id("body") }
+section body { id2132 } with xplane offset 61.47 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2133 = Id("body") }
+section body { id2133 } with xplane offset 0.51 
+#{ id2134 = Id("body") }
+intersect body { id2132 } { id2133 }
+#{ id2135 = Id("body") }
+#{id2136 = ( id2134 == id2135 ) ? id2133 : id2135}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2137 = Id("body") }
+section body { id2137 } with yplane offset 512.46 reverse
+#{ id2138 = Id("body") }
+intersect body { id2136 } { id2137 }
+#{ id2139 = Id("body") }
+#{id2140 = ( id2138 == id2139 ) ? id2137 : id2139}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2141 = Id("body") }
+section body { id2141 } with yplane offset 268.62 
+#{ id2142 = Id("body") }
+intersect body { id2140 } { id2141 }
+#{ id2143 = Id("body") }
+#{id2144 = ( id2142 == id2143 ) ? id2141 : id2143}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2145 = Id("body") }
+section body { id2145 } with zplane offset 223.52 reverse
+#{ id2146 = Id("body") }
+intersect body { id2144 } { id2145 }
+#{ id2147 = Id("body") }
+#{id2148 = ( id2146 == id2147 ) ? id2145 : id2147}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2149 = Id("body") }
+section body { id2149 } with zplane offset 0.0 
+#{ id2150 = Id("body") }
+intersect body { id2148 } { id2149 }
+#{ id2151 = Id("body") }
+#{id2152 = ( id2150 == id2151 ) ? id2149 : id2151}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id2153 = Id("body") }
+body { id2153 } move 0.0 0.0 -5000.0
+Rotate body { id2153 } about 0 0 0 direction -0.8660265528314685 0.49999800978688297 0.0 Angle 90.0
+body { id2153 } move 223.19019250519648 386.57880483055055 0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2154 = Id("body") }
+intersect body { id2153 } { id2154 }
+#{ id2155 = Id("body") }
+intersect body { id2152 } { id2154 }
+#{ id2156 = Id("body") }
+#{id2157 = ( id2155 == id2156 ) ? id2154 : id2156}
+brick x 10000.0 y 10000.0 z 10000.0
+#{ id2158 = Id("body") }
+body { id2158 } move 0.0 0.0 -5000.0
+Rotate body { id2158 } about 0 0 0 direction 0.8660265528314685 0.49999800978688297 -0.0 Angle 90.0
+body { id2158 } move -113.7260639381776 196.98036630475988 -0.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2159 = Id("body") }
+intersect body { id2158 } { id2159 }
+#{ id2160 = Id("body") }
+intersect body { id2157 } { id2159 }
+#{ id2161 = Id("body") }
+#{id2162 = ( id2160 == id2161 ) ? id2159 : id2161}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2163 = Id("body") }
+subtract body { id2162 } from body { id2163 }
+#{ id2164 = Id("body") }
+#{ id2165 = Id("body") }
+intersect body { id2131 } { id2164 }
+#{ id2166 = Id("body") }
+#{id2167 = ( id2165 == id2166 ) ? id2164 : id2166}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2168 = Id("body") }
+section body { id2168 } with xplane offset 0.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2169 = Id("body") }
+section body { id2169 } with xplane offset -38.1 
+#{ id2170 = Id("body") }
+intersect body { id2168 } { id2169 }
+#{ id2171 = Id("body") }
+#{id2172 = ( id2170 == id2171 ) ? id2169 : id2171}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2173 = Id("body") }
+section body { id2173 } with yplane offset 499.42 reverse
+#{ id2174 = Id("body") }
+intersect body { id2172 } { id2173 }
+#{ id2175 = Id("body") }
+#{id2176 = ( id2174 == id2175 ) ? id2173 : id2175}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2177 = Id("body") }
+section body { id2177 } with yplane offset 466.4 
+#{ id2178 = Id("body") }
+intersect body { id2176 } { id2177 }
+#{ id2179 = Id("body") }
+#{id2180 = ( id2178 == id2179 ) ? id2177 : id2179}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2181 = Id("body") }
+section body { id2181 } with zplane offset 213.36 reverse
+#{ id2182 = Id("body") }
+intersect body { id2180 } { id2181 }
+#{ id2183 = Id("body") }
+#{id2184 = ( id2182 == id2183 ) ? id2181 : id2183}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2185 = Id("body") }
+section body { id2185 } with zplane offset 10.16 
+#{ id2186 = Id("body") }
+intersect body { id2184 } { id2185 }
+#{ id2187 = Id("body") }
+#{id2188 = ( id2186 == id2187 ) ? id2185 : id2187}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2189 = Id("body") }
+subtract body { id2188 } from body { id2189 }
+#{ id2190 = Id("body") }
+#{ id2191 = Id("body") }
+intersect body { id2167 } { id2190 }
+#{ id2192 = Id("body") }
+#{id2193 = ( id2191 == id2192 ) ? id2190 : id2192}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2194 = Id("body") }
+section body { id2194 } with xplane offset 0.0 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2195 = Id("body") }
+section body { id2195 } with xplane offset -38.1 
+#{ id2196 = Id("body") }
+intersect body { id2194 } { id2195 }
+#{ id2197 = Id("body") }
+#{id2198 = ( id2196 == id2197 ) ? id2195 : id2197}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2199 = Id("body") }
+section body { id2199 } with yplane offset 314.35 reverse
+#{ id2200 = Id("body") }
+intersect body { id2198 } { id2199 }
+#{ id2201 = Id("body") }
+#{id2202 = ( id2200 == id2201 ) ? id2199 : id2201}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2203 = Id("body") }
+section body { id2203 } with yplane offset 281.33 
+#{ id2204 = Id("body") }
+intersect body { id2202 } { id2203 }
+#{ id2205 = Id("body") }
+#{id2206 = ( id2204 == id2205 ) ? id2203 : id2205}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2207 = Id("body") }
+section body { id2207 } with zplane offset 213.36 reverse
+#{ id2208 = Id("body") }
+intersect body { id2206 } { id2207 }
+#{ id2209 = Id("body") }
+#{id2210 = ( id2208 == id2209 ) ? id2207 : id2209}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2211 = Id("body") }
+section body { id2211 } with zplane offset 10.16 
+#{ id2212 = Id("body") }
+intersect body { id2210 } { id2211 }
+#{ id2213 = Id("body") }
+#{id2214 = ( id2212 == id2213 ) ? id2211 : id2213}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2215 = Id("body") }
+subtract body { id2214 } from body { id2215 }
+#{ id2216 = Id("body") }
+#{ id2217 = Id("body") }
+intersect body { id2193 } { id2216 }
+#{ id2218 = Id("body") }
+#{id2219 = ( id2217 == id2218 ) ? id2216 : id2218}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2220 = Id("body") }
+section body { id2220 } with xplane offset 42.43 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2221 = Id("body") }
+section body { id2221 } with xplane offset 31.0 
+#{ id2222 = Id("body") }
+intersect body { id2220 } { id2221 }
+#{ id2223 = Id("body") }
+#{id2224 = ( id2222 == id2223 ) ? id2221 : id2223}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2225 = Id("body") }
+section body { id2225 } with yplane offset 529.59 reverse
+#{ id2226 = Id("body") }
+intersect body { id2224 } { id2225 }
+#{ id2227 = Id("body") }
+#{id2228 = ( id2226 == id2227 ) ? id2225 : id2227}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2229 = Id("body") }
+section body { id2229 } with yplane offset 39.37 
+#{ id2230 = Id("body") }
+intersect body { id2228 } { id2229 }
+#{ id2231 = Id("body") }
+#{id2232 = ( id2230 == id2231 ) ? id2229 : id2231}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2233 = Id("body") }
+section body { id2233 } with zplane offset 279.4 reverse
+#{ id2234 = Id("body") }
+intersect body { id2232 } { id2233 }
+#{ id2235 = Id("body") }
+#{id2236 = ( id2234 == id2235 ) ? id2233 : id2235}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2237 = Id("body") }
+section body { id2237 } with zplane offset 276.86 
+#{ id2238 = Id("body") }
+intersect body { id2236 } { id2237 }
+#{ id2239 = Id("body") }
+#{id2240 = ( id2238 == id2239 ) ? id2237 : id2239}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2241 = Id("body") }
+section body { id2241 } with xplane offset 42.43 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2242 = Id("body") }
+section body { id2242 } with xplane offset 31.0 
+#{ id2243 = Id("body") }
+intersect body { id2241 } { id2242 }
+#{ id2244 = Id("body") }
+#{id2245 = ( id2243 == id2244 ) ? id2242 : id2244}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2246 = Id("body") }
+section body { id2246 } with yplane offset 529.59 reverse
+#{ id2247 = Id("body") }
+intersect body { id2245 } { id2246 }
+#{ id2248 = Id("body") }
+#{id2249 = ( id2247 == id2248 ) ? id2246 : id2248}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2250 = Id("body") }
+section body { id2250 } with yplane offset 39.37 
+#{ id2251 = Id("body") }
+intersect body { id2249 } { id2250 }
+#{ id2252 = Id("body") }
+#{id2253 = ( id2251 == id2252 ) ? id2250 : id2252}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2254 = Id("body") }
+section body { id2254 } with zplane offset 299.72 reverse
+#{ id2255 = Id("body") }
+intersect body { id2253 } { id2254 }
+#{ id2256 = Id("body") }
+#{id2257 = ( id2255 == id2256 ) ? id2254 : id2256}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2258 = Id("body") }
+section body { id2258 } with zplane offset 297.18 
+#{ id2259 = Id("body") }
+intersect body { id2257 } { id2258 }
+#{ id2260 = Id("body") }
+#{id2261 = ( id2259 == id2260 ) ? id2258 : id2260}
+unite body { id2240 } { id2261 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2262 = Id("body") }
+section body { id2262 } with xplane offset 37.99 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2263 = Id("body") }
+section body { id2263 } with xplane offset 35.45 
+#{ id2264 = Id("body") }
+intersect body { id2262 } { id2263 }
+#{ id2265 = Id("body") }
+#{id2266 = ( id2264 == id2265 ) ? id2263 : id2265}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2267 = Id("body") }
+section body { id2267 } with yplane offset 529.59 reverse
+#{ id2268 = Id("body") }
+intersect body { id2266 } { id2267 }
+#{ id2269 = Id("body") }
+#{id2270 = ( id2268 == id2269 ) ? id2267 : id2269}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2271 = Id("body") }
+section body { id2271 } with yplane offset 39.37 
+#{ id2272 = Id("body") }
+intersect body { id2270 } { id2271 }
+#{ id2273 = Id("body") }
+#{id2274 = ( id2272 == id2273 ) ? id2271 : id2273}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2275 = Id("body") }
+section body { id2275 } with zplane offset 299.72 reverse
+#{ id2276 = Id("body") }
+intersect body { id2274 } { id2275 }
+#{ id2277 = Id("body") }
+#{id2278 = ( id2276 == id2277 ) ? id2275 : id2277}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2279 = Id("body") }
+section body { id2279 } with zplane offset 276.86 
+#{ id2280 = Id("body") }
+intersect body { id2278 } { id2279 }
+#{ id2281 = Id("body") }
+#{id2282 = ( id2280 == id2281 ) ? id2279 : id2281}
+unite body { id2240 } { id2282 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2283 = Id("body") }
+subtract body { id2240 } from body { id2283 }
+#{ id2284 = Id("body") }
+#{ id2285 = Id("body") }
+intersect body { id2219 } { id2284 }
+#{ id2286 = Id("body") }
+#{id2287 = ( id2285 == id2286 ) ? id2284 : id2286}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2288 = Id("body") }
+section body { id2288 } with xplane offset 703.59 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2289 = Id("body") }
+section body { id2289 } with xplane offset 636.75 
+#{ id2290 = Id("body") }
+intersect body { id2288 } { id2289 }
+#{ id2291 = Id("body") }
+#{id2292 = ( id2290 == id2291 ) ? id2289 : id2291}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2293 = Id("body") }
+section body { id2293 } with yplane offset 538.47 reverse
+#{ id2294 = Id("body") }
+intersect body { id2292 } { id2293 }
+#{ id2295 = Id("body") }
+#{id2296 = ( id2294 == id2295 ) ? id2293 : id2295}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2297 = Id("body") }
+section body { id2297 } with yplane offset 412.74 
+#{ id2298 = Id("body") }
+intersect body { id2296 } { id2297 }
+#{ id2299 = Id("body") }
+#{id2300 = ( id2298 == id2299 ) ? id2297 : id2299}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2301 = Id("body") }
+section body { id2301 } with zplane offset 152.4 reverse
+#{ id2302 = Id("body") }
+intersect body { id2300 } { id2301 }
+#{ id2303 = Id("body") }
+#{id2304 = ( id2302 == id2303 ) ? id2301 : id2303}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2305 = Id("body") }
+section body { id2305 } with zplane offset 10.16 
+#{ id2306 = Id("body") }
+intersect body { id2304 } { id2305 }
+#{ id2307 = Id("body") }
+#{id2308 = ( id2306 == id2307 ) ? id2305 : id2307}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2309 = Id("body") }
+subtract body { id2308 } from body { id2309 }
+#{ id2310 = Id("body") }
+#{ id2311 = Id("body") }
+intersect body { id2287 } { id2310 }
+#{ id2312 = Id("body") }
+#{id2313 = ( id2311 == id2312 ) ? id2310 : id2312}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2314 = Id("body") }
+section body { id2314 } with xplane offset 878.84 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2315 = Id("body") }
+section body { id2315 } with xplane offset 830.58 
+#{ id2316 = Id("body") }
+intersect body { id2314 } { id2315 }
+#{ id2317 = Id("body") }
+#{id2318 = ( id2316 == id2317 ) ? id2315 : id2317}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2319 = Id("body") }
+section body { id2319 } with yplane offset 538.47 reverse
+#{ id2320 = Id("body") }
+intersect body { id2318 } { id2319 }
+#{ id2321 = Id("body") }
+#{id2322 = ( id2320 == id2321 ) ? id2319 : id2321}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2323 = Id("body") }
+section body { id2323 } with yplane offset 412.74 
+#{ id2324 = Id("body") }
+intersect body { id2322 } { id2323 }
+#{ id2325 = Id("body") }
+#{id2326 = ( id2324 == id2325 ) ? id2323 : id2325}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2327 = Id("body") }
+section body { id2327 } with zplane offset 135.89 reverse
+#{ id2328 = Id("body") }
+intersect body { id2326 } { id2327 }
+#{ id2329 = Id("body") }
+#{id2330 = ( id2328 == id2329 ) ? id2327 : id2329}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2331 = Id("body") }
+section body { id2331 } with zplane offset 10.16 
+#{ id2332 = Id("body") }
+intersect body { id2330 } { id2331 }
+#{ id2333 = Id("body") }
+#{id2334 = ( id2332 == id2333 ) ? id2331 : id2333}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2335 = Id("body") }
+subtract body { id2334 } from body { id2335 }
+#{ id2336 = Id("body") }
+#{ id2337 = Id("body") }
+intersect body { id2313 } { id2336 }
+#{ id2338 = Id("body") }
+#{id2339 = ( id2337 == id2338 ) ? id2336 : id2338}
+cylinder height 5000.0 radius 32.0
+#{ id2340 = Id("body") }
+body { id2340 } move 753.11 497.84 0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2341 = Id("body") }
+section body { id2341 } with zplane offset 99.7 
+#{ id2342 = Id("body") }
+intersect body { id2340 } { id2341 }
+#{ id2343 = Id("body") }
+#{id2344 = ( id2342 == id2343 ) ? id2341 : id2343}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2345 = Id("body") }
+section body { id2345 } with zplane offset 107.7 reverse
+#{ id2346 = Id("body") }
+intersect body { id2344 } { id2345 }
+#{ id2347 = Id("body") }
+#{id2348 = ( id2346 == id2347 ) ? id2345 : id2347}
+cylinder height 5000.0 radius 20.95
+#{ id2349 = Id("body") }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2350 = Id("body") }
+subtract body { id2349 } from body { id2350 }
+body { id2350 } move 753.11 497.84 0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2351 = Id("body") }
+section body { id2351 } with zplane offset 99.7 reverse
+unite body { id2350 } { id2351 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2352 = Id("body") }
+section body { id2352 } with zplane offset 174.7 
+unite body { id2350 } { id2352 }
+#{ id2353 = Id("body") }
+intersect body { id2348 } { id2350 }
+#{ id2354 = Id("body") }
+#{id2355 = ( id2353 == id2354 ) ? id2350 : id2354}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2356 = Id("body") }
+subtract body { id2355 } from body { id2356 }
+#{ id2357 = Id("body") }
+#{ id2358 = Id("body") }
+intersect body { id2339 } { id2357 }
+#{ id2359 = Id("body") }
+#{id2360 = ( id2358 == id2359 ) ? id2357 : id2359}
+cylinder height 5000.0 radius 32.0
+#{ id2361 = Id("body") }
+body { id2361 } move 753.11 497.84 0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2362 = Id("body") }
+section body { id2362 } with zplane offset 115.83 
+#{ id2363 = Id("body") }
+intersect body { id2361 } { id2362 }
+#{ id2364 = Id("body") }
+#{id2365 = ( id2363 == id2364 ) ? id2362 : id2364}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2366 = Id("body") }
+section body { id2366 } with zplane offset 123.83 reverse
+#{ id2367 = Id("body") }
+intersect body { id2365 } { id2366 }
+#{ id2368 = Id("body") }
+#{id2369 = ( id2367 == id2368 ) ? id2366 : id2368}
+cylinder height 5000.0 radius 20.95
+#{ id2370 = Id("body") }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2371 = Id("body") }
+subtract body { id2370 } from body { id2371 }
+body { id2371 } move 753.11 497.84 0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2372 = Id("body") }
+section body { id2372 } with zplane offset 99.7 reverse
+unite body { id2371 } { id2372 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2373 = Id("body") }
+section body { id2373 } with zplane offset 174.7 
+unite body { id2371 } { id2373 }
+#{ id2374 = Id("body") }
+intersect body { id2369 } { id2371 }
+#{ id2375 = Id("body") }
+#{id2376 = ( id2374 == id2375 ) ? id2371 : id2375}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2377 = Id("body") }
+subtract body { id2376 } from body { id2377 }
+#{ id2378 = Id("body") }
+#{ id2379 = Id("body") }
+intersect body { id2360 } { id2378 }
+#{ id2380 = Id("body") }
+#{id2381 = ( id2379 == id2380 ) ? id2378 : id2380}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2382 = Id("body") }
+section body { id2382 } with xplane offset 795.02 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2383 = Id("body") }
+section body { id2383 } with xplane offset 711.2 
+#{ id2384 = Id("body") }
+intersect body { id2382 } { id2383 }
+#{ id2385 = Id("body") }
+#{id2386 = ( id2384 == id2385 ) ? id2383 : id2385}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2387 = Id("body") }
+section body { id2387 } with yplane offset 518.16 reverse
+#{ id2388 = Id("body") }
+intersect body { id2386 } { id2387 }
+#{ id2389 = Id("body") }
+#{id2390 = ( id2388 == id2389 ) ? id2387 : id2389}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2391 = Id("body") }
+section body { id2391 } with yplane offset 477.52 
+#{ id2392 = Id("body") }
+intersect body { id2390 } { id2391 }
+#{ id2393 = Id("body") }
+#{id2394 = ( id2392 == id2393 ) ? id2391 : id2393}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2395 = Id("body") }
+section body { id2395 } with zplane offset 133.99 reverse
+#{ id2396 = Id("body") }
+intersect body { id2394 } { id2395 }
+#{ id2397 = Id("body") }
+#{id2398 = ( id2396 == id2397 ) ? id2395 : id2397}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2399 = Id("body") }
+section body { id2399 } with zplane offset 89.54 
+#{ id2400 = Id("body") }
+intersect body { id2398 } { id2399 }
+#{ id2401 = Id("body") }
+#{id2402 = ( id2400 == id2401 ) ? id2399 : id2401}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2403 = Id("body") }
+section body { id2403 } with xplane offset 785.24 
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2404 = Id("body") }
+section body { id2404 } with xplane offset 720.97 reverse
+unite body { id2403 } { id2404 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2405 = Id("body") }
+section body { id2405 } with yplane offset 522.52 
+unite body { id2403 } { id2405 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2406 = Id("body") }
+section body { id2406 } with yplane offset 472.52 reverse
+unite body { id2403 } { id2406 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2407 = Id("body") }
+section body { id2407 } with zplane offset 123.83 
+unite body { id2403 } { id2407 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2408 = Id("body") }
+section body { id2408 } with zplane offset 99.7 reverse
+unite body { id2403 } { id2408 }
+#{ id2409 = Id("body") }
+intersect body { id2402 } { id2403 }
+#{ id2410 = Id("body") }
+#{id2411 = ( id2409 == id2410 ) ? id2403 : id2410}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2412 = Id("body") }
+section body { id2412 } with xplane offset 795.02 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2413 = Id("body") }
+section body { id2413 } with xplane offset 787.4 
+#{ id2414 = Id("body") }
+intersect body { id2412 } { id2413 }
+#{ id2415 = Id("body") }
+#{id2416 = ( id2414 == id2415 ) ? id2413 : id2415}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2417 = Id("body") }
+section body { id2417 } with yplane offset 485.14 reverse
+#{ id2418 = Id("body") }
+intersect body { id2416 } { id2417 }
+#{ id2419 = Id("body") }
+#{id2420 = ( id2418 == id2419 ) ? id2417 : id2419}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2421 = Id("body") }
+section body { id2421 } with yplane offset 477.52 
+#{ id2422 = Id("body") }
+intersect body { id2420 } { id2421 }
+#{ id2423 = Id("body") }
+#{id2424 = ( id2422 == id2423 ) ? id2421 : id2423}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2425 = Id("body") }
+section body { id2425 } with zplane offset 88.9 reverse
+#{ id2426 = Id("body") }
+intersect body { id2424 } { id2425 }
+#{ id2427 = Id("body") }
+#{id2428 = ( id2426 == id2427 ) ? id2425 : id2427}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2429 = Id("body") }
+section body { id2429 } with zplane offset 10.16 
+#{ id2430 = Id("body") }
+intersect body { id2428 } { id2429 }
+#{ id2431 = Id("body") }
+#{id2432 = ( id2430 == id2431 ) ? id2429 : id2431}
+unite body { id2411 } { id2432 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2433 = Id("body") }
+section body { id2433 } with xplane offset 795.02 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2434 = Id("body") }
+section body { id2434 } with xplane offset 787.4 
+#{ id2435 = Id("body") }
+intersect body { id2433 } { id2434 }
+#{ id2436 = Id("body") }
+#{id2437 = ( id2435 == id2436 ) ? id2434 : id2436}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2438 = Id("body") }
+section body { id2438 } with yplane offset 518.16 reverse
+#{ id2439 = Id("body") }
+intersect body { id2437 } { id2438 }
+#{ id2440 = Id("body") }
+#{id2441 = ( id2439 == id2440 ) ? id2438 : id2440}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2442 = Id("body") }
+section body { id2442 } with yplane offset 510.54 
+#{ id2443 = Id("body") }
+intersect body { id2441 } { id2442 }
+#{ id2444 = Id("body") }
+#{id2445 = ( id2443 == id2444 ) ? id2442 : id2444}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2446 = Id("body") }
+section body { id2446 } with zplane offset 88.9 reverse
+#{ id2447 = Id("body") }
+intersect body { id2445 } { id2446 }
+#{ id2448 = Id("body") }
+#{id2449 = ( id2447 == id2448 ) ? id2446 : id2448}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2450 = Id("body") }
+section body { id2450 } with zplane offset 10.16 
+#{ id2451 = Id("body") }
+intersect body { id2449 } { id2450 }
+#{ id2452 = Id("body") }
+#{id2453 = ( id2451 == id2452 ) ? id2450 : id2452}
+unite body { id2411 } { id2453 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2454 = Id("body") }
+section body { id2454 } with xplane offset 718.82 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2455 = Id("body") }
+section body { id2455 } with xplane offset 711.2 
+#{ id2456 = Id("body") }
+intersect body { id2454 } { id2455 }
+#{ id2457 = Id("body") }
+#{id2458 = ( id2456 == id2457 ) ? id2455 : id2457}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2459 = Id("body") }
+section body { id2459 } with yplane offset 485.14 reverse
+#{ id2460 = Id("body") }
+intersect body { id2458 } { id2459 }
+#{ id2461 = Id("body") }
+#{id2462 = ( id2460 == id2461 ) ? id2459 : id2461}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2463 = Id("body") }
+section body { id2463 } with yplane offset 477.52 
+#{ id2464 = Id("body") }
+intersect body { id2462 } { id2463 }
+#{ id2465 = Id("body") }
+#{id2466 = ( id2464 == id2465 ) ? id2463 : id2465}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2467 = Id("body") }
+section body { id2467 } with zplane offset 88.9 reverse
+#{ id2468 = Id("body") }
+intersect body { id2466 } { id2467 }
+#{ id2469 = Id("body") }
+#{id2470 = ( id2468 == id2469 ) ? id2467 : id2469}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2471 = Id("body") }
+section body { id2471 } with zplane offset 10.16 
+#{ id2472 = Id("body") }
+intersect body { id2470 } { id2471 }
+#{ id2473 = Id("body") }
+#{id2474 = ( id2472 == id2473 ) ? id2471 : id2473}
+unite body { id2411 } { id2474 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2475 = Id("body") }
+section body { id2475 } with xplane offset 795.02 reverse
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2476 = Id("body") }
+section body { id2476 } with xplane offset 711.2 
+#{ id2477 = Id("body") }
+intersect body { id2475 } { id2476 }
+#{ id2478 = Id("body") }
+#{id2479 = ( id2477 == id2478 ) ? id2476 : id2478}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2480 = Id("body") }
+section body { id2480 } with yplane offset 518.16 reverse
+#{ id2481 = Id("body") }
+intersect body { id2479 } { id2480 }
+#{ id2482 = Id("body") }
+#{id2483 = ( id2481 == id2482 ) ? id2480 : id2482}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2484 = Id("body") }
+section body { id2484 } with yplane offset 477.52 
+#{ id2485 = Id("body") }
+intersect body { id2483 } { id2484 }
+#{ id2486 = Id("body") }
+#{id2487 = ( id2485 == id2486 ) ? id2484 : id2486}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2488 = Id("body") }
+section body { id2488 } with zplane offset 89.54 reverse
+#{ id2489 = Id("body") }
+intersect body { id2487 } { id2488 }
+#{ id2490 = Id("body") }
+#{id2491 = ( id2489 == id2490 ) ? id2488 : id2490}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2492 = Id("body") }
+section body { id2492 } with zplane offset 88.9 
+#{ id2493 = Id("body") }
+intersect body { id2491 } { id2492 }
+#{ id2494 = Id("body") }
+#{id2495 = ( id2493 == id2494 ) ? id2492 : id2494}
+unite body { id2411 } { id2495 }
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2496 = Id("body") }
+subtract body { id2411 } from body { id2496 }
+#{ id2497 = Id("body") }
+#{ id2498 = Id("body") }
+intersect body { id2381 } { id2497 }
+#{ id2499 = Id("body") }
+#{id2500 = ( id2498 == id2499 ) ? id2497 : id2499}
+sphere radius 0.0001
+#{ id2501 = Id("body") }
+body { id2501 } move 1900.0 400.0 100.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2502 = Id("body") }
+subtract body { id2501 } from body { id2502 }
+#{ id2503 = Id("body") }
+intersect body { id2500 } { id2502 }
+#{ id2504 = Id("body") }
+#{id2505 = ( id2503 == id2504 ) ? id2502 : id2504}
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2506 = Id("body") }
+subtract body { id2505 } from body { id2506 }
+#{ id2507 = Id("body") }
+#{ id2508 = Id("body") }
+intersect body { id1858 } { id2507 }
+#{ id2509 = Id("body") }
+#{id2510 = ( id2508 == id2509 ) ? id2507 : id2509}
+sphere radius 0.0001
+#{ id2511 = Id("body") }
+body { id2511 } move 1900.0 400.0 100.0
+brick x 5000.0 y 5000.0 z 5000.0
+#{ id2512 = Id("body") }
+subtract body { id2511 } from body { id2512 }
+#{ id2513 = Id("body") }
+intersect body { id2510 } { id2512 }
+#{ id2514 = Id("body") }
+#{id2515 = ( id2513 == id2514 ) ? id2512 : id2514}
+body { id2515 } name "Cell_20"
+group "mat:Air" add body { id2515 } 
+graphics flush
+set default autosize on
+zoom reset
+set echo on
+set info on
+set warning on
+set journal on
