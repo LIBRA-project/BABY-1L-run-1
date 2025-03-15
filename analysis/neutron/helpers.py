@@ -76,9 +76,7 @@ def rescale_to_lethargy(df: pd.DataFrame, normalize_over: Iterable = None) -> pd
 
     return df_lethargy
 
-def plot_results(df, ylabel=None):
-    if ylabel is None:
-        raise ValueError("ylabel must be provided by the user")
+def plot_results(df, ylabel, label, color):
         
     figsize = (10, 5)
     
@@ -101,10 +99,10 @@ def plot_results(df, ylabel=None):
     
     # Plot
         
-    ax[0].step(df['energy low [eV]'], df["mean"], linestyle='-', label="Zr")
+    ax[0].step(df['energy low [eV]'], df["mean"], linestyle='-', label=label, color=color)
     ax[0].fill_between(df['energy low [eV]'], df["mean"] - df["std. dev."], df["mean"] + df["std. dev."], color='gray', step='pre', alpha=0.5)
 
-    ax[1].step(df['energy low [eV]'], df["mean"], linestyle='-', label="Zr")
+    ax[1].step(df['energy low [eV]'], df["mean"], linestyle='-', label=label, color=color)
     ax[1].fill_between(df['energy low [eV]'], df["mean"] - df["std. dev."], df["mean"] + df["std. dev."], color='gray', step='pre', alpha=0.5)
 
     ax[0].legend()
