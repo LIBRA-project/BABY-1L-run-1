@@ -510,7 +510,7 @@ def baby_model():
     settings.batches = 100
     settings.inactive = 0
     settings.run_mode = "fixed source"
-    settings.particles = int(1e4)
+    settings.particles = int(1e5)
     settings.output = {"tallies": False}
     settings.photon_transport = True
 
@@ -543,6 +543,14 @@ def baby_model():
     act_foils_surface_zr_filter = openmc.SurfaceFilter(64)
     act_foils_surface_nb_filter = openmc.SurfaceFilter(66)
     diamond_surface_filter = openmc.SurfaceFilter(60)
+    
+    # cell from filters
+    from_act_foils_zr = openmc.CellFromFilter(act_foils_zr_cell)
+    from_act_foils_nb = openmc.CellFromFilter(act_foils_nb_cell)
+    from_diamond = openmc.CellFromFilter(diamond_detect_cell)
+    
+    # cell filters
+    diamond_detect_cell_filter = openmc.CellFilter(diamond_detect_cell)
 
     # dosimetry tallies from IRDFF-II nuclear data library
     zr90_n2n_acef = "irdff2_xs/dos-irdff2-4025.acef"
@@ -564,7 +572,7 @@ def baby_model():
     act_foils_zr_flux_tally = openmc.Tally(name="act_foils_zr_flux")
     act_foils_zr_flux_tally.scores = ["flux"]
     act_foils_zr_flux_tally.filters = [
-        openmc.CellFromFilter(act_foils_zr_cell),
+        cell_filter_list[0],
         neutron_filter,
         energy_filter,
     ]
@@ -573,7 +581,7 @@ def baby_model():
     act_foils_zr_current_tally = openmc.Tally(name="act_foils_zr_current")
     act_foils_zr_current_tally.scores = ["current"]
     act_foils_zr_current_tally.filters = [
-        openmc.CellFromFilter(act_foils_zr_cell),
+        from_act_foils_zr,
         neutron_filter,
         energy_filter,
         act_foils_surface_zr_filter,
@@ -583,7 +591,7 @@ def baby_model():
     act_foils_nb_flux_tally = openmc.Tally(name="act_foils_nb_flux")
     act_foils_nb_flux_tally.scores = ["flux"]
     act_foils_nb_flux_tally.filters = [
-        openmc.CellFromFilter(act_foils_nb_cell),
+        cell_filter_list[1],
         neutron_filter,
         energy_filter,
     ]
@@ -592,7 +600,7 @@ def baby_model():
     act_foils_nb_current_tally = openmc.Tally(name="act_foils_nb_current")
     act_foils_nb_current_tally.scores = ["current"]
     act_foils_nb_current_tally.filters = [
-        openmc.CellFromFilter(act_foils_nb_cell),
+        from_act_foils_nb,
         neutron_filter,
         energy_filter,
         act_foils_surface_nb_filter,
@@ -602,7 +610,7 @@ def baby_model():
     diamond_flux_tally = openmc.Tally(name="diamond_flux")
     diamond_flux_tally.scores = ["flux"]
     diamond_flux_tally.filters = [
-        openmc.CellFilter(diamond_detect_cell),
+        diamond_detect_cell_filter,
         neutron_filter,
         energy_filter,
     ]
@@ -611,7 +619,7 @@ def baby_model():
     diamond_current_tally = openmc.Tally(name="diamond_current")
     diamond_current_tally.scores = ["current"]
     diamond_current_tally.filters = [
-        openmc.CellFromFilter(diamond_detect_cell),
+        from_diamond,
         neutron_filter,
         energy_filter,
         diamond_surface_filter,
@@ -621,7 +629,7 @@ def baby_model():
     diamond_elastic_tally = openmc.Tally(name="elastic_scattering")
     diamond_elastic_tally.scores = ["elastic"]
     diamond_elastic_tally.filters = [
-        openmc.CellFilter(diamond_detect_cell),
+        diamond_detect_cell_filter,
         neutron_filter,
         energy_filter,
     ]

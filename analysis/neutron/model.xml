@@ -1,0 +1,1023 @@
+<?xml version='1.0' encoding='utf-8'?>
+<model>
+  <materials>
+    <material id="1">
+      <density units="g/cm3" value="2.6989"/>
+      <nuclide ao="1.0" name="Al27"/>
+    </material>
+    <material id="2">
+      <density units="g/cm3" value="8.96"/>
+      <nuclide ao="0.6917" name="Cu63"/>
+      <nuclide ao="0.3083" name="Cu65"/>
+    </material>
+    <material id="3" name="Air">
+      <density units="g/cm3" value="0.001205"/>
+      <nuclide ao="0.0001483383" name="C12"/>
+      <nuclide ao="1.6616999999999997e-06" name="C13"/>
+      <nuclide ao="0.784431" name="N14"/>
+      <nuclide ao="0.210748" name="O16"/>
+      <nuclide ao="0.004671" name="Ar40"/>
+    </material>
+    <material id="4">
+      <density units="g/cm3" value="2.3"/>
+      <nuclide ao="0.168759" name="H1"/>
+      <nuclide ao="0.001400313552" name="C12"/>
+      <nuclide ao="1.5686447999999997e-05" name="C13"/>
+      <nuclide ao="0.562524" name="O16"/>
+      <nuclide ao="0.011838" name="Na23"/>
+      <nuclide ao="0.001105314" name="Mg24"/>
+      <nuclide ao="0.00014028" name="Mg25"/>
+      <nuclide ao="0.000154406" name="Mg26"/>
+      <nuclide ao="0.021354" name="Al27"/>
+      <nuclide ao="0.188254611332" name="Si28"/>
+      <nuclide ao="0.009559032034" name="Si29"/>
+      <nuclide ao="0.006301356633999999" name="Si30"/>
+      <nuclide ao="0.005274678136" name="K39"/>
+      <nuclide ao="6.617519999999999e-07" name="K40"/>
+      <nuclide ao="0.000380660112" name="K41"/>
+      <nuclide ao="0.01810276234" name="Ca40"/>
+      <nuclide ao="0.00012082078" name="Ca42"/>
+      <nuclide ao="2.52099e-05" name="Ca43"/>
+      <nuclide ao="0.00038953964" name="Ca44"/>
+      <nuclide ao="7.469600000000001e-07" name="Ca46"/>
+      <nuclide ao="3.492038e-05" name="Ca48"/>
+      <nuclide ao="0.0002492308" name="Fe54"/>
+      <nuclide ao="0.00391239056" name="Fe56"/>
+      <nuclide ao="9.035416000000001e-05" name="Fe57"/>
+      <nuclide ao="1.2024480000000002e-05" name="Fe58"/>
+    </material>
+    <material id="5">
+      <density units="g/cm3" value="3.8"/>
+      <nuclide ao="0.135585" name="H1"/>
+      <nuclide ao="0.150644" name="O16"/>
+      <nuclide ao="0.00174876465" name="Mg24"/>
+      <nuclide ao="0.000221943" name="Mg25"/>
+      <nuclide ao="0.00024429234999999997" name="Mg26"/>
+      <nuclide ao="0.005065" name="Al27"/>
+      <nuclide ao="0.0123753784624" name="Si28"/>
+      <nuclide ao="0.0006283864088" name="Si29"/>
+      <nuclide ao="0.00041423512879999996" name="Si30"/>
+      <nuclide ao="0.0006139631804" name="S32"/>
+      <nuclide ao="4.8365374e-06" name="S33"/>
+      <nuclide ao="2.71060954e-05" name="S34"/>
+      <nuclide ao="9.41868e-08" name="S36"/>
+      <nuclide ao="0.03966728779" name="Ca40"/>
+      <nuclide ao="0.00026474592999999996" name="Ca42"/>
+      <nuclide ao="5.524065e-05" name="Ca43"/>
+      <nuclide ao="0.0008535703399999999" name="Ca44"/>
+      <nuclide ao="1.6367600000000001e-06" name="Ca46"/>
+      <nuclide ao="7.651852999999998e-05" name="Ca48"/>
+      <nuclide ao="0.002638" name="Mn55"/>
+      <nuclide ao="0.03792639305" name="Fe54"/>
+      <nuclide ao="0.59536326226" name="Fe56"/>
+      <nuclide ao="0.013749534110000001" name="Fe57"/>
+      <nuclide ao="0.0018298105800000001" name="Fe58"/>
+    </material>
+    <material id="6">
+      <density units="g/cm3" value="8.0"/>
+      <nuclide ao="0.00180972726" name="C12"/>
+      <nuclide ao="2.027274e-05" name="C13"/>
+      <nuclide ao="0.0090209850008" name="Si28"/>
+      <nuclide ao="0.0004580598796" name="Si29"/>
+      <nuclide ao="0.0003019551196" name="Si30"/>
+      <nuclide ao="0.000408" name="P31"/>
+      <nuclide ao="0.0002442547018" name="S32"/>
+      <nuclide ao="1.9241333e-06" name="S33"/>
+      <nuclide ao="1.0783694300000002e-05" name="S34"/>
+      <nuclide ao="3.7470600000000003e-08" name="S36"/>
+      <nuclide ao="0.0087231089" name="Cr50"/>
+      <nuclide ao="0.16821647218" name="Cr52"/>
+      <nuclide ao="0.01907439762" name="Cr53"/>
+      <nuclide ao="0.0047480213" name="Cr54"/>
+      <nuclide ao="0.010001" name="Mn55"/>
+      <nuclide ao="0.04035241875" name="Fe54"/>
+      <nuclide ao="0.6334466774999999" name="Fe56"/>
+      <nuclide ao="0.01462904625" name="Fe57"/>
+      <nuclide ao="0.0019468575" name="Fe58"/>
+      <nuclide ao="0.058945745402999995" name="Ni58"/>
+      <nuclide ao="0.022705795597" name="Ni60"/>
+      <nuclide ao="0.000987005213" name="Ni61"/>
+      <nuclide ao="0.0031470045150000002" name="Ni62"/>
+      <nuclide ao="0.000801449272" name="Ni64"/>
+    </material>
+    <material id="7">
+      <density units="g/cm3" value="0.64"/>
+      <nuclide ao="0.462423" name="H1"/>
+      <nuclide ao="0.319806496658" name="C12"/>
+      <nuclide ao="0.0035825033419999994" name="C13"/>
+      <nuclide ao="0.002773" name="N14"/>
+      <nuclide ao="0.208779" name="O16"/>
+      <nuclide ao="0.00050449689" name="Mg24"/>
+      <nuclide ao="6.40278e-05" name="Mg25"/>
+      <nuclide ao="7.047531e-05" name="Mg26"/>
+      <nuclide ao="0.0011509433614" name="S32"/>
+      <nuclide ao="9.0666359e-06" name="S33"/>
+      <nuclide ao="5.0813438900000006e-05" name="S34"/>
+      <nuclide ao="1.765638e-07" name="S36"/>
+      <nuclide ao="0.000370234657" name="K39"/>
+      <nuclide ao="4.6449e-08" name="K40"/>
+      <nuclide ao="2.6718894e-05" name="K41"/>
+      <nuclide ao="0.00037613108" name="Ca40"/>
+      <nuclide ao="2.51036e-06" name="Ca42"/>
+      <nuclide ao="5.238000000000001e-07" name="Ca43"/>
+      <nuclide ao="8.09368e-06" name="Ca44"/>
+      <nuclide ao="1.5520000000000003e-08" name="Ca46"/>
+      <nuclide ao="7.255599999999999e-07" name="Ca48"/>
+    </material>
+    <material id="8">
+      <density units="g/cm3" value="2.32"/>
+      <nuclide ao="0.333321" name="H1"/>
+      <nuclide ao="0.500014" name="O16"/>
+      <nuclide ao="0.0791917461976" name="S32"/>
+      <nuclide ao="0.0006238384556" name="S33"/>
+      <nuclide ao="0.0034962667076" name="S34"/>
+      <nuclide ao="1.2148639199999999e-05" name="S36"/>
+      <nuclide ao="0.08079159881" name="Ca40"/>
+      <nuclide ao="0.00053921627" name="Ca42"/>
+      <nuclide ao="0.00011251035" name="Ca43"/>
+      <nuclide ao="0.00173849326" name="Ca44"/>
+      <nuclide ao="3.3336400000000004e-06" name="Ca46"/>
+      <nuclide ao="0.00015584766999999998" name="Ca48"/>
+    </material>
+    <material id="9">
+      <density units="g/cm3" value="19.3"/>
+      <nuclide ao="0.265" name="W182"/>
+      <nuclide ao="0.1431" name="W183"/>
+      <nuclide ao="0.3064" name="W184"/>
+      <nuclide ao="0.2855" name="W186"/>
+    </material>
+    <material id="10">
+      <density units="g/cm3" value="11.34"/>
+      <nuclide ao="0.014" name="Pb204"/>
+      <nuclide ao="0.241" name="Pb206"/>
+      <nuclide ao="0.221" name="Pb207"/>
+      <nuclide ao="0.524" name="Pb208"/>
+    </material>
+    <material id="11">
+      <density units="g/cm3" value="0.95"/>
+      <nuclide name="H1" wo="0.1345"/>
+      <nuclide name="B10" wo="0.00917774793753663"/>
+      <nuclide name="B11" wo="0.04082225206246337"/>
+      <nuclide name="C12" wo="0.8057195821673774"/>
+      <nuclide name="C13" wo="0.009780417832622639"/>
+    </material>
+    <material id="12">
+      <density units="g/cm3" value="0.93"/>
+      <nuclide ao="0.666662" name="H1"/>
+      <nuclide ao="0.329645281636" name="C12"/>
+      <nuclide ao="0.003692718364" name="C13"/>
+    </material>
+    <material id="13" name="HDPE">
+      <density units="g/cm3" value="0.95"/>
+      <nuclide name="H1" wo="0.14367927419047236"/>
+      <nuclide name="H2" wo="4.472580952764201e-05"/>
+      <nuclide name="C12" wo="0.8460065492825914"/>
+      <nuclide name="C13" wo="0.010269450717408686"/>
+    </material>
+    <material id="14">
+      <density units="g/cm3" value="5.6"/>
+      <nuclide name="H1" wo="0.0216"/>
+      <nuclide name="Zr90" wo="0.4961086537103373"/>
+      <nuclide name="Zr91" wo="0.10939380284113807"/>
+      <nuclide name="Zr92" wo="0.16904894472013793"/>
+      <nuclide name="Zr94" wo="0.17504656488548798"/>
+      <nuclide name="Zr96" wo="0.028802033842898887"/>
+    </material>
+    <material id="15">
+      <density units="g/cm3" value="1.18"/>
+      <nuclide name="H1" wo="0.1073"/>
+      <nuclide name="B10" wo="0.0571"/>
+      <nuclide name="B11" wo="0.23"/>
+      <nuclide name="Zr90" wo="0.30707624763591607"/>
+      <nuclide name="Zr91" wo="0.06771145441597835"/>
+      <nuclide name="Zr92" wo="0.10463618246373214"/>
+      <nuclide name="Zr94" wo="0.10834852789723172"/>
+      <nuclide name="Zr96" wo="0.017827587587141827"/>
+    </material>
+    <material id="16">
+      <density units="g/cm3" value="1.848"/>
+      <nuclide ao="1.0" name="Be9"/>
+    </material>
+    <material id="17">
+      <density units="g/cm3" value="2.3"/>
+      <nuclide ao="2.0138e-05" name="Fe54"/>
+      <nuclide ao="0.00031874" name="Fe56"/>
+      <nuclide ao="7.2915e-06" name="Fe57"/>
+      <nuclide ao="1.0416e-06" name="Fe58"/>
+      <nuclide ao="0.01374" name="H1"/>
+      <nuclide ao="2.0613e-06" name="H2"/>
+      <nuclide ao="0.045685" name="O16"/>
+      <nuclide ao="1.8318e-05" name="O17"/>
+      <nuclide ao="9.0027e-05" name="Mg24"/>
+      <nuclide ao="1.1397e-05" name="Mg25"/>
+      <nuclide ao="1.2548e-05" name="Mg26"/>
+      <nuclide ao="0.001474" name="Ca40"/>
+      <nuclide ao="9.8378e-06" name="Ca42"/>
+      <nuclide ao="2.0527e-06" name="Ca43"/>
+      <nuclide ao="3.1718e-05" name="Ca44"/>
+      <nuclide ao="6.0821e-08" name="Ca46"/>
+      <nuclide ao="2.8434e-06" name="Ca48"/>
+      <nuclide ao="0.015328" name="Si28"/>
+      <nuclide ao="0.00077613" name="Si29"/>
+      <nuclide ao="0.0005152" name="Si30"/>
+      <nuclide ao="0.00096395" name="Na23"/>
+      <nuclide ao="0.00042949" name="K39"/>
+      <nuclide ao="4.6053e-08" name="K40"/>
+      <nuclide ao="3.0993e-05" name="K41"/>
+      <nuclide ao="0.0017453" name="Al27"/>
+      <nuclide ao="0.00011404" name="C12"/>
+      <nuclide ao="1.28e-06" name="C13"/>
+    </material>
+    <material id="18" name="Soil">
+      <density units="g/cm3" value="1.52"/>
+      <nuclide ao="0.6690083648424" name="O16"/>
+      <nuclide ao="0.000254158916" name="O17"/>
+      <nuclide ao="0.0013414762415999999" name="O18"/>
+      <nuclide ao="0.005578" name="Na23"/>
+      <nuclide ao="0.00902567832" name="Mg24"/>
+      <nuclide ao="0.0011454864" name="Mg25"/>
+      <nuclide ao="0.0012608352799999998" name="Mg26"/>
+      <nuclide ao="0.053073" name="Al27"/>
+      <nuclide ao="0.18599498417200003" name="Si28"/>
+      <nuclide ao="0.009444294614" name="Si29"/>
+      <nuclide ao="0.006225721214" name="Si30"/>
+      <nuclide ao="0.007137042393" name="K39"/>
+      <nuclide ao="8.95401e-07" name="K40"/>
+      <nuclide ao="0.000515062206" name="K41"/>
+      <nuclide ao="0.02584834824" name="Ca40"/>
+      <nuclide ao="0.00017251608" name="Ca42"/>
+      <nuclide ao="3.59964e-05" name="Ca43"/>
+      <nuclide ao="0.00055621104" name="Ca44"/>
+      <nuclide ao="1.06656e-06" name="Ca46"/>
+      <nuclide ao="4.9861679999999996e-05" name="Ca48"/>
+      <nuclide ao="0.0001657425" name="Ti46"/>
+      <nuclide ao="0.0001494696" name="Ti47"/>
+      <nuclide ao="0.0014810347999999998" name="Ti48"/>
+      <nuclide ao="0.0001086869" name="Ti49"/>
+      <nuclide ao="0.00010406619999999999" name="Ti50"/>
+      <nuclide ao="0.000272" name="Mn55"/>
+      <nuclide ao="0.0012303725" name="Fe54"/>
+      <nuclide ao="0.019314216999999998" name="Fe56"/>
+      <nuclide ao="0.0004460495" name="Fe57"/>
+      <nuclide ao="5.9360999999999996e-05" name="Fe58"/>
+    </material>
+    <material id="19" name="Brick">
+      <density units="g/cm3" value="1.8"/>
+      <nuclide ao="0.6618484417962" name="O16"/>
+      <nuclide ao="0.000251438833" name="O17"/>
+      <nuclide ao="0.0013271193708" name="O18"/>
+      <nuclide ao="0.003747" name="Al27"/>
+      <nuclide ao="0.29811307236719997" name="Si28"/>
+      <nuclide ao="0.015137331236399999" name="Si29"/>
+      <nuclide ao="0.009978596396399999" name="Si30"/>
+      <nuclide ao="0.00684694283" name="Ca40"/>
+      <nuclide ao="4.569761e-05" name="Ca42"/>
+      <nuclide ao="9.53505e-06" name="Ca43"/>
+      <nuclide ao="0.00014733418" name="Ca44"/>
+      <nuclide ao="2.8252e-07" name="Ca46"/>
+      <nuclide ao="1.320781e-05" name="Ca48"/>
+      <nuclide ao="0.0001481123" name="Fe54"/>
+      <nuclide ao="0.0023250463599999997" name="Fe56"/>
+      <nuclide ao="5.369546e-05" name="Fe57"/>
+      <nuclide ao="7.145879999999999e-06" name="Fe58"/>
+    </material>
+    <material id="20" name="RicoRad">
+      <density units="g/cm3" value="0.945"/>
+      <nuclide name="H1" wo="0.13995643307078937"/>
+      <nuclide name="H2" wo="4.356692921063902e-05"/>
+      <nuclide name="C12" wo="0.8299257498719768"/>
+      <nuclide name="C13" wo="0.010074250128023318"/>
+      <nuclide name="B10" wo="0.003671099175014652"/>
+      <nuclide name="B11" wo="0.016328900824985348"/>
+    </material>
+    <material id="21" name="Steel">
+      <density units="g/cm3" value="7.82"/>
+      <nuclide name="C12" wo="0.004940034225428433"/>
+      <nuclide name="C13" wo="5.9965774571567374e-05"/>
+      <nuclide name="Fe54" wo="0.05617330431593321"/>
+      <nuclide name="Fe56" wo="0.9144202113566464"/>
+      <nuclide name="Fe57" wo="0.02149566770606263"/>
+      <nuclide name="Fe58" wo="0.0029108166213577856"/>
+    </material>
+    <material id="22" name="Stainless Steel 304">
+      <density units="g/cm3" value="8.0"/>
+      <nuclide name="C12" wo="0.0007904054760685493"/>
+      <nuclide name="C13" wo="9.59452393145078e-06"/>
+      <nuclide name="Mn55" wo="0.02"/>
+      <nuclide name="P31" wo="0.00045"/>
+      <nuclide name="S32" wo="0.0002843058324248275"/>
+      <nuclide name="S33" wo="2.309645813262106e-06"/>
+      <nuclide name="S34" wo="1.3335457202628067e-05"/>
+      <nuclide name="S36" wo="4.9064559282261095e-08"/>
+      <nuclide name="Si28" wo="0.009187351728283676"/>
+      <nuclide name="Si29" wo="0.0004831750292786396"/>
+      <nuclide name="Si30" wo="0.00032947324243768423"/>
+      <nuclide name="Cr50" wo="0.007930004583164795"/>
+      <nuclide name="Cr52" wo="0.1590287884675572"/>
+      <nuclide name="Cr53" wo="0.01837981495548285"/>
+      <nuclide name="Cr54" wo="0.004661391993795167"/>
+      <nuclide name="Ni58" wo="0.0638378200317604"/>
+      <nuclide name="Ni60" wo="0.025437164754268084"/>
+      <nuclide name="Ni61" wo="0.0011241911310318747"/>
+      <nuclide name="Ni62" wo="0.0036430811883128114"/>
+      <nuclide name="Ni64" wo="0.0009577428946268364"/>
+      <nuclide name="Fe54" wo="0.03858456767309001"/>
+      <nuclide name="Fe56" wo="0.6281009984439196"/>
+      <nuclide name="Fe57" wo="0.014765039290159303"/>
+      <nuclide name="Fe58" wo="0.0019993945928311343"/>
+    </material>
+    <material id="23" name="Firebrick">
+      <density units="g/cm3" value="0.3"/>
+      <nuclide ao="0.004" name="Al27"/>
+      <nuclide ao="0.6644153196" name="O16"/>
+      <nuclide ao="0.000252414" name="O17"/>
+      <nuclide ao="0.0013322664" name="O18"/>
+      <nuclide ao="0.221351232" name="Si28"/>
+      <nuclide ao="0.011239584" name="Si29"/>
+      <nuclide ao="0.007409183999999999" name="Si30"/>
+      <nuclide ao="0.04630499999999999" name="Zr90"/>
+      <nuclide ao="0.010098" name="Zr91"/>
+      <nuclide ao="0.015435" name="Zr92"/>
+      <nuclide ao="0.015642" name="Zr94"/>
+      <nuclide ao="0.00252" name="Zr96"/>
+    </material>
+    <material id="24" name="Flibe_nat">
+      <density units="g/cm3" value="1.94"/>
+      <nuclide ao="0.142857" name="Be9"/>
+      <nuclide ao="0.021685" name="Li6"/>
+      <nuclide ao="0.264029" name="Li7"/>
+      <nuclide ao="0.571429" name="F19"/>
+    </material>
+    <material id="25" name="Copper">
+      <density units="g/cm3" value="8.96"/>
+      <nuclide ao="0.6915" name="Cu63"/>
+      <nuclide ao="0.3085" name="Cu65"/>
+    </material>
+    <material id="26" name="Be">
+      <density units="g/cm3" value="1.848"/>
+      <nuclide ao="1.0" name="Be9"/>
+    </material>
+    <material id="27" name="Inconel 625">
+      <density units="g/cm3" value="8.44"/>
+      <nuclide name="C12" wo="0.0009781267766348297"/>
+      <nuclide name="C13" wo="1.187322336517034e-05"/>
+      <nuclide name="Al27" wo="0.00396"/>
+      <nuclide name="Si28" wo="0.00454773910550042"/>
+      <nuclide name="Si29" wo="0.00023917163949292662"/>
+      <nuclide name="Si30" wo="0.0001630892550066537"/>
+      <nuclide name="P31" wo="0.000148"/>
+      <nuclide name="S32" wo="0.00014025754399624827"/>
+      <nuclide name="S33" wo="1.1394252678759722e-06"/>
+      <nuclide name="S34" wo="6.5788255532965135e-06"/>
+      <nuclide name="S36" wo="2.4205182579248807e-08"/>
+      <nuclide name="Ti46" wo="0.0003136357705447318"/>
+      <nuclide name="Ti47" wo="0.0002889921799985307"/>
+      <nuclide name="Ti48" wo="0.002924264069330609"/>
+      <nuclide name="Ti49" wo="0.0002190747453115002"/>
+      <nuclide name="Ti50" wo="0.0002140332348146281"/>
+      <nuclide name="Cr50" wo="0.008973426238844373"/>
+      <nuclide name="Cr52" wo="0.17995362905539367"/>
+      <nuclide name="Cr53" wo="0.020798211660151646"/>
+      <nuclide name="Cr54" wo="0.00527473304561032"/>
+      <nuclide name="Mn55" wo="0.00495"/>
+      <nuclide name="Fe54" wo="0.002794269042328758"/>
+      <nuclide name="Fe56" wo="0.045486661669444435"/>
+      <nuclide name="Fe57" wo="0.0010692744453382613"/>
+      <nuclide name="Fe58" wo="0.00014479484288854632"/>
+      <nuclide name="Co59" wo="0.009899"/>
+      <nuclide name="Ni58" wo="0.38974669072022133"/>
+      <nuclide name="Ni60" wo="0.15530058481553144"/>
+      <nuclide name="Ni61" wo="0.0068634826947209186"/>
+      <nuclide name="Ni62" wo="0.022241969360225582"/>
+      <nuclide name="Ni64" wo="0.005847272409300685"/>
+      <nuclide name="Nb93" wo="0.0365"/>
+      <nuclide name="Mo92" wo="0.012628702242355093"/>
+      <nuclide name="Mo94" wo="0.008092186542567026"/>
+      <nuclide name="Mo95" wo="0.014130417950127434"/>
+      <nuclide name="Mo96" wo="0.014998802716224538"/>
+      <nuclide name="Mo97" wo="0.008709835956777393"/>
+      <nuclide name="Mo98" wo="0.02230863512071266"/>
+      <nuclide name="Mo100" wo="0.009131419471235856"/>
+    </material>
+    <material id="28" name="ClLiF natural">
+      <density units="g/cm3" value="1.5397975799648005"/>
+      <nuclide ao="0.15250000000000002" name="F19"/>
+      <nuclide ao="0.037945" name="Li6"/>
+      <nuclide ao="0.462055" name="Li7"/>
+      <nuclide ao="0.2632823325" name="Cl35"/>
+      <nuclide ao="0.0842176675" name="Cl37"/>
+    </material>
+    <material id="29" name="Stainless Steel 304">
+      <density units="g/cm3" value="8.0"/>
+      <nuclide name="C12" wo="0.0007904054760685493"/>
+      <nuclide name="C13" wo="9.59452393145078e-06"/>
+      <nuclide name="Mn55" wo="0.02"/>
+      <nuclide name="P31" wo="0.00045"/>
+      <nuclide name="S32" wo="0.0002843058324248275"/>
+      <nuclide name="S33" wo="2.309645813262106e-06"/>
+      <nuclide name="S34" wo="1.3335457202628067e-05"/>
+      <nuclide name="S36" wo="4.9064559282261095e-08"/>
+      <nuclide name="Si28" wo="0.009187351728283676"/>
+      <nuclide name="Si29" wo="0.0004831750292786396"/>
+      <nuclide name="Si30" wo="0.00032947324243768423"/>
+      <nuclide name="Cr50" wo="0.007930004583164795"/>
+      <nuclide name="Cr52" wo="0.1590287884675572"/>
+      <nuclide name="Cr53" wo="0.01837981495548285"/>
+      <nuclide name="Cr54" wo="0.004661391993795167"/>
+      <nuclide name="Ni58" wo="0.0638378200317604"/>
+      <nuclide name="Ni60" wo="0.025437164754268084"/>
+      <nuclide name="Ni61" wo="0.0011241911310318747"/>
+      <nuclide name="Ni62" wo="0.0036430811883128114"/>
+      <nuclide name="Ni64" wo="0.0009577428946268364"/>
+      <nuclide name="Fe54" wo="0.03858456767309001"/>
+      <nuclide name="Fe56" wo="0.6281009984439196"/>
+      <nuclide name="Fe57" wo="0.014765039290159303"/>
+      <nuclide name="Fe58" wo="0.0019993945928311343"/>
+    </material>
+    <material id="30" name="heater">
+      <density units="g/cm3" value="2.44"/>
+      <nuclide name="C12" wo="0.0009781267766348297"/>
+      <nuclide name="C13" wo="1.187322336517034e-05"/>
+      <nuclide name="Al27" wo="0.00396"/>
+      <nuclide name="Si28" wo="0.00454773910550042"/>
+      <nuclide name="Si29" wo="0.00023917163949292662"/>
+      <nuclide name="Si30" wo="0.0001630892550066537"/>
+      <nuclide name="P31" wo="0.000148"/>
+      <nuclide name="S32" wo="0.00014025754399624827"/>
+      <nuclide name="S33" wo="1.1394252678759722e-06"/>
+      <nuclide name="S34" wo="6.5788255532965135e-06"/>
+      <nuclide name="S36" wo="2.4205182579248807e-08"/>
+      <nuclide name="Ti46" wo="0.0003136357705447318"/>
+      <nuclide name="Ti47" wo="0.0002889921799985307"/>
+      <nuclide name="Ti48" wo="0.002924264069330609"/>
+      <nuclide name="Ti49" wo="0.0002190747453115002"/>
+      <nuclide name="Ti50" wo="0.0002140332348146281"/>
+      <nuclide name="Cr50" wo="0.008973426238844373"/>
+      <nuclide name="Cr52" wo="0.17995362905539367"/>
+      <nuclide name="Cr53" wo="0.020798211660151646"/>
+      <nuclide name="Cr54" wo="0.00527473304561032"/>
+      <nuclide name="Mn55" wo="0.00495"/>
+      <nuclide name="Fe54" wo="0.002794269042328758"/>
+      <nuclide name="Fe56" wo="0.045486661669444435"/>
+      <nuclide name="Fe57" wo="0.0010692744453382613"/>
+      <nuclide name="Fe58" wo="0.00014479484288854632"/>
+      <nuclide name="Co59" wo="0.009899"/>
+      <nuclide name="Ni58" wo="0.38974669072022133"/>
+      <nuclide name="Ni60" wo="0.15530058481553144"/>
+      <nuclide name="Ni61" wo="0.0068634826947209186"/>
+      <nuclide name="Ni62" wo="0.022241969360225582"/>
+      <nuclide name="Ni64" wo="0.005847272409300685"/>
+      <nuclide name="Nb93" wo="0.0365"/>
+      <nuclide name="Mo92" wo="0.012628702242355093"/>
+      <nuclide name="Mo94" wo="0.008092186542567026"/>
+      <nuclide name="Mo95" wo="0.014130417950127434"/>
+      <nuclide name="Mo96" wo="0.014998802716224538"/>
+      <nuclide name="Mo97" wo="0.008709835956777393"/>
+      <nuclide name="Mo98" wo="0.02230863512071266"/>
+      <nuclide name="Mo100" wo="0.009131419471235856"/>
+    </material>
+    <material id="31" name="Firebrick">
+      <density units="g/cm3" value="0.3"/>
+      <nuclide ao="0.004" name="Al27"/>
+      <nuclide ao="0.6644153196" name="O16"/>
+      <nuclide ao="0.000252414" name="O17"/>
+      <nuclide ao="0.0013322664" name="O18"/>
+      <nuclide ao="0.221351232" name="Si28"/>
+      <nuclide ao="0.011239584" name="Si29"/>
+      <nuclide ao="0.007409183999999999" name="Si30"/>
+      <nuclide ao="0.04630499999999999" name="Zr90"/>
+      <nuclide ao="0.010098" name="Zr91"/>
+      <nuclide ao="0.015435" name="Zr92"/>
+      <nuclide ao="0.015642" name="Zr94"/>
+      <nuclide ao="0.00252" name="Zr96"/>
+    </material>
+    <material id="32" name="Alumina insulation">
+      <density units="g/cm3" value="3.98"/>
+      <nuclide ao="0.5985723599999999" name="O16"/>
+      <nuclide ao="0.0002274" name="O17"/>
+      <nuclide ao="0.0012002399999999998" name="O18"/>
+      <nuclide ao="0.4" name="Al27"/>
+    </material>
+    <material id="33" name="Air">
+      <density units="g/cm3" value="0.0012"/>
+      <nuclide name="C12" wo="0.00012250296872217428"/>
+      <nuclide name="C13" wo="1.487031277825728e-06"/>
+      <nuclide name="N14" wo="0.7523072368961117"/>
+      <nuclide name="N15" wo="0.002962763103888269"/>
+      <nuclide name="O16" wo="0.23116505817977026"/>
+      <nuclide name="O17" wo="9.333419890652665e-05"/>
+      <nuclide name="O18" wo="0.0005216076213232066"/>
+      <nuclide name="Ar36" wo="3.8527345040032535e-05"/>
+      <nuclide name="Ar38" wo="7.667262798076369e-06"/>
+      <nuclide name="Ar40" wo="0.012780805392161892"/>
+    </material>
+    <material id="34" name="Epoxy">
+      <density units="g/cm3" value="1.2"/>
+      <nuclide name="C12" wo="0.6916047915599806"/>
+      <nuclide name="C13" wo="0.008395208440019432"/>
+      <nuclide name="H1" wo="0.07997510461187964"/>
+      <nuclide name="H2" wo="2.4895388120365153e-05"/>
+      <nuclide name="O16" wo="0.14960203092141486"/>
+      <nuclide name="O17" wo="6.0402665613853635e-05"/>
+      <nuclide name="O18" wo="0.0003375664129712701"/>
+      <nuclide name="N14" wo="0.06972540493165069"/>
+      <nuclide name="N15" wo="0.000274595068349304"/>
+    </material>
+    <material id="35" name="Helium">
+      <density units="g/cm3" value="5.532627186647408e-05"/>
+      <nuclide ao="2e-06" name="He3"/>
+      <nuclide ao="0.999998" name="He4"/>
+    </material>
+    <material id="36">
+      <density units="g/cm3" value="11.34"/>
+      <nuclide ao="0.014" name="Pb204"/>
+      <nuclide ao="0.241" name="Pb206"/>
+      <nuclide ao="0.221" name="Pb207"/>
+      <nuclide ao="0.524" name="Pb208"/>
+    </material>
+    <material id="37" name="HDPE">
+      <density units="g/cm3" value="0.95"/>
+      <nuclide name="H1" wo="0.14367927419047236"/>
+      <nuclide name="H2" wo="4.472580952764201e-05"/>
+      <nuclide name="C12" wo="0.8460065492825914"/>
+      <nuclide name="C13" wo="0.010269450717408686"/>
+    </material>
+    <material id="38" name="Diamond">
+      <density units="g/cm3" value="3.51"/>
+      <nuclide ao="0.988922" name="C12"/>
+      <nuclide ao="0.011078" name="C13"/>
+    </material>
+    <material id="39" name="Zirconium">
+      <density units="g/cm3" value="6.5"/>
+      <nuclide ao="0.5145" name="Zr90"/>
+      <nuclide ao="0.1122" name="Zr91"/>
+      <nuclide ao="0.1715" name="Zr92"/>
+      <nuclide ao="0.1738" name="Zr94"/>
+      <nuclide ao="0.028" name="Zr96"/>
+    </material>
+    <material id="40" name="Niobium Nb">
+      <density units="g/cm3" value="8.4"/>
+      <nuclide ao="1.0" name="Nb93"/>
+    </material>
+  </materials>
+  <geometry>
+    <cell id="1" material="29" region="-25 26 -27 (28 | -29 | 30)" universe="1"/>
+    <cell id="2" material="void" region="-28 29 -30" universe="1"/>
+    <cell id="3" material="34" region="1 -2 -31" universe="1"/>
+    <cell id="4" material="32" region="2 -3 -31" universe="1"/>
+    <cell id="5" material="27" region="(3 -4 -21) | (4 -12 20 -21) | (12 -13 -21 (22 | -23 | 24))" universe="1"/>
+    <cell id="6" material="32" region="4 -5 -20" universe="1"/>
+    <cell id="7" material="28" region="7 -8 -16 (22 | -23 | 24)" universe="1"/>
+    <cell id="8" material="35" region="8 -9 -16 (22 | -23 | 24)" universe="1"/>
+    <cell id="9" material="27" region="(6 -7 -17 (22 | -23 | 24)) | (7 -9 16 -17 (22 | -23 | 24)) | (9 -10 -17 (22 | -23 | 24))" universe="1"/>
+    <cell id="10" material="31" region="5 -11 18 -19" universe="1"/>
+    <cell id="11" material="30" region="-22 23 -24" universe="1"/>
+    <cell id="12" material="34" region="15 -14 -31" universe="1"/>
+    <cell id="13" material="33" region="-31 ~(-25 26 -27 (28 | -29 | 30)) ~(-28 29 -30) ~(1 -2 -31) ~(2 -3 -31) ~(4 -5 -20) ~(7 -8 -16 (22 | -23 | 24)) ~(8 -9 -16 (22 | -23 | 24)) ~(5 -11 18 -19) ~(5 -12 -20 ~(-28 29 -30) ~(1 -2 -31) ~(2 -3 -31) ~(4 -5 -20) ~(7 -8 -16 (22 | -23 | 24)) ~(8 -9 -16 (22 | -23 | 24)) ~(5 -11 18 -19) ~((3 -4 -21) | (4 -12 20 -21) | (12 -13 -21 (22 | -23 | 24))) ~((6 -7 -17 (22 | -23 | 24)) | (7 -9 16 -17 (22 | -23 | 24)) | (9 -10 -17 (22 | -23 | 24))) ~(-22 23 -24) ~(15 -14 -31) ~(-33 32 -35 34 -37 14) ~(-39 38 -35 34 -37 14) ~(-45 44 -35 34 -37 14) ~(-51 50 -35 34 -37 14) ~(-57 56 -59 58 -61 60) ~(-62 63 -64) ~(-62 66 -67)) ~((3 -4 -21) | (4 -12 20 -21) | (12 -13 -21 (22 | -23 | 24))) ~((6 -7 -17 (22 | -23 | 24)) | (7 -9 16 -17 (22 | -23 | 24)) | (9 -10 -17 (22 | -23 | 24))) ~(-22 23 -24) ~(15 -14 -31) ~(-33 32 -35 34 -37 14) ~(-39 38 -35 34 -37 14) ~(-45 44 -35 34 -37 14) ~(-51 50 -35 34 -37 14) ~(-57 56 -59 58 -61 60) ~(-62 63 -64) ~(-62 66 -67)" universe="1"/>
+    <cell id="14" material="35" region="5 -12 -20 ~(-28 29 -30) ~(1 -2 -31) ~(2 -3 -31) ~(4 -5 -20) ~(7 -8 -16 (22 | -23 | 24)) ~(8 -9 -16 (22 | -23 | 24)) ~(5 -11 18 -19) ~((3 -4 -21) | (4 -12 20 -21) | (12 -13 -21 (22 | -23 | 24))) ~((6 -7 -17 (22 | -23 | 24)) | (7 -9 16 -17 (22 | -23 | 24)) | (9 -10 -17 (22 | -23 | 24))) ~(-22 23 -24) ~(15 -14 -31) ~(-33 32 -35 34 -37 14) ~(-39 38 -35 34 -37 14) ~(-45 44 -35 34 -37 14) ~(-51 50 -35 34 -37 14) ~(-57 56 -59 58 -61 60) ~(-62 63 -64) ~(-62 66 -67)" universe="1"/>
+    <cell id="15" material="36" region="-33 32 -35 34 -37 14" universe="1"/>
+    <cell id="16" material="36" region="-39 38 -35 34 -37 14" universe="1"/>
+    <cell id="17" material="36" region="-45 44 -35 34 -37 14" universe="1"/>
+    <cell id="18" material="36" region="-51 50 -35 34 -37 14" universe="1"/>
+    <cell id="19" material="38" region="-57 56 -59 58 -61 60" universe="1"/>
+    <cell id="20" material="39" region="-62 63 -64" universe="1"/>
+    <cell id="21" material="40" region="-62 66 -67" universe="1"/>
+    <cell id="22" material="29" region="-68 69 -70 (71 | -72 | 73)" universe="1"/>
+    <cell id="23" material="void" region="-71 72 -73" universe="1"/>
+    <cell id="24" material="36" region="-74 75 -76 (68 | -69 | 70)" universe="1"/>
+    <cell id="25" material="37" region="-77 75 -76 (74 | -75 | 76)" universe="1"/>
+    <cell id="26" material="33" region="-81 80 -83 82 -85 84 ~(-31 ~(-25 26 -27 (28 | -29 | 30)) ~(-28 29 -30) ~(1 -2 -31) ~(2 -3 -31) ~(4 -5 -20) ~(7 -8 -16 (22 | -23 | 24)) ~(8 -9 -16 (22 | -23 | 24)) ~(5 -11 18 -19) ~(5 -12 -20 ~(-28 29 -30) ~(1 -2 -31) ~(2 -3 -31) ~(4 -5 -20) ~(7 -8 -16 (22 | -23 | 24)) ~(8 -9 -16 (22 | -23 | 24)) ~(5 -11 18 -19) ~((3 -4 -21) | (4 -12 20 -21) | (12 -13 -21 (22 | -23 | 24))) ~((6 -7 -17 (22 | -23 | 24)) | (7 -9 16 -17 (22 | -23 | 24)) | (9 -10 -17 (22 | -23 | 24))) ~(-22 23 -24) ~(15 -14 -31) ~(-33 32 -35 34 -37 14) ~(-39 38 -35 34 -37 14) ~(-45 44 -35 34 -37 14) ~(-51 50 -35 34 -37 14) ~(-57 56 -59 58 -61 60) ~(-62 63 -64) ~(-62 66 -67)) ~((3 -4 -21) | (4 -12 20 -21) | (12 -13 -21 (22 | -23 | 24))) ~((6 -7 -17 (22 | -23 | 24)) | (7 -9 16 -17 (22 | -23 | 24)) | (9 -10 -17 (22 | -23 | 24))) ~(-22 23 -24) ~(15 -14 -31) ~(-33 32 -35 34 -37 14) ~(-39 38 -35 34 -37 14) ~(-45 44 -35 34 -37 14) ~(-51 50 -35 34 -37 14) ~(-57 56 -59 58 -61 60) ~(-62 63 -64) ~(-62 66 -67)) ~(-68 69 -70 (71 | -72 | 73)) ~(-71 72 -73) ~(-74 75 -76 (68 | -69 | 70)) ~(-77 75 -76 (74 | -75 | 76)) ~(5 -12 -20 ~(-28 29 -30) ~(1 -2 -31) ~(2 -3 -31) ~(4 -5 -20) ~(7 -8 -16 (22 | -23 | 24)) ~(8 -9 -16 (22 | -23 | 24)) ~(5 -11 18 -19) ~((3 -4 -21) | (4 -12 20 -21) | (12 -13 -21 (22 | -23 | 24))) ~((6 -7 -17 (22 | -23 | 24)) | (7 -9 16 -17 (22 | -23 | 24)) | (9 -10 -17 (22 | -23 | 24))) ~(-22 23 -24) ~(15 -14 -31) ~(-33 32 -35 34 -37 14) ~(-39 38 -35 34 -37 14) ~(-45 44 -35 34 -37 14) ~(-51 50 -35 34 -37 14) ~(-57 56 -59 58 -61 60) ~(-62 63 -64) ~(-62 66 -67)) ~(-25 26 -27 (28 | -29 | 30)) ~(-28 29 -30) ~(1 -2 -31) ~(2 -3 -31) ~(4 -5 -20) ~(7 -8 -16 (22 | -23 | 24)) ~(8 -9 -16 (22 | -23 | 24)) ~(5 -11 18 -19) ~((3 -4 -21) | (4 -12 20 -21) | (12 -13 -21 (22 | -23 | 24))) ~((6 -7 -17 (22 | -23 | 24)) | (7 -9 16 -17 (22 | -23 | 24)) | (9 -10 -17 (22 | -23 | 24))) ~(-22 23 -24) ~(15 -14 -31) ~(-33 32 -35 34 -37 14) ~(-39 38 -35 34 -37 14) ~(-45 44 -35 34 -37 14) ~(-51 50 -35 34 -37 14) ~(-57 56 -59 58 -61 60) ~(-62 63 -64) ~(-62 66 -67)" universe="1"/>
+    <cell id="27" material="3" region="-95 160 -134 96 -171 104 -93 ~(-143 109 -134 151 -140 104 -93 (132 | -133 | 134) (184 | -151 | 134)) ~(-136 135 -138 123 -140 112 -141 (132 | -133 | 134)) ~(-143 109 -145 96 -140 104 -93) ~(-109 160 -134 96 -140 104 (155 | -154 | 111 | -116 | 113 | -112)) ~(-149 148 -151 145 -140 104 141 -93) ~(-167 160 -134 96 -171 140 -93) ~(-173 172 -151 145 -112 104 -141) ~(-101 100 -103 102 -105 104 -106 -107) ~(-109 108 -111 110 -113 112) ~(-109 108 -117 116 -113 112) ~((-188 187 -190 189 -192 191) | (-188 187 -190 189 -198 197) | (-200 199 -190 189 -198 191)) ~(-121 120 -123 122 -125 112) ~(-127 126 -123 122 -131 112) ~(-208 209 -210 (205 | -209 | 207)) ~(-208 212 -213 (205 | -209 | 207)) ~((-221 220 -223 222 -225 224 (215 | -214 | 217 | -216 | 213 | -209)) | (-221 226 -229 222 -231 112) | (-221 226 -223 234 -231 112) | (-239 220 -229 222 -231 112) | (-221 220 -223 222 -224 231)) ~(-81 80 -83 82 -85 84)" universe="1"/>
+    <cell id="28" material="1" region="(-221 220 -223 222 -225 224 (215 | -214 | 217 | -216 | 213 | -209)) | (-221 226 -229 222 -231 112) | (-221 226 -223 234 -231 112) | (-239 220 -229 222 -231 112) | (-221 220 -223 222 -224 231)" universe="1"/>
+    <cell id="29" material="2" region="-208 212 -213 (205 | -209 | 207)" universe="1"/>
+    <cell id="30" material="2" region="-208 209 -210 (205 | -209 | 207)" universe="1"/>
+    <cell id="31" material="6" region="(-188 187 -190 189 -192 191) | (-188 187 -190 189 -198 197) | (-200 199 -190 189 -198 191)" universe="1"/>
+    <cell id="32" material="4" region="-143 109 -134 151 -140 104 -93 (132 | -133 | 134) (184 | -151 | 134)" universe="1"/>
+    <cell id="33" material="4" region="-173 172 -151 145 -112 104 -141" universe="1"/>
+    <cell id="34" material="4" region="-167 160 -134 96 -171 140 -93" universe="1"/>
+    <cell id="35" material="4" region="-109 160 -134 96 -140 104 (155 | -154 | 111 | -116 | 113 | -112)" universe="1"/>
+    <cell id="36" material="4" region="-149 148 -151 145 -140 104 141 -93" universe="1"/>
+    <cell id="37" material="4" region="-143 109 -145 96 -140 104 -93" universe="1"/>
+    <cell id="38" material="4" region="-95 94 -97 96 -104 98 -93" universe="1"/>
+    <cell id="39" material="4" region="-136 135 -138 123 -140 112 -141 (132 | -133 | 134)" universe="1"/>
+    <cell id="40" material="5" region="-127 126 -123 122 -131 112" universe="1"/>
+    <cell id="41" material="5" region="-121 120 -123 122 -125 112" universe="1"/>
+    <cell id="42" material="20" region="-109 108 -117 116 -113 112" universe="1"/>
+    <cell id="43" material="20" region="-109 108 -111 110 -113 112" universe="1"/>
+    <cell id="44" material="4" region="-101 100 -103 102 -105 104 -106 -107" universe="1"/>
+    <cell id="45" material="3" region="-86 ~(-101 100 -103 102 -105 104 -106 -107) ~(-109 108 -111 110 -113 112) ~(-109 108 -117 116 -113 112) ~(-121 120 -123 122 -125 112) ~(-127 126 -123 122 -131 112) ~(-136 135 -138 123 -140 112 -141 (132 | -133 | 134)) ~(-95 94 -97 96 -104 98 -93) ~(-143 109 -145 96 -140 104 -93) ~(-149 148 -151 145 -140 104 141 -93) ~(-109 160 -134 96 -140 104 (155 | -154 | 111 | -116 | 113 | -112)) ~(-167 160 -134 96 -171 140 -93) ~(-173 172 -151 145 -112 104 -141) ~(-143 109 -134 151 -140 104 -93 (132 | -133 | 134) (184 | -151 | 134)) ~((-188 187 -190 189 -192 191) | (-188 187 -190 189 -198 197) | (-200 199 -190 189 -198 191)) ~(-208 209 -210 (205 | -209 | 207)) ~(-208 212 -213 (205 | -209 | 207)) ~((-221 220 -223 222 -225 224 (215 | -214 | 217 | -216 | 213 | -209)) | (-221 226 -229 222 -231 112) | (-221 226 -223 234 -231 112) | (-239 220 -229 222 -231 112) | (-221 220 -223 222 -224 231)) ~(-95 160 -134 96 -171 104 -93 ~(-143 109 -134 151 -140 104 -93 (132 | -133 | 134) (184 | -151 | 134)) ~(-136 135 -138 123 -140 112 -141 (132 | -133 | 134)) ~(-143 109 -145 96 -140 104 -93) ~(-109 160 -134 96 -140 104 (155 | -154 | 111 | -116 | 113 | -112)) ~(-149 148 -151 145 -140 104 141 -93) ~(-167 160 -134 96 -171 140 -93) ~(-173 172 -151 145 -112 104 -141) ~(-101 100 -103 102 -105 104 -106 -107) ~(-109 108 -111 110 -113 112) ~(-109 108 -117 116 -113 112) ~((-188 187 -190 189 -192 191) | (-188 187 -190 189 -198 197) | (-200 199 -190 189 -198 191)) ~(-121 120 -123 122 -125 112) ~(-127 126 -123 122 -131 112) ~(-208 209 -210 (205 | -209 | 207)) ~(-208 212 -213 (205 | -209 | 207)) ~((-221 220 -223 222 -225 224 (215 | -214 | 217 | -216 | 213 | -209)) | (-221 226 -229 222 -231 112) | (-221 226 -223 234 -231 112) | (-239 220 -229 222 -231 112) | (-221 220 -223 222 -224 231)) ~(-81 80 -83 82 -85 84)) ~(-81 80 -83 82 -85 84)" universe="1"/>
+    <surface coeffs="100.0" id="1" type="z-plane"/>
+    <surface coeffs="101.905" id="2" type="z-plane"/>
+    <surface coeffs="104.445" id="3" type="z-plane"/>
+    <surface coeffs="105.231" id="4" type="z-plane"/>
+    <surface coeffs="105.866" id="5" type="z-plane"/>
+    <surface coeffs="106.466" id="6" type="z-plane"/>
+    <surface coeffs="106.766" id="7" type="z-plane"/>
+    <surface coeffs="113.28422" id="8" type="z-plane"/>
+    <surface coeffs="117.88922" id="9" type="z-plane"/>
+    <surface coeffs="119.31121999999999" id="10" type="z-plane"/>
+    <surface coeffs="121.106" id="11" type="z-plane"/>
+    <surface coeffs="126.324" id="12" type="z-plane"/>
+    <surface coeffs="128.716" id="13" type="z-plane"/>
+    <surface coeffs="72.0" id="14" type="z-plane"/>
+    <surface coeffs="70.095" id="15" type="z-plane"/>
+    <surface coeffs="587 60 7.0" id="16" type="z-cylinder"/>
+    <surface coeffs="587 60 7.3" id="17" type="z-cylinder"/>
+    <surface coeffs="587 60 9.144" id="18" type="z-cylinder"/>
+    <surface coeffs="587 60 12.002" id="19" type="z-cylinder"/>
+    <surface coeffs="587 60 12.853" id="20" type="z-cylinder"/>
+    <surface coeffs="587 60 13.272" id="21" type="z-cylinder"/>
+    <surface coeffs="587 60 0.439" id="22" type="z-cylinder"/>
+    <surface coeffs="107.644" id="23" type="z-plane"/>
+    <surface coeffs="133.044" id="24" type="z-plane"/>
+    <surface coeffs="60 94.365 5.0" id="25" type="x-cylinder"/>
+    <surface coeffs="573.5" id="26" type="x-plane"/>
+    <surface coeffs="623.5" id="27" type="x-plane"/>
+    <surface coeffs="60 94.365 4.75" id="28" type="x-cylinder"/>
+    <surface coeffs="573.75" id="29" type="x-plane"/>
+    <surface coeffs="623.25" id="30" type="x-plane"/>
+    <surface coeffs="587 60 100 50.0" id="31" type="sphere"/>
+    <surface coeffs="569.5" id="32" type="x-plane"/>
+    <surface coeffs="577.5" id="33" type="x-plane"/>
+    <surface coeffs="52.0" id="34" type="y-plane"/>
+    <surface coeffs="68.0" id="35" type="y-plane"/>
+    <surface coeffs="76.0" id="37" type="z-plane"/>
+    <surface coeffs="578.5" id="38" type="x-plane"/>
+    <surface coeffs="586.5" id="39" type="x-plane"/>
+    <surface coeffs="619.5" id="44" type="x-plane"/>
+    <surface coeffs="627.5" id="45" type="x-plane"/>
+    <surface coeffs="610.5" id="50" type="x-plane"/>
+    <surface coeffs="618.5" id="51" type="x-plane"/>
+    <surface coeffs="586.6" id="56" type="x-plane"/>
+    <surface coeffs="587.4" id="57" type="x-plane"/>
+    <surface coeffs="59.8" id="58" type="y-plane"/>
+    <surface coeffs="60.2" id="59" type="y-plane"/>
+    <surface coeffs="84.715" id="60" type="z-plane"/>
+    <surface coeffs="84.765" id="61" type="z-plane"/>
+    <surface coeffs="587 60 1.8" id="62" type="z-cylinder"/>
+    <surface coeffs="99.365" id="63" type="z-plane"/>
+    <surface coeffs="99.46499999999999" id="64" type="z-plane"/>
+    <surface coeffs="89.265" id="66" type="z-plane"/>
+    <surface coeffs="89.365" id="67" type="z-plane"/>
+    <surface coeffs="225.0 138.0 5.0" id="68" type="x-cylinder"/>
+    <surface coeffs="500.5" id="69" type="x-plane"/>
+    <surface coeffs="542.0" id="70" type="x-plane"/>
+    <surface coeffs="225.0 138.0 4.75" id="71" type="x-cylinder"/>
+    <surface coeffs="500.75" id="72" type="x-plane"/>
+    <surface coeffs="541.75" id="73" type="x-plane"/>
+    <surface coeffs="225.0 138.0 10.1" id="74" type="x-cylinder"/>
+    <surface coeffs="524.5" id="75" type="x-plane"/>
+    <surface coeffs="536.0" id="76" type="x-plane"/>
+    <surface coeffs="225.0 138.0 20.0" id="77" type="x-cylinder"/>
+    <surface coeffs="100.0" id="80" type="x-plane"/>
+    <surface coeffs="800.0" id="81" type="x-plane"/>
+    <surface coeffs="10.0" id="82" type="y-plane"/>
+    <surface coeffs="400.0" id="83" type="y-plane"/>
+    <surface coeffs="20.0" id="84" type="z-plane"/>
+    <surface coeffs="200.0" id="85" type="z-plane"/>
+    <surface boundary="vacuum" coeffs="0.0 0.0 0.0 2500.0" id="86" type="sphere"/>
+    <surface coeffs="0.99881 -0.04885 0.0 1046.099544" id="93" type="plane"/>
+    <surface coeffs="-1104.9" id="94" type="x-plane"/>
+    <surface coeffs="1143.0" id="95" type="x-plane"/>
+    <surface coeffs="-99.38" id="96" type="y-plane"/>
+    <surface coeffs="1898.99" id="97" type="y-plane"/>
+    <surface coeffs="-81.28" id="98" type="z-plane"/>
+    <surface coeffs="0.51" id="100" type="x-plane"/>
+    <surface coeffs="61.47" id="101" type="x-plane"/>
+    <surface coeffs="268.62" id="102" type="y-plane"/>
+    <surface coeffs="512.46" id="103" type="y-plane"/>
+    <surface coeffs="0.0" id="104" type="z-plane"/>
+    <surface coeffs="223.52" id="105" type="z-plane"/>
+    <surface coeffs="0.5 0.86603 0.0 446.3839386000001" id="106" type="plane"/>
+    <surface coeffs="0.5 -0.86603 0.0 -227.45393860000007" id="107" type="plane"/>
+    <surface coeffs="-38.1" id="108" type="x-plane"/>
+    <surface coeffs="0.0" id="109" type="x-plane"/>
+    <surface coeffs="466.4" id="110" type="y-plane"/>
+    <surface coeffs="499.42" id="111" type="y-plane"/>
+    <surface coeffs="10.16" id="112" type="z-plane"/>
+    <surface coeffs="213.36" id="113" type="z-plane"/>
+    <surface coeffs="281.33" id="116" type="y-plane"/>
+    <surface coeffs="314.35" id="117" type="y-plane"/>
+    <surface coeffs="636.75" id="120" type="x-plane"/>
+    <surface coeffs="703.59" id="121" type="x-plane"/>
+    <surface coeffs="412.74" id="122" type="y-plane"/>
+    <surface coeffs="538.47" id="123" type="y-plane"/>
+    <surface coeffs="152.4" id="125" type="z-plane"/>
+    <surface coeffs="830.58" id="126" type="x-plane"/>
+    <surface coeffs="878.84" id="127" type="x-plane"/>
+    <surface coeffs="135.89" id="131" type="z-plane"/>
+    <surface coeffs="753.11 111.76 15.24" id="132" type="y-cylinder"/>
+    <surface coeffs="538.48" id="133" type="y-plane"/>
+    <surface coeffs="650.24" id="134" type="y-plane"/>
+    <surface coeffs="594.3" id="135" type="x-plane"/>
+    <surface coeffs="1014.3" id="136" type="x-plane"/>
+    <surface coeffs="568.95" id="138" type="y-plane"/>
+    <surface coeffs="363.22" id="140" type="z-plane"/>
+    <surface coeffs="0.99881 -0.04885 0.0 964.9095439999999" id="141" type="plane"/>
+    <surface coeffs="1150.0" id="143" type="x-plane"/>
+    <surface coeffs="0.0" id="145" type="y-plane"/>
+    <surface coeffs="945.1" id="148" type="x-plane"/>
+    <surface coeffs="1095.1" id="149" type="x-plane"/>
+    <surface coeffs="568.96" id="151" type="y-plane"/>
+    <surface coeffs="-104.9" id="154" type="x-plane"/>
+    <surface coeffs="45.1" id="155" type="x-plane"/>
+    <surface coeffs="-81.28" id="160" type="x-plane"/>
+    <surface coeffs="1148.72" id="167" type="x-plane"/>
+    <surface coeffs="424.18" id="171" type="z-plane"/>
+    <surface coeffs="64.77" id="172" type="x-plane"/>
+    <surface coeffs="1064.77" id="173" type="x-plane"/>
+    <surface coeffs="317.1 50.0 5.0" id="184" type="y-cylinder"/>
+    <surface coeffs="31.0" id="187" type="x-plane"/>
+    <surface coeffs="42.43" id="188" type="x-plane"/>
+    <surface coeffs="39.37" id="189" type="y-plane"/>
+    <surface coeffs="529.59" id="190" type="y-plane"/>
+    <surface coeffs="276.86" id="191" type="z-plane"/>
+    <surface coeffs="279.4" id="192" type="z-plane"/>
+    <surface coeffs="297.18" id="197" type="z-plane"/>
+    <surface coeffs="299.72" id="198" type="z-plane"/>
+    <surface coeffs="35.45" id="199" type="x-plane"/>
+    <surface coeffs="37.99" id="200" type="x-plane"/>
+    <surface coeffs="753.11 497.84 20.95" id="205" type="z-cylinder"/>
+    <surface coeffs="174.7" id="207" type="z-plane"/>
+    <surface coeffs="753.11 497.84 32.0" id="208" type="z-cylinder"/>
+    <surface coeffs="99.7" id="209" type="z-plane"/>
+    <surface coeffs="107.7" id="210" type="z-plane"/>
+    <surface coeffs="115.83" id="212" type="z-plane"/>
+    <surface coeffs="123.83" id="213" type="z-plane"/>
+    <surface coeffs="720.97" id="214" type="x-plane"/>
+    <surface coeffs="785.24" id="215" type="x-plane"/>
+    <surface coeffs="472.52" id="216" type="y-plane"/>
+    <surface coeffs="522.52" id="217" type="y-plane"/>
+    <surface coeffs="711.2" id="220" type="x-plane"/>
+    <surface coeffs="795.02" id="221" type="x-plane"/>
+    <surface coeffs="477.52" id="222" type="y-plane"/>
+    <surface coeffs="518.16" id="223" type="y-plane"/>
+    <surface coeffs="89.54" id="224" type="z-plane"/>
+    <surface coeffs="133.99" id="225" type="z-plane"/>
+    <surface coeffs="787.4" id="226" type="x-plane"/>
+    <surface coeffs="485.14" id="229" type="y-plane"/>
+    <surface coeffs="88.9" id="231" type="z-plane"/>
+    <surface coeffs="510.54" id="234" type="y-plane"/>
+    <surface coeffs="718.82" id="239" type="x-plane"/>
+  </geometry>
+  <settings>
+    <run_mode>fixed source</run_mode>
+    <particles>100000</particles>
+    <batches>100</batches>
+    <inactive>0</inactive>
+    <source particle="neutron" strength="0.014476547884133946" type="independent">
+      <space type="point">
+        <parameters>587 60 94.365</parameters>
+      </space>
+      <angle reference_uvw="1.0 0.0 0.0" type="mu-phi">
+        <mu parameters="0.9659258262890683 1.0" type="uniform"/>
+        <phi parameters="0 6.283185307179586" type="uniform"/>
+      </angle>
+      <energy interpolation="linear-linear" type="tabular">
+        <parameters>13139561.367013372 13146050.817236254 13152540.267459137 13159029.71768202 13165519.167904904 13172008.618127787 13178498.068350669 13184987.51857355 13191476.968796434 13197966.419019315 13204455.869242199 13210945.319465082 13217434.769687964 13223924.219910847 13230413.670133729 13236903.120356612 13243392.570579495 13249882.020802379 13256371.471025262 13262860.921248142 13269350.371471023 13275839.821693907 13282329.27191679 13288818.722139673 13295308.172362557 13301797.622585438 13308287.072808322 13314776.523031203 13321265.973254086 13327755.423476968 13334244.873699851 13340734.323922733 13347223.774145616 13353713.224368498 13360202.674591381 13366692.124814264 13373181.575037148 13379671.025260031 13386160.475482915 13392649.925705794 13399139.375928676 13405628.82615156 13412118.276374443 13418607.726597326 13425097.17682021 13431586.627043089 13438076.077265972 13444565.527488856 13451054.977711739 13457544.427934622 13464033.878157504 13470523.328380387 13477012.778603267 13483502.22882615 13489991.679049034 13496481.129271917 13502970.5794948 13509460.029717684 13515949.479940563 13522438.930163447 13528928.380386328 13535417.830609212 13541907.280832095 13548396.731054978 13554886.181277858 13561375.631500741 13567865.081723625 13574354.531946508 13580843.982169392 13587333.432392275 13593822.882615156 13600312.332838036 13606801.78306092 13613291.233283803 13619780.683506686 13626270.13372957 13632759.583952453 13639249.034175333 13645738.484398216 13652227.9346211 13658717.38484398 13665206.835066864 13671696.285289748 13678185.735512631 13684675.18573551 13691164.635958394 13697654.086181277 13704143.53640416 13710632.986627044 13717122.436849928 13723611.887072807 13730101.337295689 13736590.787518572 13743080.237741455 13749569.687964339 13756059.138187222 13762548.588410106 13769038.038632985 13775527.488855869 13782016.939078752 13788506.389301635 13794995.839524517 13801485.2897474 13807974.73997028 13814464.190193163 13820953.640416047 13827443.09063893 13833932.540861813 13840421.991084697 13846911.441307576 13853400.89153046 13859890.341753341 13866379.791976225 13872869.242199108 13879358.692421991 13885848.142644875 13892337.592867754 13898827.043090638 13905316.493313521 13911805.943536405 13918295.393759288 13924784.84398217 13931274.294205049 13937763.744427932 13944253.194650816 13950742.6448737 13957232.095096583 13963721.545319466 13970210.99554235 13976700.445765229 13983189.895988112 13989679.346210994 13996168.796433877 14002658.24665676 14009147.696879644 14015637.147102524 14022126.597325407 14028616.04754829 14035105.497771174 14041594.947994057 14048084.39821694 14054573.848439822 14061063.298662702 14067552.748885585 14074042.199108468 14080531.649331352 14087021.099554235 14093510.549777118 14099999.999999998 14106489.450222882 14112978.900445765 14119468.350668648 14125957.80089153 14132447.251114413 14138936.701337297 14145426.151560176 14151915.60178306 14158405.052005943 14164894.502228826 14171383.95245171 14177873.402674593 14184362.852897473 14190852.303120354 14197341.753343238 14203831.203566121 14210320.653789004 14216810.104011888 14223299.554234767 14229789.00445765 14236278.454680534 14242767.904903417 14249257.3551263 14255746.805349182 14262236.255572066 14268725.705794945 14275215.156017829 14281704.606240712 14288194.056463595 14294683.506686479 14301172.956909362 14307662.407132242 14314151.857355125 14320641.307578007 14327130.75780089 14333620.208023774 14340109.658246657 14346599.10846954 14353088.55869242 14359578.008915303 14366067.459138187 14372556.90936107 14379046.359583953 14385535.809806835 14392025.260029715 14398514.710252598 14405004.160475481 14411493.610698365 14417983.060921248 14424472.511144131 14430961.961367015 14437451.411589894 14443940.861812778 14450430.312035661 14456919.762258543 14463409.212481426 14469898.66270431 14476388.11292719 14482877.563150072 14489367.013372956 14495856.46359584 14502345.913818723 14508835.364041606 14515324.814264487 14521814.264487367 14528303.71471025 14534793.164933134 14541282.615156017 14547772.0653789 14554261.515601784 14560750.965824664 14567240.416047547 14573729.86627043 14580219.316493314 14586708.766716195 14593198.216939079 14599687.667161958 14606177.117384842 14612666.567607725 14619156.017830608 14625645.468053492 14632134.918276375 14638624.368499259 14645113.818722138 14651603.268945022 14658092.719167903 14664582.169390786 14671071.61961367 14677561.069836553 14684050.520059433 14690539.970282316 14697029.4205052 14703518.870728083 14710008.320950966 14716497.771173848 14722987.221396731 14729476.67161961 14735966.121842494 14742455.572065378 14748945.022288261 14755434.472511144 14761923.922734028 14768413.372956907 14774902.82317979 14781392.273402674 14787881.723625556 14794371.173848439 14800860.624071322 14807350.074294206 14813839.524517085 14820328.974739969 14826818.424962852 14833307.875185736 14839797.325408619 14846286.775631502 14852776.22585438 14859265.676077263 14865755.126300147 14872244.57652303 14878734.026745914 14885223.476968797 14891712.927191677 14898202.37741456 14904691.827637443 14911181.277860327 14917670.728083208 14924160.178306092 14930649.628528975 14937139.078751855 14943628.528974738 14950117.979197621 14956607.429420505 14963096.879643388 14969586.329866271 14976075.780089151 14982565.230312034 14989054.680534916 14995544.1307578 15002033.580980683 15008523.031203566 15015012.48142645 15021501.93164933 15027991.381872213 15034480.832095096 15040970.28231798 15047459.73254086 15053949.182763744 15060438.632986624 15066928.083209507 15073417.53343239 15079906.983655274 15.0 16.0 16.0 18.0 5.0 13.0 19.0 10.0 14.0 17.0 18.0 12.0 13.0 10.0 18.0 22.0 12.0 17.0 17.0 15.0 14.0 19.0 17.0 18.0 12.0 25.0 23.0 15.0 22.0 31.0 24.0 39.0 34.0 41.0 30.0 46.0 52.0 48.0 49.0 41.0 47.0 59.0 39.0 44.0 33.0 46.0 42.0 45.0 52.0 59.0 61.0 65.0 81.0 78.0 104.0 113.0 157.0 133.0 143.0 157.0 135.0 179.0 152.0 140.0 158.0 140.0 154.0 126.0 130.0 104.0 125.0 118.0 123.0 111.0 88.0 101.0 97.0 133.0 141.0 150.0 149.0 191.0 186.0 177.0 198.0 188.0 189.0 161.0 158.0 154.0 120.0 115.0 95.0 82.0 83.0 73.0 64.0 69.0 62.0 63.0 49.0 33.0 50.0 41.0 29.0 25.0 32.0 28.0 26.0 23.0 15.0 17.0 17.0 15.0 15.0 13.0 16.0 7.0 18.0 16.0 18.0 15.0 11.0 14.0 13.0 6.0 13.0 9.0 14.0 9.0 6.0 5.0 7.0 10.0 9.0 8.0 10.0 13.0 7.0 11.0 9.0 7.0 12.0 8.0 6.0 9.0 15.0 5.0 8.0 12.0 7.0 14.0 13.0 4.0 8.0 10.0 9.0 9.0 11.0 6.0 10.0 11.0 3.0 7.0 11.0 4.0 9.0 10.0 11.0 7.0 12.0 12.0 4.0 10.0 10.0 7.0 5.0 12.0 9.0 4.0 11.0 9.0 9.0 11.0 5.0 8.0 9.0 12.0 8.0 9.0 5.0 9.0 4.0 5.0 8.0 8.0 11.0 3.0 10.0 4.0 7.0 10.0 3.0 9.0 7.0 3.0 8.0 6.0 11.0 6.0 8.0 7.0 6.0 4.0 7.0 8.0 13.0 9.0 4.0 5.0 5.0 3.0 9.0 7.0 6.0 5.0 8.0 6.0 4.0 10.0 14.0 2.0 5.0 11.0 7.0 9.0 9.0 7.0 8.0 2.0 5.0 3.0 7.0 8.0 11.0 9.0 5.0 3.0 12.0 6.0 6.0 4.0 4.0 4.0 10.0 5.0 4.0 8.0 8.0 7.0 3.0 9.0 7.0 15.0 10.0 5.0 4.0 8.0 13.0 9.0 9.0 4.0 6.0 7.0 2.0 7.0 8.0 3.0 14.0 1.0 6.0 6.0 8.0 11.0 8.0 6.0 7.0 9.0 8.0 10.0 8.0 10.0 4.0 6.0 7.0 14.0 2.0 8.0 11.0 4.0</parameters>
+      </energy>
+    </source>
+    <source particle="neutron" strength="0.03177671776825664" type="independent">
+      <space type="point">
+        <parameters>587 60 94.365</parameters>
+      </space>
+      <angle reference_uvw="1.0 0.0 0.0" type="mu-phi">
+        <mu parameters="0.8660254037844387 0.9659258262890683" type="uniform"/>
+        <phi parameters="0 6.283185307179586" type="uniform"/>
+      </angle>
+      <energy interpolation="linear-linear" type="tabular">
+        <parameters>13139561.367013372 13146050.817236254 13152540.267459137 13159029.71768202 13165519.167904904 13172008.618127787 13178498.068350669 13184987.51857355 13191476.968796434 13197966.419019315 13204455.869242199 13210945.319465082 13217434.769687964 13223924.219910847 13230413.670133729 13236903.120356612 13243392.570579495 13249882.020802379 13256371.471025262 13262860.921248142 13269350.371471023 13275839.821693907 13282329.27191679 13288818.722139673 13295308.172362557 13301797.622585438 13308287.072808322 13314776.523031203 13321265.973254086 13327755.423476968 13334244.873699851 13340734.323922733 13347223.774145616 13353713.224368498 13360202.674591381 13366692.124814264 13373181.575037148 13379671.025260031 13386160.475482915 13392649.925705794 13399139.375928676 13405628.82615156 13412118.276374443 13418607.726597326 13425097.17682021 13431586.627043089 13438076.077265972 13444565.527488856 13451054.977711739 13457544.427934622 13464033.878157504 13470523.328380387 13477012.778603267 13483502.22882615 13489991.679049034 13496481.129271917 13502970.5794948 13509460.029717684 13515949.479940563 13522438.930163447 13528928.380386328 13535417.830609212 13541907.280832095 13548396.731054978 13554886.181277858 13561375.631500741 13567865.081723625 13574354.531946508 13580843.982169392 13587333.432392275 13593822.882615156 13600312.332838036 13606801.78306092 13613291.233283803 13619780.683506686 13626270.13372957 13632759.583952453 13639249.034175333 13645738.484398216 13652227.9346211 13658717.38484398 13665206.835066864 13671696.285289748 13678185.735512631 13684675.18573551 13691164.635958394 13697654.086181277 13704143.53640416 13710632.986627044 13717122.436849928 13723611.887072807 13730101.337295689 13736590.787518572 13743080.237741455 13749569.687964339 13756059.138187222 13762548.588410106 13769038.038632985 13775527.488855869 13782016.939078752 13788506.389301635 13794995.839524517 13801485.2897474 13807974.73997028 13814464.190193163 13820953.640416047 13827443.09063893 13833932.540861813 13840421.991084697 13846911.441307576 13853400.89153046 13859890.341753341 13866379.791976225 13872869.242199108 13879358.692421991 13885848.142644875 13892337.592867754 13898827.043090638 13905316.493313521 13911805.943536405 13918295.393759288 13924784.84398217 13931274.294205049 13937763.744427932 13944253.194650816 13950742.6448737 13957232.095096583 13963721.545319466 13970210.99554235 13976700.445765229 13983189.895988112 13989679.346210994 13996168.796433877 14002658.24665676 14009147.696879644 14015637.147102524 14022126.597325407 14028616.04754829 14035105.497771174 14041594.947994057 14048084.39821694 14054573.848439822 14061063.298662702 14067552.748885585 14074042.199108468 14080531.649331352 14087021.099554235 14093510.549777118 14099999.999999998 14106489.450222882 14112978.900445765 14119468.350668648 14125957.80089153 14132447.251114413 14138936.701337297 14145426.151560176 14151915.60178306 14158405.052005943 14164894.502228826 14171383.95245171 14177873.402674593 14184362.852897473 14190852.303120354 14197341.753343238 14203831.203566121 14210320.653789004 14216810.104011888 14223299.554234767 14229789.00445765 14236278.454680534 14242767.904903417 14249257.3551263 14255746.805349182 14262236.255572066 14268725.705794945 14275215.156017829 14281704.606240712 14288194.056463595 14294683.506686479 14301172.956909362 14307662.407132242 14314151.857355125 14320641.307578007 14327130.75780089 14333620.208023774 14340109.658246657 14346599.10846954 14353088.55869242 14359578.008915303 14366067.459138187 14372556.90936107 14379046.359583953 14385535.809806835 14392025.260029715 14398514.710252598 14405004.160475481 14411493.610698365 14417983.060921248 14424472.511144131 14430961.961367015 14437451.411589894 14443940.861812778 14450430.312035661 14456919.762258543 14463409.212481426 14469898.66270431 14476388.11292719 14482877.563150072 14489367.013372956 14495856.46359584 14502345.913818723 14508835.364041606 14515324.814264487 14521814.264487367 14528303.71471025 14534793.164933134 14541282.615156017 14547772.0653789 14554261.515601784 14560750.965824664 14567240.416047547 14573729.86627043 14580219.316493314 14586708.766716195 14593198.216939079 14599687.667161958 14606177.117384842 14612666.567607725 14619156.017830608 14625645.468053492 14632134.918276375 14638624.368499259 14645113.818722138 14651603.268945022 14658092.719167903 14664582.169390786 14671071.61961367 14677561.069836553 14684050.520059433 14690539.970282316 14697029.4205052 14703518.870728083 14710008.320950966 14716497.771173848 14722987.221396731 14729476.67161961 14735966.121842494 14742455.572065378 14748945.022288261 14755434.472511144 14761923.922734028 14768413.372956907 14774902.82317979 14781392.273402674 14787881.723625556 14794371.173848439 14800860.624071322 14807350.074294206 14813839.524517085 14820328.974739969 14826818.424962852 14833307.875185736 14839797.325408619 14846286.775631502 14852776.22585438 14859265.676077263 14865755.126300147 14872244.57652303 14878734.026745914 14885223.476968797 14891712.927191677 14898202.37741456 14904691.827637443 14911181.277860327 14917670.728083208 14924160.178306092 14930649.628528975 14937139.078751855 14943628.528974738 14950117.979197621 14956607.429420505 14963096.879643388 14969586.329866271 14976075.780089151 14982565.230312034 14989054.680534916 14995544.1307578 15002033.580980683 15008523.031203566 15015012.48142645 15021501.93164933 15027991.381872213 15034480.832095096 15040970.28231798 15047459.73254086 15053949.182763744 15060438.632986624 15066928.083209507 15073417.53343239 15079906.983655274 11.0 8.0 15.0 12.0 6.0 12.0 8.0 16.0 12.0 11.0 5.0 16.0 11.0 16.0 7.0 10.0 9.0 10.0 9.0 13.0 10.0 12.0 14.0 6.0 20.0 13.0 16.0 17.0 17.0 14.0 16.0 25.0 24.0 22.0 25.0 27.0 30.0 22.0 25.0 30.0 30.0 28.0 39.0 38.0 37.0 37.0 33.0 38.0 49.0 26.0 39.0 30.0 38.0 56.0 50.0 64.0 67.0 71.0 86.0 97.0 103.0 104.0 113.0 109.0 108.0 122.0 110.0 112.0 96.0 91.0 94.0 99.0 107.0 89.0 79.0 88.0 98.0 114.0 76.0 100.0 95.0 131.0 106.0 125.0 110.0 131.0 136.0 122.0 129.0 131.0 122.0 109.0 89.0 82.0 90.0 80.0 72.0 63.0 51.0 41.0 50.0 52.0 43.0 37.0 35.0 28.0 21.0 30.0 22.0 19.0 10.0 27.0 15.0 19.0 12.0 9.0 14.0 17.0 17.0 8.0 14.0 11.0 6.0 13.0 6.0 6.0 14.0 7.0 13.0 4.0 10.0 7.0 5.0 5.0 8.0 10.0 5.0 9.0 3.0 5.0 5.0 11.0 3.0 4.0 9.0 7.0 5.0 3.0 6.0 4.0 9.0 5.0 5.0 2.0 8.0 9.0 7.0 3.0 5.0 4.0 3.0 6.0 3.0 7.0 3.0 10.0 5.0 6.0 1.0 6.0 5.0 9.0 6.0 10.0 5.0 6.0 4.0 17.0 8.0 7.0 6.0 6.0 6.0 4.0 6.0 2.0 6.0 5.0 10.0 7.0 7.0 4.0 5.0 10.0 7.0 5.0 8.0 6.0 3.0 7.0 7.0 5.0 4.0 5.0 8.0 3.0 10.0 4.0 7.0 4.0 6.0 3.0 1.0 4.0 5.0 8.0 2.0 12.0 7.0 3.0 10.0 3.0 8.0 1.0 9.0 7.0 3.0 6.0 5.0 8.0 3.0 8.0 5.0 6.0 9.0 5.0 5.0 8.0 5.0 2.0 5.0 7.0 5.0 1.0 10.0 6.0 3.0 5.0 9.0 4.0 9.0 5.0 8.0 6.0 3.0 5.0 4.0 3.0 2.0 6.0 8.0 3.0 10.0 3.0 10.0 6.0 4.0 4.0 3.0 6.0 5.0 2.0 7.0 5.0 5.0 9.0 5.0 7.0 7.0 7.0 3.0 2.0 7.0 5.0 5.0 2.0 3.0 6.0 7.0 5.0 9.0 8.0 3.0 6.0 9.0 6.0 4.0 6.0 8.0 5.0</parameters>
+      </energy>
+    </source>
+    <source particle="neutron" strength="0.056662942358867874" type="independent">
+      <space type="point">
+        <parameters>587 60 94.365</parameters>
+      </space>
+      <angle reference_uvw="1.0 0.0 0.0" type="mu-phi">
+        <mu parameters="0.7071067811865476 0.8660254037844387" type="uniform"/>
+        <phi parameters="0 6.283185307179586" type="uniform"/>
+      </angle>
+      <energy interpolation="linear-linear" type="tabular">
+        <parameters>13139561.367013372 13146050.817236254 13152540.267459137 13159029.71768202 13165519.167904904 13172008.618127787 13178498.068350669 13184987.51857355 13191476.968796434 13197966.419019315 13204455.869242199 13210945.319465082 13217434.769687964 13223924.219910847 13230413.670133729 13236903.120356612 13243392.570579495 13249882.020802379 13256371.471025262 13262860.921248142 13269350.371471023 13275839.821693907 13282329.27191679 13288818.722139673 13295308.172362557 13301797.622585438 13308287.072808322 13314776.523031203 13321265.973254086 13327755.423476968 13334244.873699851 13340734.323922733 13347223.774145616 13353713.224368498 13360202.674591381 13366692.124814264 13373181.575037148 13379671.025260031 13386160.475482915 13392649.925705794 13399139.375928676 13405628.82615156 13412118.276374443 13418607.726597326 13425097.17682021 13431586.627043089 13438076.077265972 13444565.527488856 13451054.977711739 13457544.427934622 13464033.878157504 13470523.328380387 13477012.778603267 13483502.22882615 13489991.679049034 13496481.129271917 13502970.5794948 13509460.029717684 13515949.479940563 13522438.930163447 13528928.380386328 13535417.830609212 13541907.280832095 13548396.731054978 13554886.181277858 13561375.631500741 13567865.081723625 13574354.531946508 13580843.982169392 13587333.432392275 13593822.882615156 13600312.332838036 13606801.78306092 13613291.233283803 13619780.683506686 13626270.13372957 13632759.583952453 13639249.034175333 13645738.484398216 13652227.9346211 13658717.38484398 13665206.835066864 13671696.285289748 13678185.735512631 13684675.18573551 13691164.635958394 13697654.086181277 13704143.53640416 13710632.986627044 13717122.436849928 13723611.887072807 13730101.337295689 13736590.787518572 13743080.237741455 13749569.687964339 13756059.138187222 13762548.588410106 13769038.038632985 13775527.488855869 13782016.939078752 13788506.389301635 13794995.839524517 13801485.2897474 13807974.73997028 13814464.190193163 13820953.640416047 13827443.09063893 13833932.540861813 13840421.991084697 13846911.441307576 13853400.89153046 13859890.341753341 13866379.791976225 13872869.242199108 13879358.692421991 13885848.142644875 13892337.592867754 13898827.043090638 13905316.493313521 13911805.943536405 13918295.393759288 13924784.84398217 13931274.294205049 13937763.744427932 13944253.194650816 13950742.6448737 13957232.095096583 13963721.545319466 13970210.99554235 13976700.445765229 13983189.895988112 13989679.346210994 13996168.796433877 14002658.24665676 14009147.696879644 14015637.147102524 14022126.597325407 14028616.04754829 14035105.497771174 14041594.947994057 14048084.39821694 14054573.848439822 14061063.298662702 14067552.748885585 14074042.199108468 14080531.649331352 14087021.099554235 14093510.549777118 14099999.999999998 14106489.450222882 14112978.900445765 14119468.350668648 14125957.80089153 14132447.251114413 14138936.701337297 14145426.151560176 14151915.60178306 14158405.052005943 14164894.502228826 14171383.95245171 14177873.402674593 14184362.852897473 14190852.303120354 14197341.753343238 14203831.203566121 14210320.653789004 14216810.104011888 14223299.554234767 14229789.00445765 14236278.454680534 14242767.904903417 14249257.3551263 14255746.805349182 14262236.255572066 14268725.705794945 14275215.156017829 14281704.606240712 14288194.056463595 14294683.506686479 14301172.956909362 14307662.407132242 14314151.857355125 14320641.307578007 14327130.75780089 14333620.208023774 14340109.658246657 14346599.10846954 14353088.55869242 14359578.008915303 14366067.459138187 14372556.90936107 14379046.359583953 14385535.809806835 14392025.260029715 14398514.710252598 14405004.160475481 14411493.610698365 14417983.060921248 14424472.511144131 14430961.961367015 14437451.411589894 14443940.861812778 14450430.312035661 14456919.762258543 14463409.212481426 14469898.66270431 14476388.11292719 14482877.563150072 14489367.013372956 14495856.46359584 14502345.913818723 14508835.364041606 14515324.814264487 14521814.264487367 14528303.71471025 14534793.164933134 14541282.615156017 14547772.0653789 14554261.515601784 14560750.965824664 14567240.416047547 14573729.86627043 14580219.316493314 14586708.766716195 14593198.216939079 14599687.667161958 14606177.117384842 14612666.567607725 14619156.017830608 14625645.468053492 14632134.918276375 14638624.368499259 14645113.818722138 14651603.268945022 14658092.719167903 14664582.169390786 14671071.61961367 14677561.069836553 14684050.520059433 14690539.970282316 14697029.4205052 14703518.870728083 14710008.320950966 14716497.771173848 14722987.221396731 14729476.67161961 14735966.121842494 14742455.572065378 14748945.022288261 14755434.472511144 14761923.922734028 14768413.372956907 14774902.82317979 14781392.273402674 14787881.723625556 14794371.173848439 14800860.624071322 14807350.074294206 14813839.524517085 14820328.974739969 14826818.424962852 14833307.875185736 14839797.325408619 14846286.775631502 14852776.22585438 14859265.676077263 14865755.126300147 14872244.57652303 14878734.026745914 14885223.476968797 14891712.927191677 14898202.37741456 14904691.827637443 14911181.277860327 14917670.728083208 14924160.178306092 14930649.628528975 14937139.078751855 14943628.528974738 14950117.979197621 14956607.429420505 14963096.879643388 14969586.329866271 14976075.780089151 14982565.230312034 14989054.680534916 14995544.1307578 15002033.580980683 15008523.031203566 15015012.48142645 15021501.93164933 15027991.381872213 15034480.832095096 15040970.28231798 15047459.73254086 15053949.182763744 15060438.632986624 15066928.083209507 15073417.53343239 15079906.983655274 10.0 9.0 15.0 7.0 12.0 13.0 9.0 10.0 15.0 11.0 10.0 14.0 9.0 14.0 8.0 15.0 10.0 13.0 9.0 11.0 18.0 19.0 14.0 8.0 13.0 14.0 15.0 15.0 8.0 16.0 16.0 12.0 14.0 14.0 11.0 22.0 20.0 19.0 20.0 13.0 17.0 14.0 21.0 24.0 22.0 42.0 24.0 40.0 29.0 39.0 39.0 30.0 40.0 34.0 42.0 46.0 49.0 47.0 49.0 48.0 52.0 56.0 42.0 67.0 71.0 85.0 83.0 111.0 94.0 124.0 108.0 122.0 145.0 147.0 132.0 124.0 105.0 127.0 139.0 114.0 123.0 110.0 105.0 119.0 137.0 123.0 111.0 131.0 139.0 143.0 158.0 147.0 158.0 146.0 147.0 132.0 157.0 131.0 116.0 81.0 96.0 74.0 82.0 71.0 66.0 68.0 64.0 40.0 44.0 37.0 41.0 36.0 25.0 24.0 21.0 21.0 24.0 18.0 15.0 12.0 15.0 13.0 13.0 13.0 9.0 10.0 11.0 12.0 14.0 17.0 16.0 12.0 12.0 8.0 8.0 4.0 7.0 8.0 12.0 4.0 5.0 7.0 12.0 11.0 10.0 13.0 7.0 13.0 8.0 9.0 6.0 14.0 11.0 7.0 5.0 17.0 7.0 5.0 7.0 3.0 13.0 6.0 5.0 10.0 4.0 3.0 7.0 9.0 4.0 6.0 9.0 6.0 3.0 7.0 7.0 6.0 16.0 8.0 3.0 5.0 5.0 6.0 5.0 9.0 7.0 5.0 6.0 6.0 6.0 6.0 6.0 11.0 3.0 10.0 9.0 3.0 3.0 6.0 6.0 5.0 5.0 11.0 5.0 5.0 8.0 2.0 8.0 5.0 3.0 3.0 5.0 3.0 7.0 6.0 7.0 8.0 7.0 7.0 11.0 3.0 7.0 8.0 6.0 6.0 4.0 4.0 5.0 5.0 9.0 7.0 5.0 10.0 7.0 7.0 11.0 10.0 5.0 7.0 6.0 4.0 10.0 5.0 4.0 12.0 2.0 4.0 11.0 9.0 4.0 7.0 7.0 3.0 2.0 6.0 9.0 9.0 4.0 9.0 4.0 9.0 3.0 5.0 7.0 5.0 6.0 2.0 2.0 6.0 9.0 4.0 7.0 3.0 5.0 5.0 6.0 5.0 7.0 7.0 4.0 5.0 8.0 8.0 8.0 6.0 2.0 4.0 4.0 2.0 12.0 5.0 5.0 5.0 8.0 6.0 5.0 7.0 2.0 3.0 2.0 4.0</parameters>
+      </energy>
+    </source>
+    <source particle="neutron" strength="0.1109605246579654" type="independent">
+      <space type="point">
+        <parameters>587 60 94.365</parameters>
+      </space>
+      <angle reference_uvw="1.0 0.0 0.0" type="mu-phi">
+        <mu parameters="0.5000000000000001 0.7071067811865476" type="uniform"/>
+        <phi parameters="0 6.283185307179586" type="uniform"/>
+      </angle>
+      <energy interpolation="linear-linear" type="tabular">
+        <parameters>13139561.367013372 13146050.817236254 13152540.267459137 13159029.71768202 13165519.167904904 13172008.618127787 13178498.068350669 13184987.51857355 13191476.968796434 13197966.419019315 13204455.869242199 13210945.319465082 13217434.769687964 13223924.219910847 13230413.670133729 13236903.120356612 13243392.570579495 13249882.020802379 13256371.471025262 13262860.921248142 13269350.371471023 13275839.821693907 13282329.27191679 13288818.722139673 13295308.172362557 13301797.622585438 13308287.072808322 13314776.523031203 13321265.973254086 13327755.423476968 13334244.873699851 13340734.323922733 13347223.774145616 13353713.224368498 13360202.674591381 13366692.124814264 13373181.575037148 13379671.025260031 13386160.475482915 13392649.925705794 13399139.375928676 13405628.82615156 13412118.276374443 13418607.726597326 13425097.17682021 13431586.627043089 13438076.077265972 13444565.527488856 13451054.977711739 13457544.427934622 13464033.878157504 13470523.328380387 13477012.778603267 13483502.22882615 13489991.679049034 13496481.129271917 13502970.5794948 13509460.029717684 13515949.479940563 13522438.930163447 13528928.380386328 13535417.830609212 13541907.280832095 13548396.731054978 13554886.181277858 13561375.631500741 13567865.081723625 13574354.531946508 13580843.982169392 13587333.432392275 13593822.882615156 13600312.332838036 13606801.78306092 13613291.233283803 13619780.683506686 13626270.13372957 13632759.583952453 13639249.034175333 13645738.484398216 13652227.9346211 13658717.38484398 13665206.835066864 13671696.285289748 13678185.735512631 13684675.18573551 13691164.635958394 13697654.086181277 13704143.53640416 13710632.986627044 13717122.436849928 13723611.887072807 13730101.337295689 13736590.787518572 13743080.237741455 13749569.687964339 13756059.138187222 13762548.588410106 13769038.038632985 13775527.488855869 13782016.939078752 13788506.389301635 13794995.839524517 13801485.2897474 13807974.73997028 13814464.190193163 13820953.640416047 13827443.09063893 13833932.540861813 13840421.991084697 13846911.441307576 13853400.89153046 13859890.341753341 13866379.791976225 13872869.242199108 13879358.692421991 13885848.142644875 13892337.592867754 13898827.043090638 13905316.493313521 13911805.943536405 13918295.393759288 13924784.84398217 13931274.294205049 13937763.744427932 13944253.194650816 13950742.6448737 13957232.095096583 13963721.545319466 13970210.99554235 13976700.445765229 13983189.895988112 13989679.346210994 13996168.796433877 14002658.24665676 14009147.696879644 14015637.147102524 14022126.597325407 14028616.04754829 14035105.497771174 14041594.947994057 14048084.39821694 14054573.848439822 14061063.298662702 14067552.748885585 14074042.199108468 14080531.649331352 14087021.099554235 14093510.549777118 14099999.999999998 14106489.450222882 14112978.900445765 14119468.350668648 14125957.80089153 14132447.251114413 14138936.701337297 14145426.151560176 14151915.60178306 14158405.052005943 14164894.502228826 14171383.95245171 14177873.402674593 14184362.852897473 14190852.303120354 14197341.753343238 14203831.203566121 14210320.653789004 14216810.104011888 14223299.554234767 14229789.00445765 14236278.454680534 14242767.904903417 14249257.3551263 14255746.805349182 14262236.255572066 14268725.705794945 14275215.156017829 14281704.606240712 14288194.056463595 14294683.506686479 14301172.956909362 14307662.407132242 14314151.857355125 14320641.307578007 14327130.75780089 14333620.208023774 14340109.658246657 14346599.10846954 14353088.55869242 14359578.008915303 14366067.459138187 14372556.90936107 14379046.359583953 14385535.809806835 14392025.260029715 14398514.710252598 14405004.160475481 14411493.610698365 14417983.060921248 14424472.511144131 14430961.961367015 14437451.411589894 14443940.861812778 14450430.312035661 14456919.762258543 14463409.212481426 14469898.66270431 14476388.11292719 14482877.563150072 14489367.013372956 14495856.46359584 14502345.913818723 14508835.364041606 14515324.814264487 14521814.264487367 14528303.71471025 14534793.164933134 14541282.615156017 14547772.0653789 14554261.515601784 14560750.965824664 14567240.416047547 14573729.86627043 14580219.316493314 14586708.766716195 14593198.216939079 14599687.667161958 14606177.117384842 14612666.567607725 14619156.017830608 14625645.468053492 14632134.918276375 14638624.368499259 14645113.818722138 14651603.268945022 14658092.719167903 14664582.169390786 14671071.61961367 14677561.069836553 14684050.520059433 14690539.970282316 14697029.4205052 14703518.870728083 14710008.320950966 14716497.771173848 14722987.221396731 14729476.67161961 14735966.121842494 14742455.572065378 14748945.022288261 14755434.472511144 14761923.922734028 14768413.372956907 14774902.82317979 14781392.273402674 14787881.723625556 14794371.173848439 14800860.624071322 14807350.074294206 14813839.524517085 14820328.974739969 14826818.424962852 14833307.875185736 14839797.325408619 14846286.775631502 14852776.22585438 14859265.676077263 14865755.126300147 14872244.57652303 14878734.026745914 14885223.476968797 14891712.927191677 14898202.37741456 14904691.827637443 14911181.277860327 14917670.728083208 14924160.178306092 14930649.628528975 14937139.078751855 14943628.528974738 14950117.979197621 14956607.429420505 14963096.879643388 14969586.329866271 14976075.780089151 14982565.230312034 14989054.680534916 14995544.1307578 15002033.580980683 15008523.031203566 15015012.48142645 15021501.93164933 15027991.381872213 15034480.832095096 15040970.28231798 15047459.73254086 15053949.182763744 15060438.632986624 15066928.083209507 15073417.53343239 15079906.983655274 24.0 19.0 13.0 17.0 13.0 14.0 23.0 15.0 17.0 19.0 15.0 22.0 15.0 19.0 20.0 17.0 18.0 13.0 14.0 15.0 19.0 14.0 14.0 15.0 12.0 16.0 10.0 8.0 19.0 7.0 14.0 16.0 22.0 18.0 16.0 21.0 24.0 22.0 21.0 14.0 18.0 13.0 23.0 21.0 18.0 17.0 33.0 17.0 26.0 21.0 23.0 19.0 32.0 25.0 31.0 33.0 28.0 27.0 28.0 34.0 39.0 31.0 52.0 44.0 39.0 59.0 53.0 49.0 59.0 59.0 75.0 78.0 73.0 81.0 84.0 91.0 86.0 109.0 134.0 137.0 153.0 170.0 183.0 187.0 185.0 199.0 200.0 203.0 190.0 218.0 222.0 206.0 190.0 217.0 191.0 198.0 219.0 233.0 240.0 266.0 238.0 241.0 239.0 243.0 227.0 239.0 254.0 243.0 169.0 184.0 160.0 146.0 119.0 121.0 99.0 75.0 81.0 76.0 55.0 51.0 51.0 41.0 53.0 36.0 29.0 34.0 31.0 25.0 24.0 24.0 26.0 27.0 18.0 24.0 18.0 22.0 21.0 16.0 16.0 12.0 9.0 14.0 7.0 17.0 14.0 12.0 7.0 14.0 16.0 14.0 11.0 10.0 4.0 16.0 18.0 15.0 12.0 10.0 11.0 12.0 13.0 16.0 9.0 9.0 5.0 18.0 15.0 12.0 8.0 10.0 9.0 14.0 12.0 5.0 12.0 13.0 7.0 10.0 8.0 9.0 15.0 15.0 11.0 10.0 11.0 10.0 6.0 8.0 8.0 12.0 7.0 11.0 9.0 10.0 12.0 10.0 8.0 11.0 10.0 7.0 9.0 10.0 7.0 5.0 3.0 12.0 10.0 9.0 12.0 9.0 9.0 10.0 7.0 7.0 13.0 12.0 12.0 13.0 8.0 10.0 6.0 7.0 11.0 6.0 11.0 7.0 15.0 7.0 6.0 4.0 12.0 8.0 7.0 6.0 10.0 9.0 8.0 6.0 14.0 7.0 11.0 5.0 5.0 10.0 8.0 12.0 6.0 12.0 7.0 8.0 11.0 13.0 8.0 3.0 7.0 11.0 14.0 12.0 7.0 9.0 7.0 8.0 6.0 8.0 18.0 17.0 11.0 6.0 6.0 7.0 11.0 10.0 18.0 7.0 8.0 8.0 9.0 10.0 7.0 11.0 9.0 9.0 8.0 11.0 8.0 11.0 12.0 8.0 6.0 10.0 12.0 11.0 10.0 6.0 9.0 8.0 8.0 12.0 9.0 11.0</parameters>
+      </energy>
+    </source>
+    <source particle="neutron" strength="0.1304619327706465" type="independent">
+      <space type="point">
+        <parameters>587 60 94.365</parameters>
+      </space>
+      <angle reference_uvw="1.0 0.0 0.0" type="mu-phi">
+        <mu parameters="0.25881904510252074 0.5000000000000001" type="uniform"/>
+        <phi parameters="0 6.283185307179586" type="uniform"/>
+      </angle>
+      <energy interpolation="linear-linear" type="tabular">
+        <parameters>13139561.367013372 13146050.817236254 13152540.267459137 13159029.71768202 13165519.167904904 13172008.618127787 13178498.068350669 13184987.51857355 13191476.968796434 13197966.419019315 13204455.869242199 13210945.319465082 13217434.769687964 13223924.219910847 13230413.670133729 13236903.120356612 13243392.570579495 13249882.020802379 13256371.471025262 13262860.921248142 13269350.371471023 13275839.821693907 13282329.27191679 13288818.722139673 13295308.172362557 13301797.622585438 13308287.072808322 13314776.523031203 13321265.973254086 13327755.423476968 13334244.873699851 13340734.323922733 13347223.774145616 13353713.224368498 13360202.674591381 13366692.124814264 13373181.575037148 13379671.025260031 13386160.475482915 13392649.925705794 13399139.375928676 13405628.82615156 13412118.276374443 13418607.726597326 13425097.17682021 13431586.627043089 13438076.077265972 13444565.527488856 13451054.977711739 13457544.427934622 13464033.878157504 13470523.328380387 13477012.778603267 13483502.22882615 13489991.679049034 13496481.129271917 13502970.5794948 13509460.029717684 13515949.479940563 13522438.930163447 13528928.380386328 13535417.830609212 13541907.280832095 13548396.731054978 13554886.181277858 13561375.631500741 13567865.081723625 13574354.531946508 13580843.982169392 13587333.432392275 13593822.882615156 13600312.332838036 13606801.78306092 13613291.233283803 13619780.683506686 13626270.13372957 13632759.583952453 13639249.034175333 13645738.484398216 13652227.9346211 13658717.38484398 13665206.835066864 13671696.285289748 13678185.735512631 13684675.18573551 13691164.635958394 13697654.086181277 13704143.53640416 13710632.986627044 13717122.436849928 13723611.887072807 13730101.337295689 13736590.787518572 13743080.237741455 13749569.687964339 13756059.138187222 13762548.588410106 13769038.038632985 13775527.488855869 13782016.939078752 13788506.389301635 13794995.839524517 13801485.2897474 13807974.73997028 13814464.190193163 13820953.640416047 13827443.09063893 13833932.540861813 13840421.991084697 13846911.441307576 13853400.89153046 13859890.341753341 13866379.791976225 13872869.242199108 13879358.692421991 13885848.142644875 13892337.592867754 13898827.043090638 13905316.493313521 13911805.943536405 13918295.393759288 13924784.84398217 13931274.294205049 13937763.744427932 13944253.194650816 13950742.6448737 13957232.095096583 13963721.545319466 13970210.99554235 13976700.445765229 13983189.895988112 13989679.346210994 13996168.796433877 14002658.24665676 14009147.696879644 14015637.147102524 14022126.597325407 14028616.04754829 14035105.497771174 14041594.947994057 14048084.39821694 14054573.848439822 14061063.298662702 14067552.748885585 14074042.199108468 14080531.649331352 14087021.099554235 14093510.549777118 14099999.999999998 14106489.450222882 14112978.900445765 14119468.350668648 14125957.80089153 14132447.251114413 14138936.701337297 14145426.151560176 14151915.60178306 14158405.052005943 14164894.502228826 14171383.95245171 14177873.402674593 14184362.852897473 14190852.303120354 14197341.753343238 14203831.203566121 14210320.653789004 14216810.104011888 14223299.554234767 14229789.00445765 14236278.454680534 14242767.904903417 14249257.3551263 14255746.805349182 14262236.255572066 14268725.705794945 14275215.156017829 14281704.606240712 14288194.056463595 14294683.506686479 14301172.956909362 14307662.407132242 14314151.857355125 14320641.307578007 14327130.75780089 14333620.208023774 14340109.658246657 14346599.10846954 14353088.55869242 14359578.008915303 14366067.459138187 14372556.90936107 14379046.359583953 14385535.809806835 14392025.260029715 14398514.710252598 14405004.160475481 14411493.610698365 14417983.060921248 14424472.511144131 14430961.961367015 14437451.411589894 14443940.861812778 14450430.312035661 14456919.762258543 14463409.212481426 14469898.66270431 14476388.11292719 14482877.563150072 14489367.013372956 14495856.46359584 14502345.913818723 14508835.364041606 14515324.814264487 14521814.264487367 14528303.71471025 14534793.164933134 14541282.615156017 14547772.0653789 14554261.515601784 14560750.965824664 14567240.416047547 14573729.86627043 14580219.316493314 14586708.766716195 14593198.216939079 14599687.667161958 14606177.117384842 14612666.567607725 14619156.017830608 14625645.468053492 14632134.918276375 14638624.368499259 14645113.818722138 14651603.268945022 14658092.719167903 14664582.169390786 14671071.61961367 14677561.069836553 14684050.520059433 14690539.970282316 14697029.4205052 14703518.870728083 14710008.320950966 14716497.771173848 14722987.221396731 14729476.67161961 14735966.121842494 14742455.572065378 14748945.022288261 14755434.472511144 14761923.922734028 14768413.372956907 14774902.82317979 14781392.273402674 14787881.723625556 14794371.173848439 14800860.624071322 14807350.074294206 14813839.524517085 14820328.974739969 14826818.424962852 14833307.875185736 14839797.325408619 14846286.775631502 14852776.22585438 14859265.676077263 14865755.126300147 14872244.57652303 14878734.026745914 14885223.476968797 14891712.927191677 14898202.37741456 14904691.827637443 14911181.277860327 14917670.728083208 14924160.178306092 14930649.628528975 14937139.078751855 14943628.528974738 14950117.979197621 14956607.429420505 14963096.879643388 14969586.329866271 14976075.780089151 14982565.230312034 14989054.680534916 14995544.1307578 15002033.580980683 15008523.031203566 15015012.48142645 15021501.93164933 15027991.381872213 15034480.832095096 15040970.28231798 15047459.73254086 15053949.182763744 15060438.632986624 15066928.083209507 15073417.53343239 15079906.983655274 9.0 23.0 15.0 19.0 14.0 21.0 17.0 21.0 13.0 18.0 17.0 16.0 19.0 16.0 15.0 23.0 17.0 11.0 17.0 8.0 14.0 10.0 14.0 23.0 9.0 18.0 19.0 19.0 21.0 17.0 20.0 19.0 13.0 17.0 6.0 23.0 12.0 13.0 20.0 10.0 17.0 17.0 17.0 16.0 12.0 20.0 18.0 15.0 26.0 16.0 17.0 15.0 14.0 13.0 20.0 23.0 20.0 14.0 20.0 21.0 14.0 20.0 26.0 27.0 21.0 19.0 20.0 21.0 14.0 24.0 33.0 19.0 28.0 33.0 22.0 32.0 44.0 35.0 29.0 47.0 44.0 40.0 41.0 51.0 57.0 55.0 59.0 63.0 70.0 81.0 92.0 91.0 83.0 100.0 105.0 132.0 142.0 147.0 158.0 188.0 211.0 199.0 219.0 242.0 206.0 257.0 238.0 231.0 273.0 244.0 259.0 270.0 278.0 321.0 277.0 259.0 259.0 242.0 249.0 222.0 235.0 219.0 175.0 167.0 155.0 115.0 130.0 104.0 110.0 91.0 84.0 70.0 64.0 50.0 47.0 45.0 47.0 37.0 40.0 36.0 31.0 32.0 23.0 24.0 28.0 27.0 24.0 21.0 29.0 22.0 24.0 17.0 21.0 13.0 16.0 17.0 18.0 8.0 20.0 15.0 14.0 23.0 17.0 15.0 12.0 14.0 12.0 10.0 8.0 6.0 21.0 7.0 12.0 9.0 10.0 9.0 12.0 13.0 14.0 8.0 10.0 15.0 12.0 8.0 16.0 7.0 9.0 14.0 9.0 10.0 8.0 2.0 16.0 13.0 11.0 9.0 7.0 5.0 13.0 12.0 14.0 11.0 9.0 13.0 15.0 10.0 11.0 14.0 13.0 13.0 12.0 9.0 11.0 16.0 7.0 10.0 9.0 9.0 7.0 7.0 10.0 6.0 12.0 12.0 15.0 8.0 14.0 10.0 11.0 10.0 11.0 12.0 13.0 7.0 3.0 8.0 5.0 7.0 9.0 6.0 5.0 11.0 11.0 8.0 5.0 7.0 13.0 12.0 9.0 3.0 7.0 11.0 5.0 11.0 12.0 8.0 17.0 7.0 10.0 14.0 8.0 7.0 9.0 12.0 9.0 9.0 9.0 11.0 7.0 5.0 9.0 10.0 10.0 13.0 9.0 12.0 9.0 9.0 12.0 9.0 4.0 8.0 7.0 10.0 7.0 10.0 12.0 13.0 10.0 5.0 12.0 14.0 10.0 12.0 7.0 8.0 9.0 10.0 8.0 7.0</parameters>
+      </energy>
+    </source>
+    <source particle="neutron" strength="0.13333060672314168" type="independent">
+      <space type="point">
+        <parameters>587 60 94.365</parameters>
+      </space>
+      <angle reference_uvw="1.0 0.0 0.0" type="mu-phi">
+        <mu parameters="6.123233995736766e-17 0.25881904510252074" type="uniform"/>
+        <phi parameters="0 6.283185307179586" type="uniform"/>
+      </angle>
+      <energy interpolation="linear-linear" type="tabular">
+        <parameters>13139561.367013372 13146050.817236254 13152540.267459137 13159029.71768202 13165519.167904904 13172008.618127787 13178498.068350669 13184987.51857355 13191476.968796434 13197966.419019315 13204455.869242199 13210945.319465082 13217434.769687964 13223924.219910847 13230413.670133729 13236903.120356612 13243392.570579495 13249882.020802379 13256371.471025262 13262860.921248142 13269350.371471023 13275839.821693907 13282329.27191679 13288818.722139673 13295308.172362557 13301797.622585438 13308287.072808322 13314776.523031203 13321265.973254086 13327755.423476968 13334244.873699851 13340734.323922733 13347223.774145616 13353713.224368498 13360202.674591381 13366692.124814264 13373181.575037148 13379671.025260031 13386160.475482915 13392649.925705794 13399139.375928676 13405628.82615156 13412118.276374443 13418607.726597326 13425097.17682021 13431586.627043089 13438076.077265972 13444565.527488856 13451054.977711739 13457544.427934622 13464033.878157504 13470523.328380387 13477012.778603267 13483502.22882615 13489991.679049034 13496481.129271917 13502970.5794948 13509460.029717684 13515949.479940563 13522438.930163447 13528928.380386328 13535417.830609212 13541907.280832095 13548396.731054978 13554886.181277858 13561375.631500741 13567865.081723625 13574354.531946508 13580843.982169392 13587333.432392275 13593822.882615156 13600312.332838036 13606801.78306092 13613291.233283803 13619780.683506686 13626270.13372957 13632759.583952453 13639249.034175333 13645738.484398216 13652227.9346211 13658717.38484398 13665206.835066864 13671696.285289748 13678185.735512631 13684675.18573551 13691164.635958394 13697654.086181277 13704143.53640416 13710632.986627044 13717122.436849928 13723611.887072807 13730101.337295689 13736590.787518572 13743080.237741455 13749569.687964339 13756059.138187222 13762548.588410106 13769038.038632985 13775527.488855869 13782016.939078752 13788506.389301635 13794995.839524517 13801485.2897474 13807974.73997028 13814464.190193163 13820953.640416047 13827443.09063893 13833932.540861813 13840421.991084697 13846911.441307576 13853400.89153046 13859890.341753341 13866379.791976225 13872869.242199108 13879358.692421991 13885848.142644875 13892337.592867754 13898827.043090638 13905316.493313521 13911805.943536405 13918295.393759288 13924784.84398217 13931274.294205049 13937763.744427932 13944253.194650816 13950742.6448737 13957232.095096583 13963721.545319466 13970210.99554235 13976700.445765229 13983189.895988112 13989679.346210994 13996168.796433877 14002658.24665676 14009147.696879644 14015637.147102524 14022126.597325407 14028616.04754829 14035105.497771174 14041594.947994057 14048084.39821694 14054573.848439822 14061063.298662702 14067552.748885585 14074042.199108468 14080531.649331352 14087021.099554235 14093510.549777118 14099999.999999998 14106489.450222882 14112978.900445765 14119468.350668648 14125957.80089153 14132447.251114413 14138936.701337297 14145426.151560176 14151915.60178306 14158405.052005943 14164894.502228826 14171383.95245171 14177873.402674593 14184362.852897473 14190852.303120354 14197341.753343238 14203831.203566121 14210320.653789004 14216810.104011888 14223299.554234767 14229789.00445765 14236278.454680534 14242767.904903417 14249257.3551263 14255746.805349182 14262236.255572066 14268725.705794945 14275215.156017829 14281704.606240712 14288194.056463595 14294683.506686479 14301172.956909362 14307662.407132242 14314151.857355125 14320641.307578007 14327130.75780089 14333620.208023774 14340109.658246657 14346599.10846954 14353088.55869242 14359578.008915303 14366067.459138187 14372556.90936107 14379046.359583953 14385535.809806835 14392025.260029715 14398514.710252598 14405004.160475481 14411493.610698365 14417983.060921248 14424472.511144131 14430961.961367015 14437451.411589894 14443940.861812778 14450430.312035661 14456919.762258543 14463409.212481426 14469898.66270431 14476388.11292719 14482877.563150072 14489367.013372956 14495856.46359584 14502345.913818723 14508835.364041606 14515324.814264487 14521814.264487367 14528303.71471025 14534793.164933134 14541282.615156017 14547772.0653789 14554261.515601784 14560750.965824664 14567240.416047547 14573729.86627043 14580219.316493314 14586708.766716195 14593198.216939079 14599687.667161958 14606177.117384842 14612666.567607725 14619156.017830608 14625645.468053492 14632134.918276375 14638624.368499259 14645113.818722138 14651603.268945022 14658092.719167903 14664582.169390786 14671071.61961367 14677561.069836553 14684050.520059433 14690539.970282316 14697029.4205052 14703518.870728083 14710008.320950966 14716497.771173848 14722987.221396731 14729476.67161961 14735966.121842494 14742455.572065378 14748945.022288261 14755434.472511144 14761923.922734028 14768413.372956907 14774902.82317979 14781392.273402674 14787881.723625556 14794371.173848439 14800860.624071322 14807350.074294206 14813839.524517085 14820328.974739969 14826818.424962852 14833307.875185736 14839797.325408619 14846286.775631502 14852776.22585438 14859265.676077263 14865755.126300147 14872244.57652303 14878734.026745914 14885223.476968797 14891712.927191677 14898202.37741456 14904691.827637443 14911181.277860327 14917670.728083208 14924160.178306092 14930649.628528975 14937139.078751855 14943628.528974738 14950117.979197621 14956607.429420505 14963096.879643388 14969586.329866271 14976075.780089151 14982565.230312034 14989054.680534916 14995544.1307578 15002033.580980683 15008523.031203566 15015012.48142645 15021501.93164933 15027991.381872213 15034480.832095096 15040970.28231798 15047459.73254086 15053949.182763744 15060438.632986624 15066928.083209507 15073417.53343239 15079906.983655274 20.0 15.0 17.0 16.0 13.0 11.0 11.0 14.0 13.0 10.0 7.0 17.0 16.0 19.0 8.0 22.0 14.0 15.0 8.0 14.0 12.0 16.0 15.0 12.0 10.0 8.0 14.0 13.0 8.0 18.0 15.0 14.0 19.0 11.0 11.0 15.0 19.0 13.0 12.0 15.0 14.0 12.0 12.0 18.0 19.0 16.0 21.0 13.0 13.0 13.0 14.0 20.0 14.0 18.0 18.0 18.0 6.0 18.0 24.0 14.0 23.0 17.0 12.0 18.0 15.0 23.0 18.0 17.0 23.0 18.0 15.0 19.0 27.0 21.0 14.0 19.0 16.0 16.0 15.0 18.0 24.0 13.0 22.0 24.0 18.0 20.0 30.0 20.0 29.0 24.0 29.0 24.0 22.0 28.0 35.0 25.0 41.0 32.0 34.0 50.0 44.0 44.0 52.0 58.0 51.0 55.0 75.0 58.0 81.0 62.0 80.0 94.0 107.0 105.0 124.0 105.0 138.0 155.0 147.0 173.0 201.0 207.0 206.0 188.0 227.0 260.0 256.0 276.0 275.0 284.0 305.0 289.0 277.0 288.0 268.0 255.0 247.0 234.0 215.0 181.0 174.0 179.0 134.0 122.0 134.0 93.0 78.0 64.0 64.0 46.0 62.0 59.0 41.0 44.0 33.0 36.0 32.0 41.0 37.0 30.0 26.0 19.0 23.0 23.0 14.0 16.0 16.0 21.0 13.0 18.0 18.0 16.0 21.0 14.0 14.0 19.0 9.0 12.0 16.0 13.0 16.0 14.0 8.0 12.0 11.0 12.0 14.0 7.0 11.0 9.0 16.0 15.0 11.0 8.0 17.0 16.0 18.0 15.0 11.0 6.0 7.0 8.0 11.0 14.0 9.0 9.0 15.0 4.0 13.0 12.0 8.0 12.0 9.0 15.0 12.0 11.0 8.0 4.0 12.0 9.0 10.0 6.0 14.0 8.0 17.0 8.0 11.0 8.0 5.0 12.0 18.0 12.0 9.0 12.0 10.0 8.0 9.0 6.0 9.0 5.0 12.0 12.0 5.0 6.0 7.0 12.0 10.0 9.0 10.0 8.0 12.0 5.0 11.0 10.0 5.0 14.0 8.0 15.0 6.0 7.0 9.0 12.0 10.0 16.0 8.0 7.0 9.0 5.0 16.0 5.0 7.0 10.0 10.0 18.0 7.0 9.0 9.0 9.0 6.0 17.0 14.0 4.0 8.0 14.0 10.0 6.0 6.0 9.0 10.0 12.0 5.0 9.0 6.0 8.0 4.0 8.0 14.0 8.0 10.0 12.0</parameters>
+      </energy>
+    </source>
+    <source particle="neutron" strength="0.12948165057400357" type="independent">
+      <space type="point">
+        <parameters>587 60 94.365</parameters>
+      </space>
+      <angle reference_uvw="1.0 0.0 0.0" type="mu-phi">
+        <mu parameters="-0.25881904510252085 6.123233995736766e-17" type="uniform"/>
+        <phi parameters="0 6.283185307179586" type="uniform"/>
+      </angle>
+      <energy interpolation="linear-linear" type="tabular">
+        <parameters>13139561.367013372 13146050.817236254 13152540.267459137 13159029.71768202 13165519.167904904 13172008.618127787 13178498.068350669 13184987.51857355 13191476.968796434 13197966.419019315 13204455.869242199 13210945.319465082 13217434.769687964 13223924.219910847 13230413.670133729 13236903.120356612 13243392.570579495 13249882.020802379 13256371.471025262 13262860.921248142 13269350.371471023 13275839.821693907 13282329.27191679 13288818.722139673 13295308.172362557 13301797.622585438 13308287.072808322 13314776.523031203 13321265.973254086 13327755.423476968 13334244.873699851 13340734.323922733 13347223.774145616 13353713.224368498 13360202.674591381 13366692.124814264 13373181.575037148 13379671.025260031 13386160.475482915 13392649.925705794 13399139.375928676 13405628.82615156 13412118.276374443 13418607.726597326 13425097.17682021 13431586.627043089 13438076.077265972 13444565.527488856 13451054.977711739 13457544.427934622 13464033.878157504 13470523.328380387 13477012.778603267 13483502.22882615 13489991.679049034 13496481.129271917 13502970.5794948 13509460.029717684 13515949.479940563 13522438.930163447 13528928.380386328 13535417.830609212 13541907.280832095 13548396.731054978 13554886.181277858 13561375.631500741 13567865.081723625 13574354.531946508 13580843.982169392 13587333.432392275 13593822.882615156 13600312.332838036 13606801.78306092 13613291.233283803 13619780.683506686 13626270.13372957 13632759.583952453 13639249.034175333 13645738.484398216 13652227.9346211 13658717.38484398 13665206.835066864 13671696.285289748 13678185.735512631 13684675.18573551 13691164.635958394 13697654.086181277 13704143.53640416 13710632.986627044 13717122.436849928 13723611.887072807 13730101.337295689 13736590.787518572 13743080.237741455 13749569.687964339 13756059.138187222 13762548.588410106 13769038.038632985 13775527.488855869 13782016.939078752 13788506.389301635 13794995.839524517 13801485.2897474 13807974.73997028 13814464.190193163 13820953.640416047 13827443.09063893 13833932.540861813 13840421.991084697 13846911.441307576 13853400.89153046 13859890.341753341 13866379.791976225 13872869.242199108 13879358.692421991 13885848.142644875 13892337.592867754 13898827.043090638 13905316.493313521 13911805.943536405 13918295.393759288 13924784.84398217 13931274.294205049 13937763.744427932 13944253.194650816 13950742.6448737 13957232.095096583 13963721.545319466 13970210.99554235 13976700.445765229 13983189.895988112 13989679.346210994 13996168.796433877 14002658.24665676 14009147.696879644 14015637.147102524 14022126.597325407 14028616.04754829 14035105.497771174 14041594.947994057 14048084.39821694 14054573.848439822 14061063.298662702 14067552.748885585 14074042.199108468 14080531.649331352 14087021.099554235 14093510.549777118 14099999.999999998 14106489.450222882 14112978.900445765 14119468.350668648 14125957.80089153 14132447.251114413 14138936.701337297 14145426.151560176 14151915.60178306 14158405.052005943 14164894.502228826 14171383.95245171 14177873.402674593 14184362.852897473 14190852.303120354 14197341.753343238 14203831.203566121 14210320.653789004 14216810.104011888 14223299.554234767 14229789.00445765 14236278.454680534 14242767.904903417 14249257.3551263 14255746.805349182 14262236.255572066 14268725.705794945 14275215.156017829 14281704.606240712 14288194.056463595 14294683.506686479 14301172.956909362 14307662.407132242 14314151.857355125 14320641.307578007 14327130.75780089 14333620.208023774 14340109.658246657 14346599.10846954 14353088.55869242 14359578.008915303 14366067.459138187 14372556.90936107 14379046.359583953 14385535.809806835 14392025.260029715 14398514.710252598 14405004.160475481 14411493.610698365 14417983.060921248 14424472.511144131 14430961.961367015 14437451.411589894 14443940.861812778 14450430.312035661 14456919.762258543 14463409.212481426 14469898.66270431 14476388.11292719 14482877.563150072 14489367.013372956 14495856.46359584 14502345.913818723 14508835.364041606 14515324.814264487 14521814.264487367 14528303.71471025 14534793.164933134 14541282.615156017 14547772.0653789 14554261.515601784 14560750.965824664 14567240.416047547 14573729.86627043 14580219.316493314 14586708.766716195 14593198.216939079 14599687.667161958 14606177.117384842 14612666.567607725 14619156.017830608 14625645.468053492 14632134.918276375 14638624.368499259 14645113.818722138 14651603.268945022 14658092.719167903 14664582.169390786 14671071.61961367 14677561.069836553 14684050.520059433 14690539.970282316 14697029.4205052 14703518.870728083 14710008.320950966 14716497.771173848 14722987.221396731 14729476.67161961 14735966.121842494 14742455.572065378 14748945.022288261 14755434.472511144 14761923.922734028 14768413.372956907 14774902.82317979 14781392.273402674 14787881.723625556 14794371.173848439 14800860.624071322 14807350.074294206 14813839.524517085 14820328.974739969 14826818.424962852 14833307.875185736 14839797.325408619 14846286.775631502 14852776.22585438 14859265.676077263 14865755.126300147 14872244.57652303 14878734.026745914 14885223.476968797 14891712.927191677 14898202.37741456 14904691.827637443 14911181.277860327 14917670.728083208 14924160.178306092 14930649.628528975 14937139.078751855 14943628.528974738 14950117.979197621 14956607.429420505 14963096.879643388 14969586.329866271 14976075.780089151 14982565.230312034 14989054.680534916 14995544.1307578 15002033.580980683 15008523.031203566 15015012.48142645 15021501.93164933 15027991.381872213 15034480.832095096 15040970.28231798 15047459.73254086 15053949.182763744 15060438.632986624 15066928.083209507 15073417.53343239 15079906.983655274 12.0 17.0 14.0 7.0 10.0 14.0 10.0 8.0 18.0 16.0 14.0 13.0 19.0 10.0 13.0 10.0 11.0 14.0 17.0 11.0 16.0 11.0 13.0 20.0 9.0 14.0 10.0 15.0 18.0 13.0 9.0 10.0 14.0 15.0 12.0 12.0 12.0 10.0 13.0 14.0 14.0 15.0 11.0 16.0 16.0 13.0 11.0 13.0 17.0 13.0 12.0 13.0 17.0 22.0 15.0 13.0 13.0 11.0 10.0 14.0 17.0 10.0 14.0 16.0 21.0 12.0 15.0 19.0 12.0 25.0 9.0 14.0 21.0 22.0 13.0 12.0 15.0 15.0 18.0 17.0 16.0 18.0 19.0 17.0 19.0 20.0 16.0 19.0 20.0 17.0 15.0 15.0 18.0 13.0 17.0 13.0 20.0 16.0 18.0 21.0 26.0 15.0 29.0 13.0 21.0 20.0 20.0 23.0 27.0 37.0 26.0 27.0 36.0 29.0 41.0 26.0 41.0 42.0 44.0 44.0 35.0 35.0 44.0 44.0 41.0 65.0 57.0 61.0 65.0 67.0 79.0 84.0 107.0 112.0 99.0 107.0 141.0 142.0 149.0 197.0 196.0 193.0 205.0 245.0 248.0 287.0 295.0 264.0 270.0 303.0 281.0 272.0 242.0 269.0 243.0 240.0 224.0 175.0 211.0 169.0 152.0 147.0 140.0 111.0 94.0 77.0 87.0 73.0 58.0 68.0 44.0 51.0 46.0 38.0 41.0 37.0 31.0 27.0 34.0 36.0 19.0 21.0 18.0 18.0 15.0 14.0 15.0 11.0 16.0 17.0 16.0 13.0 13.0 17.0 10.0 9.0 13.0 9.0 15.0 17.0 6.0 15.0 9.0 10.0 12.0 12.0 11.0 9.0 8.0 6.0 10.0 14.0 19.0 12.0 14.0 7.0 16.0 8.0 7.0 11.0 10.0 9.0 11.0 12.0 9.0 10.0 7.0 9.0 11.0 8.0 16.0 11.0 7.0 12.0 10.0 10.0 9.0 8.0 7.0 7.0 11.0 10.0 7.0 12.0 5.0 8.0 3.0 7.0 12.0 10.0 7.0 9.0 11.0 11.0 11.0 9.0 10.0 6.0 8.0 7.0 9.0 6.0 13.0 10.0 5.0 11.0 10.0 7.0 11.0 13.0 5.0 5.0 7.0 12.0 8.0 10.0 13.0 9.0 11.0 9.0 10.0 7.0 9.0 8.0 9.0 6.0 4.0 17.0 10.0 8.0 8.0 5.0 9.0 6.0 3.0 11.0 6.0 10.0 12.0 12.0</parameters>
+      </energy>
+    </source>
+    <source particle="neutron" strength="0.12456650095806213" type="independent">
+      <space type="point">
+        <parameters>587 60 94.365</parameters>
+      </space>
+      <angle reference_uvw="1.0 0.0 0.0" type="mu-phi">
+        <mu parameters="-0.4999999999999998 -0.25881904510252085" type="uniform"/>
+        <phi parameters="0 6.283185307179586" type="uniform"/>
+      </angle>
+      <energy interpolation="linear-linear" type="tabular">
+        <parameters>13139561.367013372 13146050.817236254 13152540.267459137 13159029.71768202 13165519.167904904 13172008.618127787 13178498.068350669 13184987.51857355 13191476.968796434 13197966.419019315 13204455.869242199 13210945.319465082 13217434.769687964 13223924.219910847 13230413.670133729 13236903.120356612 13243392.570579495 13249882.020802379 13256371.471025262 13262860.921248142 13269350.371471023 13275839.821693907 13282329.27191679 13288818.722139673 13295308.172362557 13301797.622585438 13308287.072808322 13314776.523031203 13321265.973254086 13327755.423476968 13334244.873699851 13340734.323922733 13347223.774145616 13353713.224368498 13360202.674591381 13366692.124814264 13373181.575037148 13379671.025260031 13386160.475482915 13392649.925705794 13399139.375928676 13405628.82615156 13412118.276374443 13418607.726597326 13425097.17682021 13431586.627043089 13438076.077265972 13444565.527488856 13451054.977711739 13457544.427934622 13464033.878157504 13470523.328380387 13477012.778603267 13483502.22882615 13489991.679049034 13496481.129271917 13502970.5794948 13509460.029717684 13515949.479940563 13522438.930163447 13528928.380386328 13535417.830609212 13541907.280832095 13548396.731054978 13554886.181277858 13561375.631500741 13567865.081723625 13574354.531946508 13580843.982169392 13587333.432392275 13593822.882615156 13600312.332838036 13606801.78306092 13613291.233283803 13619780.683506686 13626270.13372957 13632759.583952453 13639249.034175333 13645738.484398216 13652227.9346211 13658717.38484398 13665206.835066864 13671696.285289748 13678185.735512631 13684675.18573551 13691164.635958394 13697654.086181277 13704143.53640416 13710632.986627044 13717122.436849928 13723611.887072807 13730101.337295689 13736590.787518572 13743080.237741455 13749569.687964339 13756059.138187222 13762548.588410106 13769038.038632985 13775527.488855869 13782016.939078752 13788506.389301635 13794995.839524517 13801485.2897474 13807974.73997028 13814464.190193163 13820953.640416047 13827443.09063893 13833932.540861813 13840421.991084697 13846911.441307576 13853400.89153046 13859890.341753341 13866379.791976225 13872869.242199108 13879358.692421991 13885848.142644875 13892337.592867754 13898827.043090638 13905316.493313521 13911805.943536405 13918295.393759288 13924784.84398217 13931274.294205049 13937763.744427932 13944253.194650816 13950742.6448737 13957232.095096583 13963721.545319466 13970210.99554235 13976700.445765229 13983189.895988112 13989679.346210994 13996168.796433877 14002658.24665676 14009147.696879644 14015637.147102524 14022126.597325407 14028616.04754829 14035105.497771174 14041594.947994057 14048084.39821694 14054573.848439822 14061063.298662702 14067552.748885585 14074042.199108468 14080531.649331352 14087021.099554235 14093510.549777118 14099999.999999998 14106489.450222882 14112978.900445765 14119468.350668648 14125957.80089153 14132447.251114413 14138936.701337297 14145426.151560176 14151915.60178306 14158405.052005943 14164894.502228826 14171383.95245171 14177873.402674593 14184362.852897473 14190852.303120354 14197341.753343238 14203831.203566121 14210320.653789004 14216810.104011888 14223299.554234767 14229789.00445765 14236278.454680534 14242767.904903417 14249257.3551263 14255746.805349182 14262236.255572066 14268725.705794945 14275215.156017829 14281704.606240712 14288194.056463595 14294683.506686479 14301172.956909362 14307662.407132242 14314151.857355125 14320641.307578007 14327130.75780089 14333620.208023774 14340109.658246657 14346599.10846954 14353088.55869242 14359578.008915303 14366067.459138187 14372556.90936107 14379046.359583953 14385535.809806835 14392025.260029715 14398514.710252598 14405004.160475481 14411493.610698365 14417983.060921248 14424472.511144131 14430961.961367015 14437451.411589894 14443940.861812778 14450430.312035661 14456919.762258543 14463409.212481426 14469898.66270431 14476388.11292719 14482877.563150072 14489367.013372956 14495856.46359584 14502345.913818723 14508835.364041606 14515324.814264487 14521814.264487367 14528303.71471025 14534793.164933134 14541282.615156017 14547772.0653789 14554261.515601784 14560750.965824664 14567240.416047547 14573729.86627043 14580219.316493314 14586708.766716195 14593198.216939079 14599687.667161958 14606177.117384842 14612666.567607725 14619156.017830608 14625645.468053492 14632134.918276375 14638624.368499259 14645113.818722138 14651603.268945022 14658092.719167903 14664582.169390786 14671071.61961367 14677561.069836553 14684050.520059433 14690539.970282316 14697029.4205052 14703518.870728083 14710008.320950966 14716497.771173848 14722987.221396731 14729476.67161961 14735966.121842494 14742455.572065378 14748945.022288261 14755434.472511144 14761923.922734028 14768413.372956907 14774902.82317979 14781392.273402674 14787881.723625556 14794371.173848439 14800860.624071322 14807350.074294206 14813839.524517085 14820328.974739969 14826818.424962852 14833307.875185736 14839797.325408619 14846286.775631502 14852776.22585438 14859265.676077263 14865755.126300147 14872244.57652303 14878734.026745914 14885223.476968797 14891712.927191677 14898202.37741456 14904691.827637443 14911181.277860327 14917670.728083208 14924160.178306092 14930649.628528975 14937139.078751855 14943628.528974738 14950117.979197621 14956607.429420505 14963096.879643388 14969586.329866271 14976075.780089151 14982565.230312034 14989054.680534916 14995544.1307578 15002033.580980683 15008523.031203566 15015012.48142645 15021501.93164933 15027991.381872213 15034480.832095096 15040970.28231798 15047459.73254086 15053949.182763744 15060438.632986624 15066928.083209507 15073417.53343239 15079906.983655274 14.0 20.0 11.0 13.0 16.0 9.0 6.0 9.0 12.0 18.0 14.0 8.0 10.0 12.0 18.0 17.0 14.0 10.0 11.0 17.0 15.0 10.0 22.0 10.0 15.0 8.0 17.0 15.0 10.0 19.0 13.0 10.0 15.0 16.0 15.0 12.0 19.0 14.0 15.0 14.0 21.0 18.0 14.0 9.0 14.0 10.0 11.0 13.0 10.0 22.0 8.0 9.0 9.0 27.0 12.0 25.0 13.0 7.0 20.0 20.0 14.0 7.0 13.0 11.0 17.0 16.0 20.0 11.0 17.0 16.0 14.0 13.0 19.0 16.0 18.0 13.0 11.0 21.0 18.0 10.0 10.0 17.0 14.0 16.0 10.0 19.0 14.0 10.0 15.0 18.0 17.0 13.0 11.0 16.0 17.0 22.0 10.0 13.0 16.0 19.0 13.0 20.0 21.0 14.0 23.0 24.0 16.0 20.0 18.0 16.0 20.0 25.0 16.0 23.0 18.0 22.0 14.0 21.0 30.0 24.0 18.0 22.0 32.0 29.0 30.0 26.0 31.0 32.0 21.0 39.0 33.0 24.0 38.0 39.0 39.0 44.0 42.0 35.0 45.0 44.0 53.0 55.0 49.0 59.0 72.0 56.0 66.0 71.0 68.0 88.0 86.0 86.0 90.0 108.0 127.0 134.0 160.0 169.0 179.0 175.0 218.0 232.0 234.0 230.0 250.0 242.0 246.0 256.0 245.0 266.0 252.0 276.0 263.0 237.0 230.0 213.0 228.0 166.0 191.0 179.0 152.0 151.0 139.0 137.0 125.0 96.0 108.0 98.0 73.0 69.0 59.0 45.0 60.0 52.0 35.0 32.0 29.0 29.0 26.0 32.0 25.0 19.0 20.0 25.0 25.0 17.0 12.0 9.0 13.0 15.0 9.0 12.0 11.0 7.0 6.0 17.0 14.0 12.0 11.0 12.0 13.0 12.0 10.0 8.0 16.0 6.0 6.0 11.0 9.0 5.0 11.0 11.0 3.0 5.0 6.0 9.0 5.0 9.0 5.0 6.0 10.0 6.0 4.0 7.0 8.0 10.0 7.0 9.0 7.0 10.0 9.0 8.0 12.0 11.0 14.0 14.0 2.0 7.0 8.0 7.0 9.0 9.0 10.0 10.0 10.0 4.0 4.0 7.0 8.0 11.0 5.0 4.0 6.0 9.0 5.0 7.0 10.0 11.0 13.0 3.0 9.0 6.0 10.0 9.0 7.0 11.0 9.0 15.0 13.0 6.0 12.0 4.0 10.0 9.0 10.0 8.0 6.0 8.0 6.0 10.0</parameters>
+      </energy>
+    </source>
+    <source particle="neutron" strength="0.11070232681117559" type="independent">
+      <space type="point">
+        <parameters>587 60 94.365</parameters>
+      </space>
+      <angle reference_uvw="1.0 0.0 0.0" type="mu-phi">
+        <mu parameters="-0.7071067811865475 -0.4999999999999998" type="uniform"/>
+        <phi parameters="0 6.283185307179586" type="uniform"/>
+      </angle>
+      <energy interpolation="linear-linear" type="tabular">
+        <parameters>13139561.367013372 13146050.817236254 13152540.267459137 13159029.71768202 13165519.167904904 13172008.618127787 13178498.068350669 13184987.51857355 13191476.968796434 13197966.419019315 13204455.869242199 13210945.319465082 13217434.769687964 13223924.219910847 13230413.670133729 13236903.120356612 13243392.570579495 13249882.020802379 13256371.471025262 13262860.921248142 13269350.371471023 13275839.821693907 13282329.27191679 13288818.722139673 13295308.172362557 13301797.622585438 13308287.072808322 13314776.523031203 13321265.973254086 13327755.423476968 13334244.873699851 13340734.323922733 13347223.774145616 13353713.224368498 13360202.674591381 13366692.124814264 13373181.575037148 13379671.025260031 13386160.475482915 13392649.925705794 13399139.375928676 13405628.82615156 13412118.276374443 13418607.726597326 13425097.17682021 13431586.627043089 13438076.077265972 13444565.527488856 13451054.977711739 13457544.427934622 13464033.878157504 13470523.328380387 13477012.778603267 13483502.22882615 13489991.679049034 13496481.129271917 13502970.5794948 13509460.029717684 13515949.479940563 13522438.930163447 13528928.380386328 13535417.830609212 13541907.280832095 13548396.731054978 13554886.181277858 13561375.631500741 13567865.081723625 13574354.531946508 13580843.982169392 13587333.432392275 13593822.882615156 13600312.332838036 13606801.78306092 13613291.233283803 13619780.683506686 13626270.13372957 13632759.583952453 13639249.034175333 13645738.484398216 13652227.9346211 13658717.38484398 13665206.835066864 13671696.285289748 13678185.735512631 13684675.18573551 13691164.635958394 13697654.086181277 13704143.53640416 13710632.986627044 13717122.436849928 13723611.887072807 13730101.337295689 13736590.787518572 13743080.237741455 13749569.687964339 13756059.138187222 13762548.588410106 13769038.038632985 13775527.488855869 13782016.939078752 13788506.389301635 13794995.839524517 13801485.2897474 13807974.73997028 13814464.190193163 13820953.640416047 13827443.09063893 13833932.540861813 13840421.991084697 13846911.441307576 13853400.89153046 13859890.341753341 13866379.791976225 13872869.242199108 13879358.692421991 13885848.142644875 13892337.592867754 13898827.043090638 13905316.493313521 13911805.943536405 13918295.393759288 13924784.84398217 13931274.294205049 13937763.744427932 13944253.194650816 13950742.6448737 13957232.095096583 13963721.545319466 13970210.99554235 13976700.445765229 13983189.895988112 13989679.346210994 13996168.796433877 14002658.24665676 14009147.696879644 14015637.147102524 14022126.597325407 14028616.04754829 14035105.497771174 14041594.947994057 14048084.39821694 14054573.848439822 14061063.298662702 14067552.748885585 14074042.199108468 14080531.649331352 14087021.099554235 14093510.549777118 14099999.999999998 14106489.450222882 14112978.900445765 14119468.350668648 14125957.80089153 14132447.251114413 14138936.701337297 14145426.151560176 14151915.60178306 14158405.052005943 14164894.502228826 14171383.95245171 14177873.402674593 14184362.852897473 14190852.303120354 14197341.753343238 14203831.203566121 14210320.653789004 14216810.104011888 14223299.554234767 14229789.00445765 14236278.454680534 14242767.904903417 14249257.3551263 14255746.805349182 14262236.255572066 14268725.705794945 14275215.156017829 14281704.606240712 14288194.056463595 14294683.506686479 14301172.956909362 14307662.407132242 14314151.857355125 14320641.307578007 14327130.75780089 14333620.208023774 14340109.658246657 14346599.10846954 14353088.55869242 14359578.008915303 14366067.459138187 14372556.90936107 14379046.359583953 14385535.809806835 14392025.260029715 14398514.710252598 14405004.160475481 14411493.610698365 14417983.060921248 14424472.511144131 14430961.961367015 14437451.411589894 14443940.861812778 14450430.312035661 14456919.762258543 14463409.212481426 14469898.66270431 14476388.11292719 14482877.563150072 14489367.013372956 14495856.46359584 14502345.913818723 14508835.364041606 14515324.814264487 14521814.264487367 14528303.71471025 14534793.164933134 14541282.615156017 14547772.0653789 14554261.515601784 14560750.965824664 14567240.416047547 14573729.86627043 14580219.316493314 14586708.766716195 14593198.216939079 14599687.667161958 14606177.117384842 14612666.567607725 14619156.017830608 14625645.468053492 14632134.918276375 14638624.368499259 14645113.818722138 14651603.268945022 14658092.719167903 14664582.169390786 14671071.61961367 14677561.069836553 14684050.520059433 14690539.970282316 14697029.4205052 14703518.870728083 14710008.320950966 14716497.771173848 14722987.221396731 14729476.67161961 14735966.121842494 14742455.572065378 14748945.022288261 14755434.472511144 14761923.922734028 14768413.372956907 14774902.82317979 14781392.273402674 14787881.723625556 14794371.173848439 14800860.624071322 14807350.074294206 14813839.524517085 14820328.974739969 14826818.424962852 14833307.875185736 14839797.325408619 14846286.775631502 14852776.22585438 14859265.676077263 14865755.126300147 14872244.57652303 14878734.026745914 14885223.476968797 14891712.927191677 14898202.37741456 14904691.827637443 14911181.277860327 14917670.728083208 14924160.178306092 14930649.628528975 14937139.078751855 14943628.528974738 14950117.979197621 14956607.429420505 14963096.879643388 14969586.329866271 14976075.780089151 14982565.230312034 14989054.680534916 14995544.1307578 15002033.580980683 15008523.031203566 15015012.48142645 15021501.93164933 15027991.381872213 15034480.832095096 15040970.28231798 15047459.73254086 15053949.182763744 15060438.632986624 15066928.083209507 15073417.53343239 15079906.983655274 19.0 16.0 11.0 13.0 17.0 11.0 8.0 9.0 10.0 13.0 16.0 14.0 10.0 13.0 6.0 12.0 15.0 8.0 14.0 11.0 11.0 14.0 18.0 13.0 11.0 12.0 11.0 13.0 16.0 9.0 11.0 24.0 12.0 9.0 16.0 14.0 13.0 14.0 21.0 13.0 11.0 13.0 10.0 16.0 12.0 13.0 16.0 11.0 11.0 9.0 15.0 16.0 11.0 10.0 6.0 11.0 16.0 12.0 10.0 13.0 14.0 14.0 21.0 12.0 16.0 10.0 13.0 15.0 25.0 15.0 13.0 15.0 15.0 10.0 11.0 12.0 10.0 15.0 16.0 15.0 13.0 16.0 15.0 11.0 16.0 8.0 13.0 17.0 22.0 14.0 10.0 12.0 20.0 11.0 21.0 19.0 19.0 17.0 12.0 15.0 12.0 16.0 14.0 10.0 16.0 22.0 20.0 24.0 18.0 18.0 11.0 16.0 15.0 16.0 15.0 18.0 16.0 18.0 15.0 18.0 20.0 14.0 17.0 15.0 18.0 15.0 24.0 23.0 19.0 18.0 16.0 20.0 24.0 20.0 13.0 16.0 21.0 26.0 23.0 27.0 28.0 27.0 30.0 23.0 26.0 24.0 36.0 42.0 35.0 27.0 39.0 29.0 34.0 37.0 45.0 53.0 46.0 55.0 51.0 44.0 58.0 51.0 65.0 73.0 74.0 84.0 81.0 128.0 85.0 122.0 102.0 116.0 135.0 154.0 189.0 168.0 167.0 205.0 212.0 256.0 222.0 216.0 259.0 272.0 236.0 226.0 246.0 215.0 234.0 238.0 203.0 232.0 209.0 221.0 200.0 203.0 166.0 164.0 174.0 157.0 172.0 143.0 122.0 127.0 111.0 100.0 88.0 85.0 79.0 79.0 71.0 60.0 48.0 50.0 37.0 37.0 32.0 43.0 29.0 29.0 19.0 19.0 25.0 24.0 17.0 18.0 22.0 24.0 17.0 10.0 11.0 10.0 10.0 10.0 7.0 2.0 13.0 11.0 12.0 8.0 12.0 5.0 7.0 5.0 9.0 11.0 8.0 10.0 6.0 8.0 4.0 16.0 9.0 15.0 10.0 13.0 11.0 6.0 10.0 9.0 8.0 9.0 10.0 4.0 6.0 15.0 5.0 10.0 12.0 10.0 13.0 18.0 12.0 10.0 6.0 11.0 12.0 12.0 3.0 10.0 7.0 11.0 8.0 11.0 17.0 10.0 12.0 3.0 5.0 11.0 6.0 11.0 8.0 10.0 7.0 11.0 9.0 6.0 7.0 7.0</parameters>
+      </energy>
+    </source>
+    <source particle="neutron" strength="0.08618314659478161" type="independent">
+      <space type="point">
+        <parameters>587 60 94.365</parameters>
+      </space>
+      <angle reference_uvw="1.0 0.0 0.0" type="mu-phi">
+        <mu parameters="-0.8660254037844387 -0.7071067811865475" type="uniform"/>
+        <phi parameters="0 6.283185307179586" type="uniform"/>
+      </angle>
+      <energy interpolation="linear-linear" type="tabular">
+        <parameters>13139561.367013372 13146050.817236254 13152540.267459137 13159029.71768202 13165519.167904904 13172008.618127787 13178498.068350669 13184987.51857355 13191476.968796434 13197966.419019315 13204455.869242199 13210945.319465082 13217434.769687964 13223924.219910847 13230413.670133729 13236903.120356612 13243392.570579495 13249882.020802379 13256371.471025262 13262860.921248142 13269350.371471023 13275839.821693907 13282329.27191679 13288818.722139673 13295308.172362557 13301797.622585438 13308287.072808322 13314776.523031203 13321265.973254086 13327755.423476968 13334244.873699851 13340734.323922733 13347223.774145616 13353713.224368498 13360202.674591381 13366692.124814264 13373181.575037148 13379671.025260031 13386160.475482915 13392649.925705794 13399139.375928676 13405628.82615156 13412118.276374443 13418607.726597326 13425097.17682021 13431586.627043089 13438076.077265972 13444565.527488856 13451054.977711739 13457544.427934622 13464033.878157504 13470523.328380387 13477012.778603267 13483502.22882615 13489991.679049034 13496481.129271917 13502970.5794948 13509460.029717684 13515949.479940563 13522438.930163447 13528928.380386328 13535417.830609212 13541907.280832095 13548396.731054978 13554886.181277858 13561375.631500741 13567865.081723625 13574354.531946508 13580843.982169392 13587333.432392275 13593822.882615156 13600312.332838036 13606801.78306092 13613291.233283803 13619780.683506686 13626270.13372957 13632759.583952453 13639249.034175333 13645738.484398216 13652227.9346211 13658717.38484398 13665206.835066864 13671696.285289748 13678185.735512631 13684675.18573551 13691164.635958394 13697654.086181277 13704143.53640416 13710632.986627044 13717122.436849928 13723611.887072807 13730101.337295689 13736590.787518572 13743080.237741455 13749569.687964339 13756059.138187222 13762548.588410106 13769038.038632985 13775527.488855869 13782016.939078752 13788506.389301635 13794995.839524517 13801485.2897474 13807974.73997028 13814464.190193163 13820953.640416047 13827443.09063893 13833932.540861813 13840421.991084697 13846911.441307576 13853400.89153046 13859890.341753341 13866379.791976225 13872869.242199108 13879358.692421991 13885848.142644875 13892337.592867754 13898827.043090638 13905316.493313521 13911805.943536405 13918295.393759288 13924784.84398217 13931274.294205049 13937763.744427932 13944253.194650816 13950742.6448737 13957232.095096583 13963721.545319466 13970210.99554235 13976700.445765229 13983189.895988112 13989679.346210994 13996168.796433877 14002658.24665676 14009147.696879644 14015637.147102524 14022126.597325407 14028616.04754829 14035105.497771174 14041594.947994057 14048084.39821694 14054573.848439822 14061063.298662702 14067552.748885585 14074042.199108468 14080531.649331352 14087021.099554235 14093510.549777118 14099999.999999998 14106489.450222882 14112978.900445765 14119468.350668648 14125957.80089153 14132447.251114413 14138936.701337297 14145426.151560176 14151915.60178306 14158405.052005943 14164894.502228826 14171383.95245171 14177873.402674593 14184362.852897473 14190852.303120354 14197341.753343238 14203831.203566121 14210320.653789004 14216810.104011888 14223299.554234767 14229789.00445765 14236278.454680534 14242767.904903417 14249257.3551263 14255746.805349182 14262236.255572066 14268725.705794945 14275215.156017829 14281704.606240712 14288194.056463595 14294683.506686479 14301172.956909362 14307662.407132242 14314151.857355125 14320641.307578007 14327130.75780089 14333620.208023774 14340109.658246657 14346599.10846954 14353088.55869242 14359578.008915303 14366067.459138187 14372556.90936107 14379046.359583953 14385535.809806835 14392025.260029715 14398514.710252598 14405004.160475481 14411493.610698365 14417983.060921248 14424472.511144131 14430961.961367015 14437451.411589894 14443940.861812778 14450430.312035661 14456919.762258543 14463409.212481426 14469898.66270431 14476388.11292719 14482877.563150072 14489367.013372956 14495856.46359584 14502345.913818723 14508835.364041606 14515324.814264487 14521814.264487367 14528303.71471025 14534793.164933134 14541282.615156017 14547772.0653789 14554261.515601784 14560750.965824664 14567240.416047547 14573729.86627043 14580219.316493314 14586708.766716195 14593198.216939079 14599687.667161958 14606177.117384842 14612666.567607725 14619156.017830608 14625645.468053492 14632134.918276375 14638624.368499259 14645113.818722138 14651603.268945022 14658092.719167903 14664582.169390786 14671071.61961367 14677561.069836553 14684050.520059433 14690539.970282316 14697029.4205052 14703518.870728083 14710008.320950966 14716497.771173848 14722987.221396731 14729476.67161961 14735966.121842494 14742455.572065378 14748945.022288261 14755434.472511144 14761923.922734028 14768413.372956907 14774902.82317979 14781392.273402674 14787881.723625556 14794371.173848439 14800860.624071322 14807350.074294206 14813839.524517085 14820328.974739969 14826818.424962852 14833307.875185736 14839797.325408619 14846286.775631502 14852776.22585438 14859265.676077263 14865755.126300147 14872244.57652303 14878734.026745914 14885223.476968797 14891712.927191677 14898202.37741456 14904691.827637443 14911181.277860327 14917670.728083208 14924160.178306092 14930649.628528975 14937139.078751855 14943628.528974738 14950117.979197621 14956607.429420505 14963096.879643388 14969586.329866271 14976075.780089151 14982565.230312034 14989054.680534916 14995544.1307578 15002033.580980683 15008523.031203566 15015012.48142645 15021501.93164933 15027991.381872213 15034480.832095096 15040970.28231798 15047459.73254086 15053949.182763744 15060438.632986624 15066928.083209507 15073417.53343239 15079906.983655274 10.0 17.0 6.0 11.0 15.0 15.0 16.0 17.0 9.0 9.0 15.0 12.0 19.0 16.0 15.0 11.0 22.0 10.0 15.0 11.0 10.0 13.0 12.0 13.0 13.0 13.0 17.0 6.0 11.0 11.0 15.0 10.0 16.0 7.0 24.0 17.0 16.0 11.0 18.0 13.0 15.0 17.0 17.0 15.0 13.0 14.0 21.0 14.0 14.0 20.0 17.0 18.0 19.0 13.0 14.0 10.0 18.0 13.0 12.0 16.0 16.0 13.0 11.0 9.0 19.0 13.0 16.0 10.0 20.0 13.0 10.0 11.0 14.0 14.0 19.0 11.0 7.0 12.0 17.0 12.0 12.0 22.0 15.0 13.0 9.0 19.0 20.0 9.0 10.0 15.0 14.0 19.0 17.0 8.0 16.0 6.0 10.0 15.0 12.0 14.0 13.0 9.0 18.0 13.0 12.0 21.0 13.0 12.0 14.0 15.0 17.0 15.0 16.0 14.0 12.0 11.0 13.0 23.0 17.0 14.0 14.0 14.0 8.0 10.0 17.0 11.0 20.0 19.0 16.0 4.0 15.0 17.0 22.0 23.0 22.0 15.0 26.0 22.0 20.0 16.0 24.0 21.0 23.0 22.0 24.0 20.0 23.0 19.0 26.0 22.0 26.0 21.0 19.0 31.0 27.0 24.0 20.0 27.0 18.0 23.0 36.0 42.0 35.0 32.0 38.0 26.0 31.0 40.0 36.0 47.0 46.0 54.0 68.0 61.0 57.0 65.0 54.0 73.0 68.0 82.0 101.0 108.0 112.0 123.0 113.0 133.0 145.0 144.0 173.0 154.0 147.0 188.0 216.0 195.0 195.0 229.0 205.0 226.0 211.0 206.0 222.0 226.0 221.0 200.0 209.0 187.0 194.0 177.0 199.0 162.0 167.0 175.0 178.0 148.0 140.0 163.0 161.0 148.0 152.0 110.0 122.0 111.0 114.0 88.0 80.0 73.0 79.0 86.0 75.0 58.0 55.0 46.0 43.0 31.0 42.0 30.0 31.0 24.0 24.0 18.0 20.0 20.0 28.0 19.0 14.0 18.0 9.0 18.0 17.0 9.0 11.0 12.0 11.0 9.0 9.0 18.0 10.0 5.0 3.0 11.0 10.0 12.0 8.0 9.0 18.0 10.0 9.0 10.0 7.0 14.0 7.0 7.0 8.0 10.0 7.0 5.0 5.0 9.0 11.0 11.0 4.0 9.0 9.0 8.0 9.0 8.0 8.0 3.0 9.0 8.0 6.0 6.0 12.0 10.0 8.0 12.0 9.0 11.0 7.0 10.0</parameters>
+      </energy>
+    </source>
+    <source particle="neutron" strength="0.07139710289896516" type="independent">
+      <space type="point">
+        <parameters>587 60 94.365</parameters>
+      </space>
+      <angle reference_uvw="1.0 0.0 0.0" type="mu-phi">
+        <mu parameters="-1.0 -0.8660254037844387" type="uniform"/>
+        <phi parameters="0 6.283185307179586" type="uniform"/>
+      </angle>
+      <energy interpolation="linear-linear" type="tabular">
+        <parameters>13139561.367013372 13146050.817236254 13152540.267459137 13159029.71768202 13165519.167904904 13172008.618127787 13178498.068350669 13184987.51857355 13191476.968796434 13197966.419019315 13204455.869242199 13210945.319465082 13217434.769687964 13223924.219910847 13230413.670133729 13236903.120356612 13243392.570579495 13249882.020802379 13256371.471025262 13262860.921248142 13269350.371471023 13275839.821693907 13282329.27191679 13288818.722139673 13295308.172362557 13301797.622585438 13308287.072808322 13314776.523031203 13321265.973254086 13327755.423476968 13334244.873699851 13340734.323922733 13347223.774145616 13353713.224368498 13360202.674591381 13366692.124814264 13373181.575037148 13379671.025260031 13386160.475482915 13392649.925705794 13399139.375928676 13405628.82615156 13412118.276374443 13418607.726597326 13425097.17682021 13431586.627043089 13438076.077265972 13444565.527488856 13451054.977711739 13457544.427934622 13464033.878157504 13470523.328380387 13477012.778603267 13483502.22882615 13489991.679049034 13496481.129271917 13502970.5794948 13509460.029717684 13515949.479940563 13522438.930163447 13528928.380386328 13535417.830609212 13541907.280832095 13548396.731054978 13554886.181277858 13561375.631500741 13567865.081723625 13574354.531946508 13580843.982169392 13587333.432392275 13593822.882615156 13600312.332838036 13606801.78306092 13613291.233283803 13619780.683506686 13626270.13372957 13632759.583952453 13639249.034175333 13645738.484398216 13652227.9346211 13658717.38484398 13665206.835066864 13671696.285289748 13678185.735512631 13684675.18573551 13691164.635958394 13697654.086181277 13704143.53640416 13710632.986627044 13717122.436849928 13723611.887072807 13730101.337295689 13736590.787518572 13743080.237741455 13749569.687964339 13756059.138187222 13762548.588410106 13769038.038632985 13775527.488855869 13782016.939078752 13788506.389301635 13794995.839524517 13801485.2897474 13807974.73997028 13814464.190193163 13820953.640416047 13827443.09063893 13833932.540861813 13840421.991084697 13846911.441307576 13853400.89153046 13859890.341753341 13866379.791976225 13872869.242199108 13879358.692421991 13885848.142644875 13892337.592867754 13898827.043090638 13905316.493313521 13911805.943536405 13918295.393759288 13924784.84398217 13931274.294205049 13937763.744427932 13944253.194650816 13950742.6448737 13957232.095096583 13963721.545319466 13970210.99554235 13976700.445765229 13983189.895988112 13989679.346210994 13996168.796433877 14002658.24665676 14009147.696879644 14015637.147102524 14022126.597325407 14028616.04754829 14035105.497771174 14041594.947994057 14048084.39821694 14054573.848439822 14061063.298662702 14067552.748885585 14074042.199108468 14080531.649331352 14087021.099554235 14093510.549777118 14099999.999999998 14106489.450222882 14112978.900445765 14119468.350668648 14125957.80089153 14132447.251114413 14138936.701337297 14145426.151560176 14151915.60178306 14158405.052005943 14164894.502228826 14171383.95245171 14177873.402674593 14184362.852897473 14190852.303120354 14197341.753343238 14203831.203566121 14210320.653789004 14216810.104011888 14223299.554234767 14229789.00445765 14236278.454680534 14242767.904903417 14249257.3551263 14255746.805349182 14262236.255572066 14268725.705794945 14275215.156017829 14281704.606240712 14288194.056463595 14294683.506686479 14301172.956909362 14307662.407132242 14314151.857355125 14320641.307578007 14327130.75780089 14333620.208023774 14340109.658246657 14346599.10846954 14353088.55869242 14359578.008915303 14366067.459138187 14372556.90936107 14379046.359583953 14385535.809806835 14392025.260029715 14398514.710252598 14405004.160475481 14411493.610698365 14417983.060921248 14424472.511144131 14430961.961367015 14437451.411589894 14443940.861812778 14450430.312035661 14456919.762258543 14463409.212481426 14469898.66270431 14476388.11292719 14482877.563150072 14489367.013372956 14495856.46359584 14502345.913818723 14508835.364041606 14515324.814264487 14521814.264487367 14528303.71471025 14534793.164933134 14541282.615156017 14547772.0653789 14554261.515601784 14560750.965824664 14567240.416047547 14573729.86627043 14580219.316493314 14586708.766716195 14593198.216939079 14599687.667161958 14606177.117384842 14612666.567607725 14619156.017830608 14625645.468053492 14632134.918276375 14638624.368499259 14645113.818722138 14651603.268945022 14658092.719167903 14664582.169390786 14671071.61961367 14677561.069836553 14684050.520059433 14690539.970282316 14697029.4205052 14703518.870728083 14710008.320950966 14716497.771173848 14722987.221396731 14729476.67161961 14735966.121842494 14742455.572065378 14748945.022288261 14755434.472511144 14761923.922734028 14768413.372956907 14774902.82317979 14781392.273402674 14787881.723625556 14794371.173848439 14800860.624071322 14807350.074294206 14813839.524517085 14820328.974739969 14826818.424962852 14833307.875185736 14839797.325408619 14846286.775631502 14852776.22585438 14859265.676077263 14865755.126300147 14872244.57652303 14878734.026745914 14885223.476968797 14891712.927191677 14898202.37741456 14904691.827637443 14911181.277860327 14917670.728083208 14924160.178306092 14930649.628528975 14937139.078751855 14943628.528974738 14950117.979197621 14956607.429420505 14963096.879643388 14969586.329866271 14976075.780089151 14982565.230312034 14989054.680534916 14995544.1307578 15002033.580980683 15008523.031203566 15015012.48142645 15021501.93164933 15027991.381872213 15034480.832095096 15040970.28231798 15047459.73254086 15053949.182763744 15060438.632986624 15066928.083209507 15073417.53343239 15079906.983655274 15.0 21.0 14.0 14.0 12.0 15.0 15.0 19.0 9.0 17.0 17.0 15.0 14.0 10.0 11.0 7.0 16.0 17.0 13.0 9.0 16.0 14.0 14.0 15.0 9.0 13.0 13.0 15.0 17.0 13.0 11.0 13.0 14.0 16.0 15.0 13.0 13.0 10.0 8.0 8.0 16.0 17.0 18.0 8.0 14.0 13.0 13.0 11.0 11.0 14.0 15.0 12.0 15.0 10.0 6.0 17.0 20.0 9.0 17.0 8.0 15.0 12.0 11.0 17.0 16.0 11.0 11.0 12.0 13.0 9.0 8.0 12.0 11.0 16.0 17.0 17.0 14.0 12.0 12.0 17.0 10.0 11.0 7.0 12.0 10.0 7.0 13.0 18.0 11.0 16.0 10.0 16.0 14.0 16.0 14.0 16.0 15.0 8.0 16.0 14.0 18.0 14.0 19.0 18.0 12.0 9.0 16.0 11.0 8.0 16.0 12.0 13.0 19.0 15.0 17.0 17.0 21.0 20.0 12.0 12.0 13.0 16.0 14.0 19.0 11.0 13.0 18.0 9.0 13.0 14.0 17.0 21.0 9.0 18.0 13.0 20.0 17.0 29.0 18.0 13.0 13.0 17.0 15.0 13.0 20.0 14.0 15.0 19.0 15.0 22.0 15.0 17.0 16.0 23.0 15.0 21.0 10.0 19.0 26.0 14.0 22.0 19.0 21.0 26.0 17.0 21.0 33.0 27.0 21.0 24.0 22.0 25.0 29.0 37.0 32.0 43.0 35.0 34.0 38.0 41.0 47.0 55.0 57.0 54.0 59.0 59.0 69.0 80.0 68.0 83.0 75.0 108.0 95.0 107.0 106.0 112.0 130.0 130.0 147.0 189.0 160.0 214.0 196.0 203.0 190.0 177.0 201.0 215.0 206.0 199.0 188.0 175.0 168.0 172.0 173.0 147.0 166.0 144.0 138.0 161.0 147.0 155.0 157.0 134.0 167.0 158.0 161.0 160.0 138.0 170.0 153.0 121.0 119.0 109.0 118.0 108.0 92.0 78.0 77.0 77.0 82.0 63.0 52.0 45.0 41.0 46.0 36.0 39.0 40.0 32.0 51.0 37.0 25.0 32.0 27.0 21.0 24.0 15.0 19.0 16.0 17.0 13.0 8.0 14.0 15.0 6.0 10.0 11.0 9.0 8.0 3.0 10.0 4.0 5.0 15.0 3.0 7.0 11.0 8.0 7.0 9.0 9.0 13.0 9.0 4.0 9.0 6.0 8.0 8.0 12.0 10.0 6.0 5.0 4.0 18.0 8.0 9.0 10.0 15.0 7.0</parameters>
+      </energy>
+    </source>
+    <output>
+      <tallies>false</tallies>
+    </output>
+    <photon_transport>true</photon_transport>
+  </settings>
+  <tallies>
+    <mesh id="1">
+      <dimension>130 90 60</dimension>
+      <lower_left>-100.0 -200.0 -100.0</lower_left>
+      <upper_right>1200.0 700.0 500.0</upper_right>
+    </mesh>
+    <filter id="4" type="cell">
+      <bins>20</bins>
+    </filter>
+    <filter id="1" type="particle">
+      <bins>neutron</bins>
+    </filter>
+    <filter id="13" type="energyfunction">
+      <energy>12104000.0 12200000.0 12250000.0 12300000.0 12350000.0 12400000.0 12450000.0 12500000.0 12550000.0 12600000.0 12700000.0 12800000.0 12900000.0 13000000.0 13300000.0 13400000.0 13500000.0 13600000.0 13700000.0 13800000.0 13900000.0 14000000.0 14100000.0 14300000.0 14510000.0 14700000.0 14900000.0 15100000.0 15400000.0 15700000.0 16000000.0 16399999.999999998 16800000.0 17300000.0 17800000.0 18400000.0 19000000.0 19700000.0 20000100.0 21000000.0 22000000.0 23000000.0 24000000.0 25000000.0 26000000.0 27000000.0 28000000.0 29000000.0 30000000.0 32000000.0 34000000.0 36000000.0 38000000.0 40000000.0 42000000.0 44000000.0 48000000.0 50000000.0 52000000.0 54000000.0 56000000.0 58000000.0 60000000.0</energy>
+      <y>0.0 0.0102949 0.015607 0.0225531 0.0310396 0.0409663 0.0522282 0.0647171 0.0783233 0.0929366 0.124754 0.159333 0.195905 0.233779 0.349715 0.387743 0.424968 0.461196 0.496287 0.530146 0.562715 0.593964 0.623888 0.679822 0.733174 0.777037 0.819073 0.85727 0.908212 0.95258 0.991391 1.03593 1.07365 1.113 1.14519 1.17589 1.19901 1.21713 1.22203 1.21543 1.19705 1.16953 1.11825 1.0298 0.903038 0.764678 0.647938 0.557368 0.489432 0.402659 0.355297 0.332784 0.319328 0.309996 0.302136 0.295414 0.274556 0.266168 0.256521 0.251667 0.248072 0.245168 0.237592</y>
+      <interpolation>linear-linear</interpolation>
+    </filter>
+    <filter id="5" type="cell">
+      <bins>21</bins>
+    </filter>
+    <filter id="14" type="energyfunction">
+      <energy>9064111.0 9100000.0 9200000.0 9300000.0 9400001.0 9500000.0 9600000.0 9700000.0 9800000.0 9900001.0 10000000.0 10100000.0 10200000.0 10300000.0 10400000.0 10500000.0 10600000.0 10700000.0 10800000.0 10900000.0 11000000.0 11100000.0 11200000.0 11300000.0 11400000.0 11500000.0 11600000.0 11700000.0 11800000.0 11900000.0 12000000.0 12100000.0 12200000.0 12300000.0 12400000.0 12500000.0 12600000.0 12700000.0 12800000.0 12900000.0 13000000.0 13100000.0 13200000.0 13300000.0 13400000.0 13500000.0 13600000.0 13700000.0 13800000.0 13900000.0 14000000.0 14100000.0 14200000.0 14300000.0 14400000.0 14500000.0 14600000.0 14700000.0 14800000.0 14900000.0 15000000.0 15500000.0 16000000.0 16500000.0 17000000.0 17700000.0 18000000.0 18500000.0 19000000.0 19500000.0 20000000.0 21000000.0 21500000.0 22000000.0 22500000.0 23000000.0 23500000.0 24000000.0 24500000.0 25000000.0 25500000.0 26000000.0 26500000.0 27000000.0 27500000.0 28000000.0 28500000.0 29000000.0 29500000.0 30000000.0 30500000.0 31000000.0 31500000.0 32000000.0 32500000.0 33000000.0 33500000.0 34000000.0 34500000.0 35000000.0 35500000.0 36000000.0 36500000.0 37000000.0 37500000.0 38000000.0 38500000.0 39000000.0 39500000.0 40000000.0 40000100.0 42000000.0 44000000.0 46000000.0 48000000.0 50000000.0 52000000.0 54000000.0 56000000.0 58000000.0 60000000.0</energy>
+      <y>0.0 0.00181805 0.00349717 0.00812313 0.0173275 0.0312977 0.0488299 0.0682613 0.0882563 0.108027 0.127211 0.145698 0.163489 0.180628 0.197164 0.213139 0.228583 0.243513 0.257938 0.271858 0.285268 0.29816 0.310525 0.322353 0.333636 0.344366 0.354538 0.364149 0.373201 0.381695 0.389636 0.397034 0.403899 0.410244 0.416084 0.421435 0.426316 0.430746 0.434746 0.438337 0.441539 0.444376 0.446869 0.449039 0.450996 0.452998 0.454725 0.45619 0.457404 0.45838 0.459128 0.459659 0.459984 0.460112 0.46012 0.46013 0.46015 0.46017 0.4602 0.46027 0.4603 0.45819 0.45204 0.44559 0.43705 0.4235 0.414 0.396966 0.375928 0.350109 0.320288 0.256936 0.227934 0.199085 0.174167 0.153281 0.136101 0.122106 0.110738 0.101483 0.0939032 0.0876426 0.0824192 0.07801319 0.0742541 0.0710103 0.0681798 0.0656839 0.0634609 0.0614628 0.0596517 0.0579973 0.0564757 0.0550676 0.0537572 0.05253181 0.0513809 0.0502956 0.0492688 0.0482944 0.047367 0.0464824 0.0456367 0.0448267 0.0440494 0.0433025 0.0425837 0.041891 0.0412228 0.0405775 0.0405775 0.0422714 0.04393537 0.04547435 0.04691133 0.04826731 0.04954129 0.05056028 0.05118027 0.05168626 0.05217925</y>
+      <interpolation>linear-linear</interpolation>
+    </filter>
+    <filter id="3" type="energy">
+      <bins>1e-05 0.1 0.41399 0.53158 0.68256 0.87643 1.1253 1.445 1.8554 2.3824 3.059 3.9279 5.0435 6.4759 8.3153 10.677 13.71 17.604 22.603 29.023 37.266 47.851 61.442 78.893 101.3 130.07 167.02 214.45 275.36 353.58 454.0 582.95 748.52 961.12 1234.1 1584.6 2034.7 2248.7 2485.2 2612.6 2746.5 3035.4 3354.6 3707.4 4307.4 5530.8 7101.7 9118.8 10595.0 11709.0 15034.0 19304.0 21875.0 23579.0 24176.0 24788.0 26058.0 27000.0 28501.0 31828.0 34307.0 40868.0 46309.0 52475.0 56562.0 67380.0 72024.0 79499.0 82503.0 86517.0 98036.0 111090.0 116790.0 122770.0 129070.0 135690.0 142640.0 149960.0 157640.0 165730.0 174220.0 183160.0 192550.0 202420.0 212800.0 223710.0 235180.0 247240.0 273240.0 287250.0 294520.0 297210.0 298490.0 301970.0 333730.0 368830.0 387740.0 407620.0 450490.0 497870.0 523400.0 550230.0 578440.0 608100.0 639280.0 672060.0 706510.0 742740.0 780820.0 820850.0 862940.0 907180.0 961670.0 1002600.0 1108000.0 1164800.0 1224600.0 1287400.0 1353400.0 1422700.0 1495700.0 1572400.0 1653000.0 1737700.0 1826800.0 1920500.0 2019000.0 2122500.0 2231300.0 2306900.0 2345700.0 2365300.0 2385100.0 2466000.0 2592400.0 2725300.0 2865000.0 3011900.0 3166400.0 3328700.0 3678800.0 4065700.0 4493300.0 4723700.0 4965800.0 5220500.0 5488100.0 5769500.0 6065300.0 6376300.0 6592400.0 6703200.0 7046900.0 7408200.0 7788000.0 8187300.0 8607100.0 9048400.0 9512300.0 10000000.0 10513000.0 11052000.0 11618000.0 12214000.0 12523000.0 12840000.0 13499000.0 13840000.0 14191000.0 14550000.0 14918000.0 15683000.0 16487000.0 16905000.0 17332000.0 19640000.0</bins>
+    </filter>
+    <filter id="9" type="cellfrom">
+      <bins>20</bins>
+    </filter>
+    <filter id="6" type="surface">
+      <bins>64</bins>
+    </filter>
+    <filter id="10" type="cellfrom">
+      <bins>21</bins>
+    </filter>
+    <filter id="7" type="surface">
+      <bins>66</bins>
+    </filter>
+    <filter id="12" type="cell">
+      <bins>19</bins>
+    </filter>
+    <filter id="11" type="cellfrom">
+      <bins>19</bins>
+    </filter>
+    <filter id="8" type="surface">
+      <bins>60</bins>
+    </filter>
+    <filter id="16" type="mesh">
+      <bins>1</bins>
+    </filter>
+    <filter id="15" type="energyfunction">
+      <energy>0.001 0.01 0.024999999999999998 0.09999999999999999 0.19999999999999998 0.5 1.0 2.0 5.0 10.0 20.0 50.0 100.0 200.0 500.0 1000.0 2000.0 5000.0 10000.0 20000.0 30000.0 50000.0 70000.0 100000.0 150000.0 200000.0 300000.0 500000.0 700000.0 900000.0 1000000.0 1200000.0 1500000.0 2000000.0 3000000.0 4000000.0 5000000.0 6000000.0 7000000.0 8000000.0 9000000.0 10000000.0 12000000.0 14000000.0 15000000.0 16000000.0 18000000.0 20000000.0 21000000.0 30000000.0 50000000.0 75000000.0 100000000.0 130000000.0 150000000.0 180000000.0 200000000.0 300000000.0 400000000.0 500000000.0 600000000.0 700000000.0 800000000.0 900000000.0 1000000000.0 2000000000.0 5000000000.0 10000000000.0</energy>
+      <y>1.29 1.56 1.76 2.26 2.54 2.92 3.15 3.32 3.47 3.52 3.54 3.55 3.54 3.52 3.47 3.46 3.48 3.66 4.19 5.61 7.18 10.4 13.7 18.6 26.6 34.4 49.4 77.1 102.0 126.0 137.0 153.0 174.0 203.0 244.0 271.0 290.0 303.0 313.0 321.0 327.0 332.0 339.0 344.0 346.0 347.0 350.0 352.0 353.0 358.0 371.0 387.0 397.0 407.0 412.0 421.0 426.0 455.0 488.0 521.0 553.0 580.0 604.0 624.0 642.0 767.0 1010.0 1320.0</y>
+      <interpolation>cubic</interpolation>
+    </filter>
+    <filter id="2" type="particle">
+      <bins>photon</bins>
+    </filter>
+    <filter id="17" type="energyfunction">
+      <energy>10000.0 15000.0 20000.0 30000.0 40000.0 50000.0 60000.0 70000.0 80000.0 100000.0 150000.0 200000.0 300000.0 400000.0 500000.0 511000.0 600000.0 662000.0 800000.0 1000000.0 1117000.0 1330000.0 1500000.0 2000000.0 3000000.0 4000000.0 5000000.0 6000000.0 6129000.0 8000000.0 10000000.0 15000000.0 20000000.0 30000000.0 40000000.0 50000000.0 60000000.0 80000000.0 100000000.0 150000000.0 200000000.0 300000000.0 400000000.0 500000000.0 600000000.0 800000000.0 1000000000.0 1500000000.0 2000000000.0 3000000000.0 4000000000.0 5000000000.0 6000000000.0 8000000000.0 10000000000.0</energy>
+      <y>0.0288 0.056 0.0813 0.127 0.158 0.18 0.198 0.218 0.238 0.286 0.429 0.589 0.932 1.28 1.63 1.66 1.97 2.17 2.62 3.25 3.6 4.21 4.67 5.91 8.08 10.0 11.8 13.5 13.7 16.6 19.7 26.8 33.8 46.1 56.9 66.1 74.1 87.1 97.5 116.0 129.0 147.0 159.0 167.0 174.0 185.0 193.0 208.0 218.0 232.0 242.0 251.0 258.0 268.0 276.0</y>
+      <interpolation>cubic</interpolation>
+    </filter>
+    <filter id="18" type="cell">
+      <bins>7</bins>
+    </filter>
+    <tally id="1" name="rr_zr90">
+      <filters>4 1 13</filters>
+      <scores>flux</scores>
+    </tally>
+    <tally id="2" name="rr_nb93">
+      <filters>5 1 14</filters>
+      <scores>flux</scores>
+    </tally>
+    <tally id="3" name="act_foils_zr_flux">
+      <filters>4 1 3</filters>
+      <scores>flux</scores>
+    </tally>
+    <tally id="4" name="act_foils_zr_current">
+      <filters>9 1 3 6</filters>
+      <scores>current</scores>
+    </tally>
+    <tally id="5" name="act_foils_nb_flux">
+      <filters>5 1 3</filters>
+      <scores>flux</scores>
+    </tally>
+    <tally id="6" name="act_foils_nb_current">
+      <filters>10 1 3 7</filters>
+      <scores>current</scores>
+    </tally>
+    <tally id="7" name="diamond_flux">
+      <filters>12 1 3</filters>
+      <scores>flux</scores>
+    </tally>
+    <tally id="8" name="diamond_current">
+      <filters>11 1 3 8</filters>
+      <scores>current</scores>
+    </tally>
+    <tally id="9" name="elastic_scattering">
+      <filters>12 1 3</filters>
+      <scores>elastic</scores>
+    </tally>
+    <tally id="10" name="neutron_dose_on_mesh">
+      <filters>16 1 15</filters>
+      <scores>flux</scores>
+    </tally>
+    <tally id="11" name="photon_dose_on_mesh">
+      <filters>16 2 17</filters>
+      <scores>flux</scores>
+    </tally>
+    <tally id="12" name="TBR">
+      <filters>18</filters>
+      <nuclides>Li6 Li7</nuclides>
+      <scores>(n,Xt)</scores>
+    </tally>
+  </tallies>
+</model>
