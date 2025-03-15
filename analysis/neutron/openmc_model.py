@@ -205,7 +205,7 @@ def baby_geometry(x_c: float, y_c: float, z_c: float):
     )
 
     ######## Neutron Detectors: Activation Foils #################
-    act_foils_radius = 1.8
+    act_foils_radius = 1.8   # VERIFY THAT THIS IS THE CORRECT RADIUS
     act_foils_thickness = 0.1
 
     act_foils_zr = openmc.model.RightCircularCylinder(
