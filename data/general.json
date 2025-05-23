@@ -93,18 +93,46 @@
             "materials": [
                 {
                     "position": "A 325 - top",
-                    "material": "Zr",
+                    "material": "Nb",
+                    "designator": "Nb1",
+                    "number_of_foils": 1,
+                    "distance_from_source": {
+                        "value": 5.1,
+                        "unit": "cm"
+                    },
                     "mass": {
-                        "value": null,
+                        "value": 0.2733,
                         "unit": "g"
+                    },
+                    "mass_err": {
+                        "value": 0.0002,
+                        "unit": "g"
+                    },
+                    "thickness":{
+                        "value": 0.01,
+                        "unit": "inch"
                     }
                 },
                 {
                     "position": "A 325 - bottom",
-                    "material": "Nb",
+                    "material": "Zr",
+                    "designator": "Zr Packet #1",
+                    "number_of_foils": 8,
+                    "distance_from_source": {
+                        "value": 5.1,
+                        "unit": "cm"
+                    },
                     "mass": {
-                        "value": null,
+                        "value": 0.9036,
                         "unit": "g"
+                    },
+                    "mass_err": {
+                        "value": 0.0001,
+                        "unit": "g"
+                    },
+                    "thickness": {
+                        "value": 0.04,
+                        "unit": "inch"
                     }
                 }
             ]
