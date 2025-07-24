@@ -14,9 +14,10 @@ dependencies:
   - nbconvert
   - ipykernel
   - pint
+  - papermill
   - pip
   - pip:
-      - libra-toolbox==0.7
+      - libra-toolbox==0.8
       - openmc_data_downloader~=0.6.0
       - matplotlib-label-lines
       - h-transport-materials~=0.17
