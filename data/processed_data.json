@@ -8,7 +8,7 @@
         "unit": "centimeter"
     },
     "modelled_baby_height": {
-        "value": 0.00649612012619981,
+        "value": 0.007931370977693591,
         "unit": "liter / centimeter ** 2"
     },
     "irradiations": [
@@ -47,11 +47,11 @@
         "unit": "particle / neutron"
     },
     "k_top": {
-        "value": 8.9e-08,
+        "value": 1.09e-07,
         "unit": "meter / second"
     },
     "k_wall": {
-        "value": 1.5130000000000003e-09,
+        "value": 1.6241e-09,
         "unit": "meter / second"
     },
     "cumulative_tritium_release": {
