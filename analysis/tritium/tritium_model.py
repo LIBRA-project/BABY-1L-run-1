@@ -1,4 +1,5 @@
 from libra_toolbox.tritium.model import ureg, Model, quantity_to_activity
+from libra_toolbox.neutronics.materials import get_exp_cllif_density
 import numpy as np
 import json
 from libra_toolbox.tritium.lsc_measurements import (
@@ -498,7 +499,11 @@ replacement_times_walls = sorted(OV_stream.relative_times_as_pint)
 
 baby_diameter = 14 * ureg.cm  # TODO confirm with CAD
 baby_radius = 0.5 * baby_diameter
-baby_volume = 1 * ureg.L
+salt_mass = general_data["general_data"]["salt_mass"]
+salt_mass = salt_mass["value"] * ureg(salt_mass["unit"])
+# same density as the neutronics model (analysis/neutron/openmc_model.py)
+salt_density = get_exp_cllif_density(650) * ureg.g * ureg.cm**-3
+baby_volume = (salt_mass / salt_density).to(ureg.L)
 baby_cross_section = np.pi * baby_radius**2
 baby_height = baby_volume / baby_cross_section
 
@@ -563,10 +568,10 @@ if not filename.exists():
 import openmc
 
 sp = openmc.StatePoint(filename)
-tally_df = sp.get_tally(name="TBR").get_pandas_dataframe()
-calculated_TBR = tally_df["mean"].iloc[0] * ureg.particle * ureg.neutron**-1
+tbr_tally = sp.get_tally(name="TBR")
+calculated_TBR = float(tbr_tally.mean.squeeze()) * ureg.particle * ureg.neutron**-1
 calculated_TBR_std_dev = (
-    tally_df["std. dev."].iloc[0] * ureg.particle * ureg.neutron**-1
+    float(tbr_tally.std_dev.squeeze()) * ureg.particle * ureg.neutron**-1
 )
 
 # TBR from measurements
@@ -582,8 +587,8 @@ measured_TBR = (T_produced / quantity_to_activity(T_consumed)).to(
     ureg.particle * ureg.neutron**-1
 )
 
-optimised_ratio = 1.7e-2
-k_top = 8.9e-8 * ureg.m * ureg.s**-1
+optimised_ratio = 1.49e-2
+k_top = 1.09e-7 * ureg.m * ureg.s**-1
 k_wall = optimised_ratio * k_top
 
 
